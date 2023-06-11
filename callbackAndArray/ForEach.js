@@ -10,3 +10,5 @@ numbers.forEach(function(el){
     if(el%2==0){
     console.log(el)}
 });
+
+// foreach => 배열에 사용되고 함수를 인수로 받고 요소 별로 함수를 실행하고 요소를 전달한다.

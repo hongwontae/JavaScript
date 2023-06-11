@@ -48,3 +48,5 @@ const goodMovies = movies.filter((movie)=>{
 const goodMovies1 = movies.filter(movie => movie.score>=80)
 const badMovies1 = movies.filter(movie => movie.score<=60)
 const resentlyMovies = movies.filter(movie => movie.year>=2000)
+
+// 이것 또한 마찬가지로 변수에 담아서 사용한다. 있는 그대로는 존재할 뿐이다.

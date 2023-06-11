@@ -24,3 +24,7 @@ movies.forEach(function(movie){
 movies.forEach(function(movie1){
     console.log(`${movie1.title} - ${movie1.score}/100`)
 })
+
+//const all = movies.forEach(function(movie1){
+//   console.log(`${movie1.title} - ${movie1.score}/100`)
+//}) 이 형태는 불가능하다. 값 할당 x

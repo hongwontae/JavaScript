@@ -29,3 +29,7 @@ const title2 = movies.map(function(movie){
     return movie.title
 }) 
 
+
+//movies.map(function(movie){
+//    return movie.title
+//}) 이 형태로는 아무것도 실행하지도 않기에 변수에 담아서 실행해야 한다.
