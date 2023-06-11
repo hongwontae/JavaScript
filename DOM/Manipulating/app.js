@@ -1,24 +1,28 @@
-const d1 = document.getElementById('banner')
-console.log(d1);
-const d2 = document.getElementById('winner')
+const d1 = document.querySelector('a')
+console.log(d1)
+// js 객체가 출현한다.
+
+const d2 = document.querySelector('a').innerText
 console.log(d2)
 
-console.log("-----------------------------------------------------------------------")
+console.log("----------------------------------------------------------------------------")
 
-const d3 = document.getElementsByTagName('img')
-console.log(d3);
-console.dir(d3)
-console.log(d3[2])
-console.log(d3.length)
+const d3D = document.querySelector('p').innerText
+console.log(d3D)
 
-// for(let img of d3){
-//     console.log(img.src)
-// }
+const d3 = document.querySelector('p').textContent
+console.log(d3)
 
-for(let img of d3){
-    img.src = 'https://images.unsplash.com/photo-1563281577-a7be47e20db9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2550&q=80'
-} // 모든 이미지 한 가지로 변경
-// 배열이 아니기에 map 사용 불가
+const d4 = document.querySelector('p').innerHTML
+console.log(d4) //태그 모두 포함
 
-const d4 = document.getElementsByTagName('a')
-console.log(d4)
+//const c1 = document.querySelector('h1').innerText = '<i>asd</i>'
+// 태그 사항 포함되지 않고 그대로 출력만 된다.
+
+//const c2 = document.querySelector('h1').textContent = '<i>asd</i>'
+// 마찬가지이다.
+
+const c3 = document.querySelector('h1').innerHTML = '<i>Slikie Chickens</i>'
+// 태그에 맞게 사항이 반영된다.
+
+
