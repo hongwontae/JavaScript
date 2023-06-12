@@ -27,7 +27,7 @@ const c3 = document.querySelector('h1').innerHTML = '<i>Slikie Chickens</i>'
 
 document.querySelector('img').id
 // id를 반환한다.
-document.querySelector('img').id = '#asd'
+// document.querySelector('img').id = '#asd'
 // asd로 id가 변환된다.
 
 document.querySelector('img').src
