@@ -19,3 +19,5 @@ currentResult = add(3,3);
 let calculationDescription = `(${defaultResult} + 10) * 3 / 2 - 1`;
 
 outputResult(currentResult, calculationDescription);
+
+// let currentResult = defaultResult; 함수의 선언을 여기다가 하면 위의 currentResult의 할당이 실패한다.
