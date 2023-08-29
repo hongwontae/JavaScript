@@ -1,0 +1,7 @@
+1. Switch Case (control-12-switch-case)
+switch case 구문은 간단히 말해서 case별로 다른 코드를 실행해야 할 때 사용한다. (if else와 비슷하다.)
+
+fall through가 기본 동작이다. 하나의 case가 실행된 후 다른 case도 실행한다는 의미이다. 이를 방지하기 위해서 하나의 case 구문 제일 밑에 break;를 작성하면 된다. 이렇게 작성하면 하나의 case문이 일치하면 다른 case문은 무시하라는 뜻이 된다.
+
+default 키워드는 일치하는 case가 하나도 없을 때 default 안의 코드를 실행하라는 키워드이다.
+
