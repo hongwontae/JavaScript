@@ -1,4 +1,4 @@
-1. IF문과 Boolean (control-01-starting-project)
+1. if문과 Boolean (control-01-starting-project)
 == : 이중 등호 연산자/ 두 값을 비교해서 같다면 true 다르다면 false를 반환한다.
 != : 두 값을 비교해서 같다면 false 다르다면 true를 반환한다.
 단순히 값을 비교하는 것이지 값+자료형을 비교하는 것이 아니다.
@@ -18,7 +18,7 @@ if(조건문){
 } => (),{}는 무조건 필요하다.
 
 
-2. IF문 사용하기 (control-02-added-if)
+2. if문 사용하기 (control-02-added-if)
 
 
 3. 등식으로 객체와 배열 비교
@@ -56,6 +56,17 @@ ex) const username = 'user1'
    if(username) {
   ...
 } => username은 Truthy값으로 평가되어 중괄호문이 실행된다. 빈 문자열은 false, 하나라도 있는 문자열은 true
+
+
+7. if문 활용하기1 (공격함수 추가하기) (control-03-monster-killer-starting-project)
+
+
+8. if문 활용하기2 (승리조건 확인하기) (control-05-attack-if-else-if)
+
+
+9. if문 활용하기3 (강한공격 기능 추가하기) (control-06-strong-attack)
+Refactoring
+
 
 
 
