@@ -1,0 +1,45 @@
+1. 삼항 연산자
+if문은 그 자체로는 값을 가질 수 없다. ex) const username = if () {} => 허용이 되지 않는다.
+이를 해결하고자 나온 것이 삼항 연산자이다. ?와 :를 사용해서 식을 만든다.
+
+ex) const userName = isLogin ? 'Max' : null => isLogin이 true면 'Max'를 userName에 저장하고 false면 null을 userName에 저장한다. isLogin은 and와 or를 사용해서 조건을 결합할 수 도 있다.
+
+
+2. 문장 VS 표현식
+JS에서 표현식은 상수나 변수에 저장하는 값이나 함수에서 반환되는 값 등을 산출하는 것을 말한다.
+JS에서 문장은 단순히 문장을 뜻하는 것이다. 표현식도 문장이다. 다만 IF문 같은 경우는 산출되는 값이 없기에 표현식은 아니고 문장이라 불린다.
+
+
+3. 논리 연산자 TIP & 축약어
+!! => 부정을 부정한다.
+"" 빈 문자열 앞에 느낌표 두 개를 사용하면 falsy값이 아닌 실제 boolean타입인 false를 얻는다.
+! => 위의 로직을 따르지만 true를 false로 바꿔서 한 번더 작업해야 한다.
+느낌표 연산자는 항상 불리언 값을 반환한다. ex) !'Max' => false
+
+|| 연산자로 값 부여하기 (||,&& 연산자는 값을 truthy나 falsy로 판단한다.)
+ex) const userName = 변수 || 'Max' => 만약 변수명이 빈 문자열이거나 null이면 false를 반환한다. 그렇다면 or 연산자에 의해 'max'가 userName의 값이 된다. 변수의 값이 있다면 변수명이 대상이되고 or 연산자에 의해 연산이 끝난다. 만약 둘다 false값이 이라면? 항상 두 번쨰 피연산자가 반환된다.
+
+&& 연산자로 값 부여하기
+ex) const userName = 변수(true) && 'Max' => 앞에 있는 조건이 참이면 'Max'가 변수의 값이 된다.
+ex) const userName = null && 'Max' => 앞에 있는 조건이 false다. null이 출력된다.
+ex) const userName = 변수(true) && 변수(false) => 변수 false가 출력된다.
+=> 즉, 첫 번쨰 값이 참이면 두 번째 값을 반환하고 첫 번쨰 값이 거짓이면 첫 번째 값을 반환한다.
+
+
+-- NaN, null, undefined는 false이다. (falsy값을 내포하고 있다.)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
