@@ -3,14 +3,7 @@ const STRONG_ATTACK_VALUE = 17;
 const MONSTER_ATTACK_VALUE = 14;
 const HEAL_VALUE = 20;
 
-const enteredValue = prompt('Maximum life for tou and the monster.','100');
-
-let chosenMaxLife = parseInt(enteredValue);
-
-if(isNaN(chosenMaxLife) || chosenMaxLife <= 0){
-    chosenMaxLife = 100;
-}
-
+let chosenMaxLife = 100;
 let currentMonsterHealth = chosenMaxLife;
 let currentPlayerHealth = chosenMaxLife;
 let hasBonusLife = true;
@@ -18,9 +11,9 @@ let hasBonusLife = true;
 adjustHealthBars(chosenMaxLife);
 
 function reset() {
-    currentMonsterHealth = chosenMaxLife;
-    currentPlayerHealth = chosenMaxLife;
-    resetGame(chosenMaxLife);
+  currentMonsterHealth = chosenMaxLife;
+  currentPlayerHealth = chosenMaxLife;
+  resetGame(chosenMaxLife);
 }
 
 function endRound() {
@@ -33,15 +26,15 @@ function endRound() {
     removeBonusLife();
     currentPlayerHealth = initialPlayerHealth;
     setPlayerHealth(initialPlayerHealth);
-    alert("you would be dead but the bonus life saved you");
+    alert('You would be dead but the bonus life saved you!');
   }
 
   if (currentMonsterHealth <= 0 && currentPlayerHealth > 0) {
-    alert("You won!");
+    alert('You won!');
   } else if (currentPlayerHealth <= 0 && currentMonsterHealth > 0) {
-    alert("You lost!");
+    alert('You lost!');
   } else if (currentPlayerHealth <= 0 && currentMonsterHealth <= 0) {
-    alert("You have a draw!");
+    alert('You have a draw!');
   }
 
   if (currentMonsterHealth <= 0 || currentPlayerHealth <= 0) {
@@ -49,40 +42,39 @@ function endRound() {
   }
 }
 
-function attackMoster(mode) {
+function attackMonster(mode) {
   let maxDamage;
-  if (mode === "ATTACK") {
+  if (mode === 'ATTACK') {
     maxDamage = ATTACK_VALUE;
-  } else if (mode === "STRONG_ATTACK") {
+  } else if (mode === 'STRONG_ATTACK') {
     maxDamage = STRONG_ATTACK_VALUE;
   }
-
   const damage = dealMonsterDamage(maxDamage);
   currentMonsterHealth -= damage;
   endRound();
 }
 
 function attackHandler() {
-  attackMoster("ATTACK");
+  attackMonster('ATTACK');
 }
 
 function strongAttackHandler() {
-  attackMoster("STRONG_ATTACK");
+  attackMonster('STRONG_ATTACK');
 }
 
 function healPlayerHandler() {
   let healValue;
   if (currentPlayerHealth >= chosenMaxLife - HEAL_VALUE) {
-    alert("You can't to more than your max initial health");
+    alert("You can't heal to more than your max initial health.");
     healValue = chosenMaxLife - currentPlayerHealth;
   } else {
-    healValue - HEAL_VALUE;
+    healValue = HEAL_VALUE;
   }
-  increasePlayerHealth(HEAL_VALUE);
-  currentPlayerHealth += HEAL_VALUE;
+  increasePlayerHealth(healValue);
+  currentPlayerHealth += healValue;
   endRound();
 }
 
-attackBtn.addEventListener("click", attackHandler);
-strongAttackBtn.addEventListener("click", strongAttackHandler);
-healBtn.addEventListener("click", healPlayerHandler);
+attackBtn.addEventListener('click', attackHandler);
+strongAttackBtn.addEventListener('click', strongAttackHandler);
+healBtn.addEventListener('click', healPlayerHandler);

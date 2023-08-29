@@ -68,6 +68,20 @@ ex) const username = 'user1'
 Refactoring
 
 
+10. if문 활용하기4 (치료 기능 추가하기) (control-07-heal-functionality)
+
+
+11. if문 활용하기5 (보너스 생명) (control-08-bonus-life-functionality)
+
+
+13. if문 활용하기6 (reset()) (control-09-reset-logic)
+
+
+14. if문 활용하기7 (사용자 입력 검증하기) (control-10-player-set-initial-health)
+prompt() => 웹페이지를 열면 사용자에게 메시지 상자를 건네주고 사용의 입력값을 받아오는 함수이다.
+
+Or조건은 맨 처음이 true이면 뒤의 조건문은 확인하지 않는다.
+
 
 
 
