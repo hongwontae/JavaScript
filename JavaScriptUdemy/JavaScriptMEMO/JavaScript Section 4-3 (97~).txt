@@ -5,3 +5,20 @@ fall through가 기본 동작이다. 하나의 case가 실행된 후 다른 case
 
 default 키워드는 일치하는 case가 하나도 없을 때 default 안의 코드를 실행하라는 키워드이다.
 
+ex) switch (ev) {
+    case LOG_EVENT_PLAYER_ATTACK:
+      logEntry.target = 'MONSTER';
+      break;
+    case LOG_EVENT_PLAYER_STRONG_ATTACK:
+      logEntry = {
+        event: ev,
+        value: val,
+        target: 'MONSTER',
+        finalMonsterHealth: monsterHealth,
+        finalPlayerHealth: playerHealth
+      };
+=> switch(가져온 매개변수)
+   case 사용자가 비교할 값 : 일치하면 실행할 코드 (:다음에 실행할 코드를 적어야 된다.)
+     break; 일치하면 실행하고 끝내라
+     default : 실행할 코드 
+     
