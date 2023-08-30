@@ -1,0 +1,23 @@
+1. var/let/const 블록 범위
+var와 let은 변동 가능한 변수를 생성하고 const는 상수 변수를 생성한다.
+
+let과 const는 Block Scope이고 var는 함수, 전역 Scope이다.
+(var는 if문이나 for문 같이 가로()안에 있을 떄는 전역 Scope이고 중괄호{}안에 있을 떄는 함수 Scope가 된다.)
+(var는 변수의 중복선언이 가능하다. var name='1' var name='2' console.log(name) =>'2')
+
+let과 const를 사용해 중괄호 안에 변수를 생성하면 변수는 해당 블록(중괄호)으로 스코프가 지정되어 해당 블록에서만 사용가능하다. 블록 밖에서는 사용불가능하다.
+
+현재 자바스크립트에서 let과 const만 사용한다.
+
+let과 const로 변수를 재 선언하면 오류 발생/ let은 재할당 가능, const는 불가능
+
+
+2. hoising
+var의 경우 
+ex) console.log(userName) 
+    var userName = 'Max'
+
+=> var userName;
+   consoel.log(userName);
+   userName = 'Max'
+=> 이런 식으로 JS엔진과 브라우저가 작동한다.
