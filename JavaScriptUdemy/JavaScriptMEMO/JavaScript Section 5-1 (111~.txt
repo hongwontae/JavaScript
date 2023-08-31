@@ -20,4 +20,4 @@ ex) console.log(userName)
 => var userName;
    consoel.log(userName);
    userName = 'Max'
-=> 이런 식으로 JS엔진과 브라우저가 작동한다./
+=> 이런 식으로 JS엔진과 브라우저가 작동한다.
