@@ -33,7 +33,8 @@ ex) const person = {welcome : function greet(){console.log('Hello There')}}
 그러나 익명함수로 지정하면 콘솔의 오류의 내용이 익명함수라고만 출력되어 오류의 발생지가 찾기 어려워진다.
 
 
-8. 
+8. 화살표 함수
+ 
 
 
 
