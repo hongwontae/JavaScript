@@ -1,0 +1,11 @@
+1. 사용자에게 메시지 출력하기 (functions-06-finished-game-logic)
+
+
+2. 함수 내의 기본 인자
+매개변수에 할당 연산자를 사용해서 Default값을 줄 수 있다. 이를 받을 수 있는 것은 정의되지 않은 변수만 가능하다.
+(undefined만 가능하고 null, NaN, false같은 값은 불가능하다.)
+
+ex) function mul(num1, num2=10){
+  num*num2
+}
+mul(10) => 100; default값이 10이라서
