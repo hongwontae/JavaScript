@@ -36,8 +36,29 @@ ex) const add = (...numbers) => {
 console.log(add(1,2,3,4,9,9....));
 
 
-4.
+4. 함수 내에서 함수 생성
 
+ex) const sumUp = (a, b, ...numbers) => {
+  const validateNumber = (number) => {
+    return isNaN(number) ? 0 : number;
+  };
+
+  let sum = 0;
+  for (const num of numbers) {
+    sum += validateNumber(num);
+  }
+  return sum;
+};
+
+=> 일반 함수와 함수내의 함수의 차이점은 단지 내부의 함수는 이를 가지고 있는 외부의 함수만 사용할 수 있다는 점
+
+
+5. 콜백 함수
+불려오는 함수를 콜백 함수라고 한다. => ex) addEventListener
+매개변수가 함수인 경우를 말한다.
+
+
+6. bind()
 
 
 
