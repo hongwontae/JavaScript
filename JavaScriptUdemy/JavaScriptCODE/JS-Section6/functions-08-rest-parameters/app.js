@@ -81,6 +81,7 @@ startGameBtn.addEventListener('click', () => {
   gameIsRunning = false;
 });
 
+
 // not related to game
 
 const sumUp = (a, b, ...numbers) => {
@@ -93,3 +94,4 @@ const sumUp = (a, b, ...numbers) => {
 
 console.log(sumUp(1, 5, 10, -3, 6, 10));
 console.log(sumUp(1, 5, 10, -3, 6, 10, 25, 88));
+console.log(sumUp(1,2)) // 0
