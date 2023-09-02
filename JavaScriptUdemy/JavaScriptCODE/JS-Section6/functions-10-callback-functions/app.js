@@ -93,7 +93,9 @@ const sumUp = (resultHandler, ...numbers) => {
     sum += validateNumber(num);
   }
   resultHandler(sum);
-};
+}; // => 이 작업을 한 이유는 함수안에 함수가 선언이 될 수 있다. 선언된 함수는 내부 함수 안에서만 사용된다.
+   // => 매개변수로 함수를 선언할 수 도 있고 함수를 받을 수 도 있다.
+   
 
 const subtractUp = function() {
   let sum = 0;
