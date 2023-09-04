@@ -1,1 +1,53 @@
-1. 
+1. DOM 프로퍼티 탐구 및 변경 (dom-02-basic-selection-code)
+무엇가를 조작하는 것이 아니라 노드의 정보를 얻기위한 프로퍼티도 사용한다.
+
+const a1 = document.querySelector('h1')
+a1.textContnet => a1에 해당하는 텍스트는?
+a1.className => a1에 해당하는 css class는?
+a1.id => a1에 해당하는 id는?
+=> 해당 CSS 클래스나 ID도 변경할 수 있다.
+
+al.style.backgroundColor = 'white' => 문서 객체의 style 속성을 이용해서 css를 변경할 수 있다.
+
+
+2. 속성 VS 프로퍼티 (dom-02-basic-selection-code)
+Input태그에는 id/class/value.. 존재한다. html 태그에 추가하는 것은 해당 태그의 속성이다.(HTML에 관련됨)
+프로퍼티는 HTML코드를 기반으로 생성된 객체에 저장된 값이다. (JS에 관련됨)
+
+ex) input의 class는 DOM객체의 ClassName 프로퍼티로 변환된다.
+
+대부분은 실시간 동기화(DOM의 객체를 변경하면 HTML의 속성도 변경되여 웹 페이지 반영되는 것.. 반대로 경우도 포함)
+가 가능하지만 HTML의 value는 불가능하다.
+HTML의 직접적으로 속성변경은 JS DOM 프로퍼티도 적용받지만 반대의 경우는 허용하지 않는다.
+
+
+3. 다수의 요소 선택하기 (dom-02-basic-selection-code)
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
