@@ -53,4 +53,3 @@ console.log(input.className)
 
 console.log(input.value) // html상에서 확인가능
 
-let a = 10;
