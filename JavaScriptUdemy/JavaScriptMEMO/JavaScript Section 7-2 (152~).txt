@@ -22,7 +22,20 @@ HTML의 직접적으로 속성변경은 JS DOM 프로퍼티도 적용받지만 �
 
 
 3. 다수의 요소 선택하기 (dom-02-basic-selection-code)
- 
+querySelectorAll()
+
+
+4. DOM 탐색
+DOM 트래버싱 => 어떤 요소를 선택하면 하위 요소 or 상위요소를 검색하거나 추가하거나 변경할 수 있는 개념
+Child => 직접적인 자식 노드
+Descendant => 직접 또는 간접적인 자식 노드
+Parent => 직접적인 부모 노드
+Ancestor => 직접 또는 간접적인 부모 노드
+
+
+5. 자식 노드 탐색하기
+
+
 
 
 
