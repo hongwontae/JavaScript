@@ -46,6 +46,8 @@ removeChild() => 자식의 노드를 삭제한다.
 ex) const list = document.querySelector('ul')
     list.parentElement.removeChild(list) => ul를 다 지운다.
 
+-- replaceChild()/ replaceWith()
+
 
 
 
