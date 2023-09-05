@@ -4,10 +4,6 @@
 .textContent => <style>, <script>을 비롯한 모든 요소의 텍스트 컨텐츠를 가져온다.
 
 .insertAdjacentHTML( , ) => html or xml 같은 특정 텍스트를 파싱하고 특정 위치에 DOM Tree 안에 원하는 node들을 추가한다. 이미 사용중인 element는 다시 파싱하지 않는다. innerHTML보다 성능이 높다.
-beforebegin => 맨 처음에 들어간다.
-afterbegin => 두 번쨰에 들어간다.
-beforeend => 마지막의 두 번쨰에 들어간다.
-afterend => 맨 마지막에 들어간다.
 
 
 2. createElement() (dom-04-styling) (createElement.js) 
@@ -19,6 +15,29 @@ createElement('') => 매개변수에는 태그 이름만 입력한다. 꺽쇠기
 append(...n) => 들어오는 매개변수 요소노드나 텍스트 노드를 자식처럼 받아들여 삽입한다. 삽입된 객체는 마지막에 삽입된다. 또한 여러개를 받을 수 있다. html태그 사용 불가능
 appendChild() => 들어오는 매개변수는 요소노드만 가능하다. 삽입된 객체는 마지막에 삽입된다.  또한 한번에 하나의 요소노드만 가능하다. html 태그 사용가능
 prepend() => 들어오는 매개변수 요소노드나 텍스트 노드를 자식처럼 받아들여 삽입한다. 삽입된 객체는 맨 앞에 삽입된다. 또한 여러개를 받을 수 있다. html태그 사용 가능
+before() => 선택된 노드의 전에 위치시킨다.
+after() => 선택된 노드의 뒤에 위치시킨다.
+repalceWith() => 해당된 요소를 매개변수의 값으로 교체한다.
+
+targetElement.insertAdjacentElement(position, element) 
+=>  특정 element를 기준으로 앞뒤, 자식으로의 처음, 마지막 위치로 노드 삽입 또는 이동을 하게 도와주는 메서드이다.
+beforebegin: targetElement의 앞
+afterbegin: targetElement 자식 요소의 첫 번째 위치
+beforeend: targetElement 자식요소의 마지막 위치
+afterend: targetElement의 뒤
+
+4. DOM 노드 복제하기
+
+
+
+
+
+
+
+
+
+
+
 
 
 
