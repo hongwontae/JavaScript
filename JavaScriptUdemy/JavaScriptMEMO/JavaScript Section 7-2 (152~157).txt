@@ -41,7 +41,7 @@ Parent => 직접적인 부모 노드
 Ancestor => 직접 또는 간접적인 부모 노드
 
 
-5. 자식 노드 탐색하기
+5. 자식 노드 탐색하기 (dom-02-basic-selection-code) (childparent.js)
 (-- review : DOM트리는 노드로 이루어져있다. 노드는 요소노드(html태그)/ 텍스트 노드 etc..로 이루어져 있다.)
 .children => 반환타입은 HTMLCollection (유사 배열 객체)이고 자식들을 모두 보여준다. (요소노드)
 .childNodes => 반환타입은 NodeList (유사 배열 객체)이고 자식들을 모두 보여준다. (요소노드 + 텍스트 노드)
@@ -51,7 +51,7 @@ Ancestor => 직접 또는 간접적인 부모 노드
 .lastElementChild => firstElementChild의 반대
 
 
-6. 부모노드와 부모요소 사용하기
+6. 부모노드와 부모요소 사용하기 (dom-02-basic-selection-code) (childparent.js)
 .parentElement => 부모의 요소를 반환한다. 부모가 없다면 null을 반환한다.
 (부모가 요소여야만 요소를 반환한다.)
 .parentNode => 부모의 노드를 반환한다. 부모가 없다면 null을 반환한다.

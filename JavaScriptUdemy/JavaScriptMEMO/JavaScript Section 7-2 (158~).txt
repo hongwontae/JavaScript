@@ -1,0 +1,10 @@
+1. 형제 요소 선택하기
+.previousSibling => 가장 가까운 이전 형제 노드를 선택한다.
+.previousElemnetSibling => 가장 가까운 이전 형제 요소 노드를 선택한다.
+.nextSibling => 가장 가까운 다음 형제 노드를 선택한다.
+.nextElementSibling => 가장 가까운 다음 형제 요소 노드를 선택한다.
+=> querySelector는 문서 객체를 모두 확인 후에 선택한다. Sibling은 앞이나 뒤를 바로 찾는다.
+=> 성능의 차이가 존재한다.
+
+2. DOM 탐색 vs 쿼리 메서드
+
