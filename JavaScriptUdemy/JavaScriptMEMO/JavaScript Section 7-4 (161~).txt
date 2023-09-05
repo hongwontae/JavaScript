@@ -1,0 +1,18 @@
+1. 코드에서 HTML을 통해 요소 추가하기 (dom-04-styling) (contentsAdd.js)
+.textContent => 부모의 요소일 경우 자식의 텍스트도 모두 반환한다. textContent의 값을 주면 기존 값은 전부 사라지고 새로운 값으로 대체된다.
+.innerHTML => textContent와 같다. 다만 html태그를 사용하여 넣을 수 있다.
+=> 이들은 값이 추가되면 추가된 값만 리렌더링 되는 것이 아니라 선택한 노드들이 모두 리렌더링된다. => 성능이 낮아진다.
+
+.insertAdjacentHTML( , ) => 해당된 위치에 html 컨텐츠를 붙인다. => 해당 컨텐츠만 렌더링된다.
+beforebegin => 맨 처음에 들어간다.
+afterbegin => 두 번쨰에 들어간다.
+beforeend => 마지막의 두 번쨰에 들어간다.
+afterend => 맨 마지막에 들어간다.
+
+
+2. createElement()
+새 요소를 추가하는 다른 접근법이다.
+createElement('') => 매개변수에는 태그 이름만 입력한다. 꺽쇠기호는 필요없다.
+
+
+3. DOM 요소 삽입하기 
