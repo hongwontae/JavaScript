@@ -1,9 +1,9 @@
-1. 코드에서 HTML을 통해 요소 추가하기 (dom-04-styling) (contentsAdd.js)
-.textContent => 부모의 요소일 경우 자식의 텍스트도 모두 반환한다. textContent의 값을 주면 기존 값은 전부 사라지고 새로운 값으로 대체된다.
-.innerHTML => textContent와 같다. 다만 html태그를 사용하여 넣을 수 있다.
-=> 이들은 값이 추가되면 추가된 값만 리렌더링 되는 것이 아니라 선택한 노드들이 모두 리렌더링된다. => 성능이 낮아진다.
+1. 코드에서 HTML을 통해 요소 추가하기 (dom-04-styling) (InnerHTML.js)
+.innerHTML => 요소의내에 포함된 html or xml마크업을 가져온다.
+.innerText => 눈에 보이는 text만 가져온다. => 텍스트 컨텐츠만 가져온다.
+.textContent => <style>, <script>을 비롯한 모든 요소의 텍스트 컨텐츠를 가져온다.
 
-.insertAdjacentHTML( , ) => 해당된 위치에 html 컨텐츠를 붙인다. => 해당 컨텐츠만 렌더링된다.
+.insertAdjacentHTML( , ) => html or xml 같은 특정 텍스트를 파싱하고 특정 위치에 DOM Tree 안에 원하는 node들을 추가한다. 이미 사용중인 element는 다시 파싱하지 않는다. innerHTML보다 성능이 높다.
 beforebegin => 맨 처음에 들어간다.
 afterbegin => 두 번쨰에 들어간다.
 beforeend => 마지막의 두 번쨰에 들어간다.
@@ -19,4 +19,27 @@ createElement('') => 매개변수에는 태그 이름만 입력한다. 꺽쇠기
 append(...n) => 들어오는 매개변수 요소노드나 텍스트 노드를 자식처럼 받아들여 삽입한다. 삽입된 객체는 마지막에 삽입된다. 또한 여러개를 받을 수 있다. html태그 사용 불가능
 appendChild() => 들어오는 매개변수는 요소노드만 가능하다. 삽입된 객체는 마지막에 삽입된다.  또한 한번에 하나의 요소노드만 가능하다. html 태그 사용가능
 prepend() => 들어오는 매개변수 요소노드나 텍스트 노드를 자식처럼 받아들여 삽입한다. 삽입된 객체는 맨 앞에 삽입된다. 또한 여러개를 받을 수 있다. html태그 사용 가능
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
