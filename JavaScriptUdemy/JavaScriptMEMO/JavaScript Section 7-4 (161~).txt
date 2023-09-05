@@ -11,7 +11,7 @@
 createElement('') => 매개변수에는 태그 이름만 입력한다. 꺽쇠기호는 필요없다.
 
 
-3. DOM 요소 삽입하기 (dom-04-styling) (createElement.js)
+3. DOM 요소 삽입하기 (dom-04-styling) (createElement.js) (BeforeAfter.js) (insert.js)
 append(...n) => 들어오는 매개변수 요소노드나 텍스트 노드를 자식처럼 받아들여 삽입한다. 삽입된 객체는 마지막에 삽입된다. 또한 여러개를 받을 수 있다. html태그 사용 불가능
 appendChild() => 들어오는 매개변수는 요소노드만 가능하다. 삽입된 객체는 마지막에 삽입된다.  또한 한번에 하나의 요소노드만 가능하다. html 태그 사용가능
 prepend() => 들어오는 매개변수 요소노드나 텍스트 노드를 자식처럼 받아들여 삽입한다. 삽입된 객체는 맨 앞에 삽입된다. 또한 여러개를 받을 수 있다. html태그 사용 가능
@@ -25,6 +25,7 @@ beforebegin: targetElement의 앞
 afterbegin: targetElement 자식 요소의 첫 번째 위치
 beforeend: targetElement 자식요소의 마지막 위치
 afterend: targetElement의 뒤
+
 
 4. DOM 노드 복제하기
 
