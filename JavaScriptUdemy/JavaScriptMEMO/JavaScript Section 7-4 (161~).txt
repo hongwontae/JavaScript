@@ -10,9 +10,13 @@ beforeend => 마지막의 두 번쨰에 들어간다.
 afterend => 맨 마지막에 들어간다.
 
 
-2. createElement()
+2. createElement() (dom-04-styling) (createElement.js) 
 새 요소를 추가하는 다른 접근법이다.
 createElement('') => 매개변수에는 태그 이름만 입력한다. 꺽쇠기호는 필요없다.
 
 
-3. DOM 요소 삽입하기 
+3. DOM 요소 삽입하기 (dom-04-styling) (createElement.js)
+append(...n) => 들어오는 매개변수 요소노드나 텍스트 노드를 자식처럼 받아들여 삽입한다. 삽입된 객체는 마지막에 삽입된다. 또한 여러개를 받을 수 있다. html태그 사용 불가능
+appendChild() => 들어오는 매개변수는 요소노드만 가능하다. 삽입된 객체는 마지막에 삽입된다.  또한 한번에 하나의 요소노드만 가능하다. html 태그 사용가능
+prepend() => 들어오는 매개변수 요소노드나 텍스트 노드를 자식처럼 받아들여 삽입한다. 삽입된 객체는 맨 앞에 삽입된다. 또한 여러개를 받을 수 있다. html태그 사용 가능
+
