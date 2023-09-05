@@ -7,4 +7,4 @@
 => 성능의 차이가 존재한다.
 
 2. DOM 탐색 vs 쿼리 메서드
-
+DOM을 기준으로 firstElementChild나 previousSibling등을 사용해서 노드를 선택하면 HTML의 코드가 변할 시 선택대상도 바뀔 수 있으니 조심해야 한다.
