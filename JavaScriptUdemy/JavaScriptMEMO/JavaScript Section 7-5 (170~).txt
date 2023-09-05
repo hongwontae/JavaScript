@@ -1,1 +1,6 @@
-1.
+1. 모달과 추가 버튼 선택하기
+오버레이를 표시하는 기능 => 모달(Modal)
+Our goal => add movie를 누르면 id='add-modal'에 접근해서 visible 클래스를 추가하는 것이다.
+
+
+2. CSS 클래스 변경을 통한 모달 열기
