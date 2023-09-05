@@ -1,5 +1,5 @@
 1. 코드에서 HTML을 통해 요소 추가하기 (dom-04-styling) (InnerHTML.js)
-.innerHTML => 요소의내에 포함된 html or xml마크업을 가져온다.
+.innerHTML => 요소내에 포함된 html or xml마크업을 가져온다.
 .innerText => 눈에 보이는 text만 가져온다. => 텍스트 컨텐츠만 가져온다.
 .textContent => <style>, <script>을 비롯한 모든 요소의 텍스트 컨텐츠를 가져온다.
 
@@ -29,7 +29,7 @@ afterend: targetElement의 뒤
 
 4. DOM 노드 복제하기
 cloneNode() => 노드를 복제해서 새로운 노드를 반환한다.
-인자에 false => 해당된 노드만 복제한다./ 해당된 노드만 => 텍스트 주석 다 무시한다.
+인자에 false => 해당된 노드만 복제한다./ 해당된 요소만 => 텍스트 주석 다 무시한다.
 인자에 true => 자손 노드도 복제한다. / 텍스트도 가져온다. 대체로 true값을 사용한다.
 
 

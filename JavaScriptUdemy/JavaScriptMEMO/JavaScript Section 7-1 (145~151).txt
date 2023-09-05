@@ -28,14 +28,14 @@ DOM = document은 노드를 이용한 트리구조로 이루어져 있다.
 
 4. DOM 쿼리
 querySelector => class와 id와 html tag를 매개변수로 넣으면 일치하는 첫 번째 값을 반환한다. 다만 class는 .으로 id는 #으로 표기하여 사용해야 한다.
-querySelectorAll => class,id,tag를 매개변수에 넣으면 일치하는 모든 것을 반환한다. css 선택자 규칙을 지켜야 한다.
+querySelectorAll => class,id,tag를 매개변수에 넣으면 일치하는 모든 것을 반환한다. css 선택자 규칙을 지켜야 한다. nodeList 유사배열이 반환된다.
 => query들은 일치하는 요소가 없다면 null를 반환한다.
 
 -- queryselector와 다르게 css규칙을 제거하고 사용해야 반환된다.
 getElementById => 일치하는 id의 html을 반환한다.
 getElemnetByClassName => 일치하는 Class를 모두 반환한다. HTMLCollection이라는 배열에 담겨서 반환된다.
 getElementByTagName => 일치하는 html태그를 모두 반환한다. HTMLCollection이라는 배열에 담겨서 반환된다.
-HTMLCollectio에 반환되는 className이나 TagName이 해당되는 요소가 없다면 빈 collectio 배열을 반환한다.
+HTMLCollectio에 반환되는 className이나 TagName이 해당되는 요소가 없다면 빈 collection 배열을 반환한다.
 
 노드는 텍스트, Element(html 태그), 주석, Cdata 등이 포함된 DOM을 이루는 객체이다.
 Element는 html 태그일 뿐이다.
@@ -47,7 +47,6 @@ document => 문서객체중에서 getElementById(mt) => main-title의 css id를 
 
 부모 노드가 자식 노드를 찾기 위해서는 const h1 = document.getElementById('main-title')로 해당 노드를 지정한 후에 변수명(h1)으로 자식 노드를 찾아야 한다. => 굳이 이렇게 안 찾아도 된다.
 
-getElementByClassName => 문서 객체가 유사 배열로 형식의 값으로 반환된다. for/ for-of 구문이 작동된다.
 
 
 

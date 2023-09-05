@@ -43,8 +43,9 @@ Ancestor => 직접 또는 간접적인 부모 노드
 
 5. 자식 노드 탐색하기 (dom-02-basic-selection-code) (childparent.js)
 (-- review : DOM트리는 노드로 이루어져있다. 노드는 요소노드(html태그)/ 텍스트 노드 etc..로 이루어져 있다.)
+
 .children => 반환타입은 HTMLCollection (유사 배열 객체)이고 자식들을 모두 보여준다. (요소노드)
-.childNodes => 반환타입은 NodeList (유사 배열 객체)이고 자식들을 모두 보여준다. (요소노드 + 텍스트 노드)
+.childNodes => 반환타입은 NodeList (유사 배열 객체)이고 자식들을 모두 보여준다. (요소노드 + 비요소 노드)
 .fistChild => 자식요소 첫 번쨰의 텍스트 노드에 접근한다.
 .firstElementChild => 자식요소 첫 번째의 요소노드에 접근한다.
 .lastChild => firstChild의 반대

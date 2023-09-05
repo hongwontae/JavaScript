@@ -6,7 +6,7 @@ console.log(addMovieModal)
 
 const startAddMovieButton = document.querySelector('header button')
 const startAddMovieButton2 = document.querySelector('header').lastElementChild
-const startAddMovieButton3 = document.querySelector('header').firstElementChild // 이건 불가능
+const startAddMovieButton3 = document.querySelector('header').firstElementChild 
 
 
 console.log(startAddMovieButton)
