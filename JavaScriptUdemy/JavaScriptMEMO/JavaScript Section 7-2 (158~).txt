@@ -1,4 +1,4 @@
-1. 형제 요소 선택하기
+1. 형제 요소 선택하기 (dom-03-dom-traversing)
 .previousSibling => 가장 가까운 이전 형제 노드를 선택한다.
 .previousElemnetSibling => 가장 가까운 이전 형제 요소 노드를 선택한다.
 .nextSibling => 가장 가까운 다음 형제 노드를 선택한다.
@@ -8,3 +8,13 @@
 
 2. DOM 탐색 vs 쿼리 메서드
 DOM을 기준으로 firstElementChild나 previousSibling등을 사용해서 노드를 선택하면 HTML의 코드가 변할 시 선택대상도 바뀔 수 있으니 조심해야 한다.
+
+
+3. DOM 요소 스타일링하기 (dom-04-styling)
+JS로 스타일 작업을 하는 것은 HTML 문서의 요소에 인라인 스타일을 사용하는 것과 같다.
+
+classList => CSS 클래스를 변경,추가,삭제를 할 수 있는 빌트인 JS객체이다.
+classList.toggle('') => 매개변수가 있으면 삭제하고 없으면 추가하는 메서드이다.
+classList.add => 추가/ classList.remove => 제거/ classList.contains() => 있는지 없는지 불리언으로 나타냄
+
+
