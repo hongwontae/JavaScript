@@ -4,3 +4,8 @@ Our goal => add movie를 누르면 id='add-modal'에 접근해서 visible 클래
 
 
 2. CSS 클래스 변경을 통한 모달 열기
+classList의 toggle()메서드를 사용해야 한다.
+toggle('클래스 이름') => 해당되는 클래스 이름이 없다면 추가하고 있으면 삭제하는 메서드
+
+
+3. 배경(backdrop) 제어하기
