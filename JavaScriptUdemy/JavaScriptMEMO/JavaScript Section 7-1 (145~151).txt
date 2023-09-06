@@ -35,7 +35,7 @@ querySelectorAll => class,id,tag를 매개변수에 넣으면 일치하는 모�
 getElementById => 일치하는 id의 html을 반환한다. 요소를 반환한다.
 getElemnetByClassName => 일치하는 Class를 모두 반환한다. HTMLCollection이라는 배열에 담겨서 반환된다.
 getElementByTagName => 일치하는 html태그를 모두 반환한다. HTMLCollection이라는 배열에 담겨서 반환된다.
-HTMLCollectio에 반환되는 className이나 TagName이 해당되는 요소가 없다면 빈 collection 배열을 반환한다.
+HTMLCollection에 반환되는 className이나 TagName이 해당되는 요소가 없다면 빈 collection 배열을 반환한다.
 
 노드는 텍스트, Element(html 태그), 주석, Cdata 등이 포함된 DOM을 이루는 객체이다.
 Element는 html 태그일 뿐이다.

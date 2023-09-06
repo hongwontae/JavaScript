@@ -7,3 +7,40 @@ Iterable은 반복가능한 객체를 의미한다. => Symbol의 개념을 알�
 
 
 
+2. 배열 생성하기 (arrays-01-starting-code)
+일반적인 방법 => const number = [1,2,3,4,5] / 예외적인 사항을 제외하고 대부분 이 방식을 사용한다.
+길이는 1부터/ 인덱스는 0부터
+
+const moreNumber = new Array(1,2,3); => (3) [1,2,3]
+생성자 함수를 사용하여 배열을 생성하는 방법이다. 마찬가지로 배열의 타입은 일정하지 않아도 된다.
+다만 배열 생성자 함수에 단일 숫자만을 넣게 되면 그 숫자만큼 빈 배열이 생성된다.
+new는 생략이 가능하다.
+
+const yetMoreNumber = Array.of(1,2) => (2) [1,2]
+일반적인 배열 생성의 로직과 같다.
+
+const arrayFrom = Array.from(..);
+=> Array.from 안에는 Iterable이나 유사 배열 객체가 들어가서 일반 배열로 반환되는 메서드이다. 일반 배열을 넣어도 된다.
+
+ex) const arraylike = Array.from("Hi!") => (3) ['H','i','!']
+   => 유사배열객체 = String이 일반 배열로 반환된다.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
