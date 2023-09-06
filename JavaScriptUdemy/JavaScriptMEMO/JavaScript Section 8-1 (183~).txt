@@ -1,1 +1,9 @@
-JavaScript Section 8-1 (183~)
+1. Iterable과 유사 배열 객체란?
+Iterable과 유사 배열 객체는 배열이 아니다.
+Iterable은 반복가능한 객체를 의미한다. => Symbol의 개념을 알아야한다. 나중에 알아보자
+유사 배열 객체는 nodelList, HTMLCollection, String etc....
+
+두 객체는 for-of를 사용할 수 있고 길이(length)를 가지고 있다. 이를 제외하면 일반배열에서 사용할 수 있는 메서드들을 사용할 수 없다.
+
+
+
