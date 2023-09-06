@@ -17,3 +17,6 @@ console.log(listItem[0].textContent)
 
 const listItem2 = document.getElementsByTagName('li');
 console.log(listItem2)
+
+const arr = [1,2,3,function ko(){}, {ko:1},[1,[1,2],3]]
+console.log(arr)
