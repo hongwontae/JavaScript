@@ -10,3 +10,11 @@ toggle('클래스 이름') => 해당되는 클래스 이름이 없다면 추가�
 
 3. 배경(backdrop) 제어하기 (dom-09-handling-movie-modal)
 배경을 누르면 모달창이 사라지는 로직 구성 => classList.toggle를 이용했다.
+
+
+4. 사용자 입력 페칭 및 검증
+trim() => 공백제거
+input값을 가져올 떄 js의 행동요령
+
+
+5.
