@@ -15,6 +15,8 @@ const userInputs2 = addMovieModal.getElementsByTagName('input')
 console.log(userInputs) // nodeList
 console.log(userInputs2) // HTMLCollection
 
+const movies = [];
+
 
 const toggleBackdrop = () => {
   backdrop.classList.toggle('visible');
@@ -29,6 +31,12 @@ const cancelAddMovieHandler = () => {
   toggleMovieModal();
 };
 
+const clearMovieInput = () => {
+  for(const userInput of userInputs){
+    userInput.value = '';
+  }
+}
+
 const addMovieHandler = () => {
   const titleValue = userInputs[0].value
   const imageURLValue = userInputs[1].value
@@ -39,6 +47,17 @@ const addMovieHandler = () => {
       alert('Invalid')
       return
     }
+
+  const newMovie ={
+    title : titleValue,
+    image : imageURLValue,
+    rating : ratingValue
+  }
+
+  movies.push(newMovie)
+  console.log(movies)
+  toggleMovieModal();
+  clearMovieInput();
 
 }
 
