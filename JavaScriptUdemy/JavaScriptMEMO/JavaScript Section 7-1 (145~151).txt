@@ -45,7 +45,6 @@ Element는 html 태그일 뿐이다.
 console.dir(document.getElementById('main-title')) => console.dir() 객체를 표현한다.
 document => 문서객체중에서 getElementById(mt) => main-title의 css id를 가지고 있는 js읽을 수 있는 html를 가져와라
 
-부모 노드가 자식 노드를 찾기 위해서는 const h1 = document.getElementById('main-title')로 해당 노드를 지정한 후에 변수명(h1)으로 자식 노드를 찾아야 한다. => 굳이 이렇게 안 찾아도 된다.
 
 
 
