@@ -1,0 +1,2 @@
+InnnerHtml/ InnerText/ textContent
+해당 요소를 건드리는 것이 아니라 해당 요소 안의 태그와 텍스들을 출력하는 용도이다.
