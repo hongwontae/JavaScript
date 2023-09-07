@@ -1,4 +1,4 @@
-1. 분산 연산자(전개 연산자)
+1. 분산 연산자(전개 연산자) (Spread Operator)
 전개 연산자는 배열의 모든 요소를 꺼내 개별 요소의 리스트로 변환한다.
 => const b1 = [1,2,3,4,5]/ const b2 = ...b1 => 1,2,3,4,5
 => 요소의 리스로 반환된다.
@@ -18,5 +18,63 @@ const a1 = [1,2,3,4,5]/ const a2= [...a1]
   age: person.age
 }));
 => person.name를 값에 줘야한다. 고급반복의 첫 번쨰 인자는 element 각 요소인데 그냥 이렇게 하는거 같다.
+
+
+2. 배열 구조 분해 이해하기
+const nameData = ['Max', 'Schwarz'];
+// const firstName = nameData[0];
+// const lastName = nameData[1];
+=> 이러한 방식을 사용해도 좋지만 조금 빠른 방법이 존재한다.
+
+const [name1,name2] = nameData;
+console.log(name1,name2)
+=> const/let/var 앞에 []를 작성하고 = 데이터를 꺼낼 배열
+=> JS가 순서에 맞게 [] 변수명으로 배열값을 저장한다.
+
+배열의 전부나 나머지를 모두 꺼내서 변수에 넣고 싶은 경우
+const nameData = ['Max', 'Schwarz', 'Mr', 30];
+const [ firstName, lastName, ...otherInformation ] = nameData;
+... => Rest연산자라고 부른다. 배열에 남아있는 모든 요소를 수집하여 새로운 변수에 저장한다.
+=> firstName가 lastName에 값이 할당되고 남은 값들을 ...otherInformation에 배열 형태로 담는 로직이다.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
