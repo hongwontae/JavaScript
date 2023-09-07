@@ -1,0 +1,128 @@
+DOM => Document Object Model이며 HTML이 화면에 렌더링 될 떄 JS가 읽을 수 있는 객체가 생성되는데 이를 DOM이라고 한다.
+BOM => Browser Object Mdoel이며 브라우저 객체를 뜻한다. window가 최상위 객체이며 여기서 js의 모든 객체가 파생된다. dom은 bom의 속해있다.
+
+
+window => 전역객체이다. 사실 window.alert()이 window가 생략할 수 있다./ 브라우저 창의 정보를 가지고 있다.
+
+
+dom 노드
+노드는 dom 트리를 이루고 있는 조각이다. 
+노드 => html노드, 텍스트 노드, 주석 노드를 뜻한다.
+
+
+dom 쿼리
+querySelector() => css class, id, html태그를 매개변수에 넣을 수 있으며 맨 처음 일치하는 것 하나만 선택된다. css 규칙을 함께 적어야 한다.
+querySeletorAll() => class, 태그를 매개변수에 넣을 수 있으며 해당되는 모든 노드들을 반환한다. 이떄 nodeList라는 유사 배열 객체로 반환된다.
+
+getElemnetById => css id(css 규칙x)없이 요소 노드를 반환한다.
+getElementByClassName => 일치하는 css class를 모두 반환한다. HTMLCollectio이라는 유사 배열 객체에 담겨서 반환된다.
+getElementByTagName => 일치하는 태그를 모두 반환한다. HTMLCollection이라는 유사 배열 객체에 담겨서 반환된다.
+
+nodeList vs HTMLCollection
+HTMLCollection와 NodeList의 첫 번째 차이점은 HTMLCollection 객체는 <div>, <span>, <p> 등과 같은 요소 노드만 포함하고 NodeList 객체는 요소 노드, 속성 노드, 텍스트 노드 등을 포함한다는 것입니다.
+nodeList는 정적이고 HTMLCollection은 동적이다.
+
+
+dom 정보 읽어오기
+.className => class
+.id => id
+.textContent => text가져오기
+.style.backgroundColor => css 작업하기
+
+
+속성 vs 프로퍼티
+속성은 html 프로퍼티는 js
+
+
+자식 노드
+children => htmlcollection에 담겨 자식들 반환
+childNodes => nodeList
+firstChild => 자식 첫 번쨰 노드
+firstElementChild => 자식 첫 번쨰 요소 노드
+lastChild => 자식 마지막 노드
+lastElementChild => 자식 마지막 요소
+
+
+부모 노드
+parentNode => 부모의 노드 반환
+parentElement => 부모의 요소 반환
+
+형제 노드
+previousSibling => 이전 형제 노드
+previousElementSibling => 이전 형제 요소 노드
+nextSibling => 다음 형제 노드
+nextElementSibling => 다음 형제 요소 노드
+
+
+classList
+classList.toggle() => 매개변수의 css가 있으면 추가하고 없으면 제거하는 메서드
+.add() => 추가하는 메서드
+.remove() => 제거하는 메서드
+.contains() => true/false 있는지 없는지
+
+
+text
+innerHTML => 해당 요소내의 html,xml를 가져온다.
+innerText => 해당 요소의 텍스트만 가져온다.
+textContent => 해당 요소의 텍스트와 스타일태그, 스크립트 태그 등의 화면에 출력되지 않은 텍스트도 가져온다.
+=> 이들은 값을 변경할 때 모든 요소에 접근하여 변경하기에 성능이 떨어질 수 있다.
+
+insertAdjacentHTML => 원하는 곳에 접근하여 텍스트를 넣어줄 수 있다. 
+
+
+CreateElement => 요소를 생성한다.
+append() => 자식 요소의 마지막에 요소노드, 텍스트 노드를 삽입한다. 매개변수는 여러개를 넣을 수 있다. 태그는 사용불가능하다.
+appendChild() => 자식 요소의 마지막에 요소드만 삽입한다. 매개변수는 한 개이며 태그를 사용할 수 있다.
+prepend() => 자식 요소의 맨 앞에 요소노드와 텍스트 노드를 삽입한다. 매개변수는 여러개 사용할 수 있고 태그도 사용가능하다.
+before() => 선택된 노드 앞에 넣는다.
+after() => 선택된 노드 뒤에 넣는다.
+replaceWith() => 선택된 노드와 매개변수의 요소를 교체한다.
+
+
+insertAdjacentElement
+beforebegin => 해당 노드의 앞
+afterend => 해당 노드 뒤
+afterbegin => 해당 노드의 자식 앞
+beforeend => 해당 노드의 자식 마지막 
+
+
+cloneNode => 인자에 false => 요소만 복제/ 인자에 true => 노드 자체를 복사
+
+
+제거
+remove => 해당 요소를 삭제
+removeChild => 해당 요소의 자식을 삭제
+
+
+bind() => 함수의 매개변수가 다른 함수의 매개변수가 될 떄 bind해주는 것을 의미한다.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
