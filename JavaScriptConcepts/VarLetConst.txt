@@ -1,0 +1,4 @@
+let/const
+=> block level scope
+=> 변수 중복 선언 불가
+=> 호이스팅 불가

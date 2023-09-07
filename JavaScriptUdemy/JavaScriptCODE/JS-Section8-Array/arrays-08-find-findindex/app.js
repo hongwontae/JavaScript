@@ -15,3 +15,15 @@ const maxIndex = personData.findIndex((person, idx, persons) => {
 });
 
 console.log(maxIndex);
+
+
+const number = [{num:1},{num :2}]
+console.log(number.indexOf({num:1})) // -1
+
+const fifi = number.find((nums, idx, numbers) => {
+  let a = nums.num === 2;
+  return a;
+})
+console.log(fifi)
+
+
