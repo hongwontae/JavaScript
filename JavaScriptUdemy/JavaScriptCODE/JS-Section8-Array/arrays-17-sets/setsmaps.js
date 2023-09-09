@@ -1,9 +1,15 @@
-// const ids = new Set(['Hi', 'from', 'set!']);
-// ids.add(2);
-// if (ids.has('Hi')) {
-//   ids.delete('Hi');
-// }
+const ids = new Set(['HI','From','Set']);
+ids.add(2)
 
-// for (const entry of ids.entries()) {
-//   console.log(entry[0]);
-// }
+ids.delete('Set')
+console.log(ids)
+console.log(ids[0])
+console.log(ids.has(1))
+console.log(ids.has(5))
+
+console.log(ids.entries())
+
+for(const entry of ids.entries()){
+    console.log(entry[0])
+}
+

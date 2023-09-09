@@ -1,0 +1,6 @@
+set,map,string,array => iterable
+
+Iteration protocol Iteration protocol은 어떠한 객체든 특정 조건을 만족하면 Iterable 또는 Iterator로 평가 받을 수 있도록 하는 규약이다.
+
+Iterable => 반복 가능한 객체를 의미한다. Iterable로 평가된 값은 for...of문, 전개 문법(Spread syntax), 구조 분해 할당(Destructuring) 등에 사용 할 수 있다.
+
