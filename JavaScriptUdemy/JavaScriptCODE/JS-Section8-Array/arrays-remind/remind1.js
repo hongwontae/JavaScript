@@ -140,7 +140,26 @@ const f6  = f2.indexOf(111);
 console.log(f6); // 매개변수 값에 일치하는 인덱스가 없으면 indexOf는 -1를 반환한다.
 
 
+console.log('-------------------------------------------------------------------')
+console.log('find()/ findIndex()')
+// find는 매개변수로 콜백을 받는다.
 
+const g = [{name : 'hwt', age : 10, team : 'RiverPool'}]
+
+const g1 = g.find( (play, idx, arr) => {
+    return play.age === 10
+})
+
+console.log(g1);
+
+g1.name = 'hhhh' // 같은 주소값을 가지고 있기 때문에 g1의 객체를 변경하면 g의 배열안의 객체도 바뀐다. => 고려하여 사용해야 한다.
+console.log(g);
+console.log(g1)
+
+const g2 = g.findIndex((a,b,c) => {
+    return a.team === 'RiverPool'
+})
+console.log(g2); // 0 findIndexOf => find와 같지만 인덱스를 반환한다.
 
 
 
