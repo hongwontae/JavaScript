@@ -27,3 +27,25 @@ console.log('배열의 값 원칙')
 // 배열의 값 원칙
 const a4 = [1,2,'asd',true,{kkk : 'ko'},[111,222],function b(){}]; // 아무거나 넣어도 된다. 원시값이든 참조값이든..
 console.log(a4) 
+
+
+console.log('-------------------------------------------------------------------')
+console.log('push, unshift, pop, shift')
+
+const b = [1,2,3,4,5,6,7,8,9,10]
+b.push(111) // 배열의 마지막에 추가하는 메서드
+console.log(b)
+
+b.unshift(0); // 배열의 맨 처음에 추가하는 메서드  
+// ★ unshift/shift로직은 맨 처음에 값을 추가하기 위해서 기존의 값들을 한 칸씩 옆으로 치우고 그 자리에 넣는 것이다.
+// push와 pop은 마지막에 추가하거나 뺴기만 한다. => push와 pop이 성능이 더 좋다.
+console.log(b);
+
+b.pop() // 마지막 배열의 값을 삭제하는 메서드
+console.log(b); 
+
+b.shift() // 첫 번쨰 배열의 값을 삭제하는 메서드
+console.log(b);
+
+
+
