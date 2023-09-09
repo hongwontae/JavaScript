@@ -153,6 +153,15 @@ console.log(persons);
 
 
 8. weakMap()
+const personData = new WeakMap();
+personData.set(person, 'Extra info!');
+
+person = null;
+
+console.log(personData);
+=> 가비지 컬렉터의 차이이다.
+
+weakSet,WeakMap은 일반적인 set,map보다 사용할 수 있는 메서드가 적다.
 
 
 
