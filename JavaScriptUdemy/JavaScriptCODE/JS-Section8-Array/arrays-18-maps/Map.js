@@ -116,6 +116,11 @@ for(const [key,values] of player2.entries()){
     console.log(key)
     console.log(values)
 }
+console.log(player2.entries())
 
-const c = new Map([1,2,3],[4,5,6]);
-console.log(c)
+// const c = new Map(1,2,3);
+// console.log(c)
+
+// const c1 = new Map([12,21],[20,22]);
+// console.log(c1)
+
