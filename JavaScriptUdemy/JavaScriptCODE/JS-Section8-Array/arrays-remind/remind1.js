@@ -116,3 +116,32 @@ console.log(e.concat([11,12,13,14]))
 
 const e1 = e.concat(1,2,3);
 console.log(e1);
+
+
+console.log('-------------------------------------------------------------------')
+console.log('indexOf(), lastIndexOf()')
+
+const f = [1,2,3,4,5,6,7,8,9,10]
+const f1 = f.indexOf(2);
+console.log(f1);
+
+const f2 = [1,2,3,4,5,1,2,3,4,5]
+const f3 = f2.indexOf(2);
+console.log(f3);
+// f2의 배열에서 2의 값의 인덱스 위치는 두개이다. indexOf의 로직은 왼쪽에서 일치하는 값을 찾으면 인덱스를 반환하고 종료한다.
+const f4 = f2.indexOf(2,2);
+console.log(f4) 
+// 일치하는 값을 정확하게 찾기 위해 두 번쨰 매개변수가 있는 것이다. 두 번쨰 매개변수는 그 인덱스 이후부터 일치하는 값을 찾으라는 뜻이다.
+
+const f5 = f2.lastIndexOf(3);
+console.log(f5); // indexOf와 로직이 같지만 lastIndexOf는 왼쪽부터 찾는다.
+
+const f6  = f2.indexOf(111);
+console.log(f6); // 매개변수 값에 일치하는 인덱스가 없으면 indexOf는 -1를 반환한다.
+
+
+
+
+
+
+
