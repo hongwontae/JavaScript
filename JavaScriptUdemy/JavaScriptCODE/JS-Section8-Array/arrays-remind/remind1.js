@@ -48,4 +48,31 @@ b.shift() // 첫 번쨰 배열의 값을 삭제하는 메서드
 console.log(b);
 
 
+console.log('-------------------------------------------------------------------')
+console.log('splice()')
 
+const c = [1,2,3,4,5,6,7,8,9,10]
+c.splice(2,2)
+console.log(c)
+
+const c1 = [10,20,30,40,50]
+c1.splice(1,3,100,200)
+console.log(c1)
+
+const c2 = [100,200,300,400,500,600]
+c2.splice(3)
+console.log(c2)
+
+const c3 = [1000,2000,3000,4000,5000,6000,7000]
+console.log(c3);
+
+const c4 = c3.splice(1,2,'aaa')
+console.log(c4) // 제거된 배열의 값 배열로 출력
+
+c3.push(100000);
+console.log(c3)
+console.log(c4[0]) // 제거된 배열의 값 배열 인덱스 값 반환된다.
+
+// 이 결과는 무엇을 의미하는가?
+// splice의 메서드를 다른 변수에 넣으면 그 반환값은 splice()로 제거된 배열의 값이 출력된다.
+// => splice()는 참조값을 따질것도 없다는 것이다.
