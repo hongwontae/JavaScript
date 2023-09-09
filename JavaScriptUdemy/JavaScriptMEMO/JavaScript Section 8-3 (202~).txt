@@ -39,7 +39,7 @@ const [ firstName, lastName, ...otherInformation ] = nameData;
 
 
 3. Maps & Sets
-JS에서는 3개의 주요 데이터 구조가 존재한다. (array, sets, maps)
+JS에서는 4개의 주요 데이터 구조가 존재한다. (array, sets, maps, Object)
 Array => 배열 메서드 사용가능, 요소의 순서가 보장된다. 중복를 허용한다. 인덱스를 사용한다.
 Sets => 데이터 구조를 뜻하며, 배열 메서드가 아닌 sets 메서드를 사용한다. Array.from 메서드를 통해 이터러블 set를 배열로 변환할 수 있다. 요소의 순서를 보장하지 않는다. 중복을 허용하지 않는다. 인덱스 기반으로 접근하지 않는다.
 Maps => 키-값으로 데이터를 저장한다. maps은 키로 배열이나 또 다른 객체를 가질 수 있다. (일반 객체는 불가능)
@@ -47,7 +47,7 @@ maps 메서드를 사용한다. 순서를 보장한다. 중복 키는 허용하�
 
 
 4. Sets
-- 셋(Set)은 중복을 허용하지 않는 값을 모아놓은 특별한 컬렉션이다.
+- 셋(Set)은 중복을 허용하지 않는 값을 모아놓은 특별한 컬렉션이다. (고유한 값을 다루고 싶을 떄 set을 사용한다.)
 - 셋(Set)은 키가 없는 값을 저장한다는 점에서 배열(array)과 유사하다.
 
 new Set(iterable) : 셋 객체를 만든다. (배열이나 이터러블 객체를 전달하면 그 안의 값을 복사해 셋에 넣어준다.)
@@ -65,7 +65,17 @@ forEach(callFuc(value, valueAgain, set)) : 내장 메서드인 forEach 반복문
 => 같은 값이 두 번 반환된다. 키-값으로
 
 배열을 셋으로, 셋을 배열로 변환하기
+let mineSet3 = new Set([0, 1, 2, 3]);
 
+// 1. 전개 연산자 사용
+const arr1 = [...mineSet3];
+console.log(arr1); // [0, 1, 2, 3]
+
+// 2. Array.from 사용
+const arr2 = Array.from(mineSet3);
+console.log(arr2); // [0, 1, 2, 3]
+
+new Set() => 하나의 배열이나 하나의 이터러블만 가능하다. 매개변수로..
 
 
 5. Maps
@@ -107,13 +117,42 @@ ex) for(const [key,values] of player2.entries()){
     console.log(values)
 }
 console.log(player2.entries())
-=> 이건 그냥 외우지 공식이다.
+=> 배열 구조 분해를 생각해보자
 
 
 맵을 객체로/ 객체를 맵으로 바꾸는 방법
 Object.entreis - object를 map으로 변환
 Object.fromEntries - map을 object로 변환 (자료가 map에 저장되어있는데, third-party code에서 자료를 object로 넘겨받길 원할 때 이 방법을 사용할 수 있음)
 
+
+=> set과 map 둘다 entries()로 나오는 값은 배열이라고 생각하자. 그렇기에 for-of가 가능하다. map의 경우에 하나의 배열에 키와 값을 가지고 있다. 그렇다면 keys(), values()도 배열이라고 생각하면 된다.
+
+
+6. Maps vs 객체
+map은 어느 타입이든지 키로 사용될 수 있다.
+map은 많은 데이터를 처리하는데 있어서 객체보다 성능이 뛰어나다.
+map은 객체의 키-값을 add/delete하는데 성능이 obj보다 좋다.
+
+Object는 String, symbols, number만 키로 사용될 수 있다.
+Object는 작거나 중간 크기의 데이터를 처리하는데 map보다 뛰어나다.
+Object는 create할 떄 빠르다.
+
+
+7. weakMap()
+let person = {name: 'Max'};
+const persons = new WeakSet();
+persons.add(person);
+
+// ... some operations
+person = null;
+
+console.log(persons);
+=> set에 person이라는 객체를 저장했다. 그렇다면 기존의 person은 필요없어진 data가 되었다. weakSet()은 객체의  값에 null을 할당하면 메모리 값은 null이 되고 가비지 컬렉터는 필요없는 객체로 인식되어 힙영역에서 제거한다.
+일반적인 set은 person = null을 해도 메모리 값에는 null이고 힙 영역에는 메모리가 할당된다. 
+가비지 컬렉터의 차이라고 생각하면 된다.
+
+
+8. weakMap()
 
 
 

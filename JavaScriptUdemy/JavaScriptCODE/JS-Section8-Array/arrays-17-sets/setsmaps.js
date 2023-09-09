@@ -13,3 +13,9 @@ for(const entry of ids.entries()){
     console.log(entry[0])
 }
 
+const kk = new Set([1,2,3])
+console.log(kk)
+
+for(const a of kk.entries()){
+    console.log(a[0])
+} // 배열을 반환한다.
