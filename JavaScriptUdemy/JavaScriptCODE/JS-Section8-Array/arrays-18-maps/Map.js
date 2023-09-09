@@ -124,3 +124,24 @@ console.log(player2.entries())
 // const c1 = new Map([12,21],[20,22]);
 // console.log(c1)
 
+
+// (1) Convert object to map
+let obj = {
+    name: "John",
+    age: 30
+  };
+  
+  let map1 = new Map(Object.entries(obj));
+  console.log( map1.get('name') ); // John
+  console.log(map1) // 변환 완료
+  
+  // (2) Convert map to object
+  let map2 = new Map();
+  map2.set('banana', 1);
+  map2.set('orange', 2);
+  map2.set('meat', 4);
+  
+  let obj2 = Object.fromEntries(map2);
+  // obj = { banana: 1, orange: 2, meat: 4 }
+  
+console.log(obj2) // 일반 객체로 변환 완료

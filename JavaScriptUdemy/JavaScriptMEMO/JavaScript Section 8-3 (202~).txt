@@ -106,6 +106,12 @@ console.log(player2.entries())
 => 이건 그냥 외우지 공식이다.
 
 
+맵을 객체로/ 객체를 맵으로 바꾸는 방법
+Object.entreis - object를 map으로 변환
+Object.fromEntries - map을 object로 변환 (자료가 map에 저장되어있는데, third-party code에서 자료를 object로 넘겨받길 원할 때 이 방법을 사용할 수 있음)
+
+
+
 
 
 
