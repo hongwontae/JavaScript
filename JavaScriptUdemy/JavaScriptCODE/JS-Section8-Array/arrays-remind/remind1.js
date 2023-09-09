@@ -3,8 +3,9 @@
 // Iterable은 나중에 symbol의 개념에서 알아보자
 // 유사배열객체는 for-of/ index활용 가능/ length을 사용할 수 있다. 그러나 배열 메서드는 사용하지 못한다.
 
+console.log('-------------------------------------------------------------------')
+console.log('배열 생성방식')
 // 배열 생성방식
-
 const a = [1,2,3,'hi'] // 일반적으로 많이 사용하는 배열 생성 방식이다.
 console.log(a)
 
@@ -19,3 +20,10 @@ console.log(a3)
 
 const a3EX = Array.from('koala3121') // String은 유사배열객체이다.
 console.log(a3EX)
+
+
+console.log('-------------------------------------------------------------------')
+console.log('배열의 값 원칙')
+// 배열의 값 원칙
+const a4 = [1,2,'asd',true,{kkk : 'ko'},[111,222],function b(){}]; // 아무거나 넣어도 된다. 원시값이든 참조값이든..
+console.log(a4) 
