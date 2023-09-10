@@ -95,3 +95,33 @@ console.log(e1)
 // filter는 제약조건을 단 배열만 가져오는 메서드
 // 반환값은 새로운 배열이다.
 
+
+console.log('-----------------------------------------------------------------------------')
+console.log('reduce')
+
+const f = [1,2,3,4,5,6,7,8,9,10]
+const f1 = f.reduce((acc,cur) => {
+    return acc+cur
+})
+
+console.log(f1); // 55
+
+const f2 = f.reduce((acc,cur) => {
+    return acc+cur
+},10) // [10,1,2,3,4,5,6,7,8,9,10] 초기값을 줌으로 이렇게 게산된다.
+
+console.log(f2);
+
+const numbers = [1,2,3,4,5,6,7,8,9,10]
+
+const avg = numbers.reduce((acc, cur, index, arr) => {
+	if (index === arr.length - 1) { // index가 마지막일 때
+		return (acc + cur) / arr.length; // cur - 4
+	}
+	return acc + cur; // cur - 1, 2, 3
+	}, 0);
+
+console.log("avg", avg);
+// 반환값은 새로운 값
+// acc => 누적된 값, cur => 현재값, index => 인덱스, arr => 현재 reduce되고 있는 배열본체
+// acc+cur[0] = value => value+cur[1] = value2 => value2+cur[2] => value3
