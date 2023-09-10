@@ -68,3 +68,30 @@ d.sort((a,b) => {
 console.log(d);
 // sort를 이용해서 원하는 값을 만드려면 인자에 콜백함수를 주어서 사용해야 한다.
 // sort는 새로운 값을 만드는 것이 아니다. 원본 타입를 수정한다.
+
+
+console.log('-----------------------------------------------------------------------------')
+console.log('reverse()')
+
+d.reverse()
+console.log(d)
+// reverse() => 오름차순을 내림차순으로, 내림차순을 오름차순으로 바꾸는 메서드
+// 새로운 값을 만드는 것이 아니다. 기존의 값 수정하는 것
+
+
+console.log('-----------------------------------------------------------------------------')
+console.log('filter()')
+
+const e = [1,2,3,4,5,6,7,8,9,10]
+const e1 = e.filter((currentValue, idx, arr) => {
+    return currentValue%2 === 1
+})
+console.log(e1)
+
+e.push(100);
+console.log(e)
+console.log(e1)
+
+// filter는 제약조건을 단 배열만 가져오는 메서드
+// 반환값은 새로운 배열이다.
+
