@@ -125,3 +125,22 @@ console.log("avg", avg);
 // 반환값은 새로운 값
 // acc => 누적된 값, cur => 현재값, index => 인덱스, arr => 현재 reduce되고 있는 배열본체
 // acc+cur[0] = value => value+cur[1] = value2 => value2+cur[2] => value3
+
+
+console.log('-----------------------------------------------------------------------------')
+console.log('split(), join()')
+
+let g = 'koala3121, dnjsxoghd, sskksks, dkdkkd'
+let g1 = g.split(', ',2)
+console.log(g1);
+console.log(g);
+// split() => 문자열을 배열로 만드는 메서드이다.
+// 첫번째 인자 => 구분자이다. 문자열을 나누는 기준을 '' 넣는다.
+// 두번쨰 인자 => 최대배열 개수를 의미한다. g는 4개이다. g.split('-',2) => 2개의 배열만 반환된다.
+
+const g2 = ['홍','원','태']
+const g3 = g2.join('');
+console.log(g3);
+// join() => 배열을 문자열로 바꾸는 메서드
+// 인자로 String을 받는다. string을 주면 결합하는 가운데 문자열로 들어간다.
+
