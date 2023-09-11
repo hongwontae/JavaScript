@@ -51,6 +51,41 @@ ex) const a = {name : 'asd', 1 : 'asd',kkk : () => {console.log('Jinggle Bell')}
 but 키가 숫자로만 이루어져 있다면 오름차순으로 정렬된다. 1,2,3 ...
 
 
+키를 변수로 만들어서 활용할 수 도 있다.
+let person = {
+  'first name': 'Max',
+  age: 30,
+  hobbies: ['Sports', 'Cooking'],
+  [userChosenKeyName]: '',
+  greet: function() {
+    alert('Hi there!');
+  },
+  1.5: 'hello'
+};
+
+1. const a = 'first-name'
+person[a] => 'hwt'/ person.a는 undefined가 반환된다.
+=> 기존의 키 값을 변수로 만들어서 활용한다.
+
+2. const userChosenKeyName = 'level';
+let person = {~~
+  [userChosenKeyName]: '',
+~~}
+console.log(person.level)
+=> 키 값을 동적을 생성해서 부여할 수 도 있다.
+=> []에 넣지 않으면 전역에서 생성한 변수를 인식하지 못해서 []안에 넣어서 키값을 부여해야 한다.
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
