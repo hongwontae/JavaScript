@@ -90,6 +90,42 @@ ex) const titleInput = document.getElementById('title').value;
   }
 
 
+6. 객체에 기반해 요소 렌더링하기
+const rendering = () => {
+  const moveList = document.getElementById('movie-list');
+
+  if(movies.length === 0){
+    moveList.classList.remove('visible')
+    return;
+  } else{
+    moveList.classList.add('visible')
+  }
+
+  moveList.innerHTML = '';
+
+  movies.forEach((currentValue) => {
+    const movieEl = document.createElement('li');
+    movieEl.textContent =currentValue.info.title;
+    moveList.append(movieEl);
+  })
+}
+
+=> if문은 들어온 배열이 없다면 moveList의 class에서 visible을 제거하고 끝내버린다. else라면 class에 visible을 추가하고 moveList의 innerHTML을 ''로 만든다. getElementId로 선택된 ul은 li을 자식으로 받는다. 
+
+innerHTML, innerText, textCotent => 모두 태그안의 내용을 반환하는 것이다.
+
+ex) <div id="asd">
+<div> kk </div>
+</div>
+innerHTML은 <div>kk</div>를 출력한다.
+innerText는 kk를 출력한다. => 텍스트만
+textContent도 kk를 출력한다. => 숨겨진 텍스트도 함꼐 (display:none인데 텍스트가 있다면 가져온다.)
+
+const a1 = document.querySelector('#ko')
+a1.innerHTML = '';
+console.log(a1); => 결과는 안쪽의 태그와 텍스트들은 없어진다. (태그안의 내용을 반환하니까)
+
+
 
 
 
