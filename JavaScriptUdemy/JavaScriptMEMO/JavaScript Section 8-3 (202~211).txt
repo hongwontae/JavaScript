@@ -59,7 +59,7 @@ size : 셋(Set) 객체 안에 있는 요소의 개수를 반환한다.
 keys() : 셋 내의 모든 값을 포함하는 반복 가능한 iterable(이터러블) 객체를 반환한다.
 values() : keys()와 동일한 작업을 한다. (맵과의 호환성을 위해 만들어진 메서드다.)
 entries() : 셋 내의 각 값을 이용해 만든 [value, value] 배열을 포함하는 이터러블 객체를 반환한다. (맵과의 호환성을 위해 만들어진 메서드다.)
-forEach(callFuc(value, valueAgain, set)) : 내장 메서드인 forEach 반복문이다. (맵과의 호환성을 위해 콜백 변수가 3개이며, 두번째 valueAgain 역시 첫번째 value 와 동일한 값을 반환하다.)\
+forEach(callFuc(value, valueAgain, set)) : 내장 메서드인 forEach 반복문이다. (맵과의 호환성을 위해 콜백 변수가 3개이며, 두번째 valueAgain 역시 첫번째 value 와 동일한 값을 반환하다.)
 
 => values(), entries() => 맵과 호환하기 위해서 만들어진 메서드이다.
 => 같은 값이 두 번 반환된다. 키-값으로

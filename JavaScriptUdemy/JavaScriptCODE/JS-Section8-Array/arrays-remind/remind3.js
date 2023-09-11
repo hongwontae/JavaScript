@@ -84,3 +84,35 @@ console.log('전개 연산자와 배열 구조 분해할당')
 // ex) 기존 배열이 [1,2,3]이 존재하고 새롭게 넣을 변수명이 2개라면 1,2만 들어가고 3은 들어가지 않는다. => 순차적으로 들어간다.
 // 나머지 배열을 다 모아서 넣어주고 싶다면 rest연산자를 사용하면 된다. 로직은 함수의 인자에 들어가는 ...rest연산자와 비슷하다.
 // ex) const a = [1,2,3,4,5,6,7,8,9,10] const [a1,,..a2] = a => a1=1, a2=[2,3,4,5,6,7,8,9,10] => rest연산자로 묶인 값들은 배열로 전달된다.
+
+
+console.log('-----------------------------------------------------------------------------')
+console.log('set 데이터 구조')
+// set메서드를 사용하고 순서를 보장하지 않으며, 중복을 허용하지 않는다. Array.from()에 set을 넣으면 배열로 변한다.
+
+const d = new Set();
+d.add('hwt');
+d.add(100).add('20000').add('koala3121') // set 이터러블에 값을 넣는 방법
+
+console.log(d);
+console.log(d.has('20000')) // set 데이터 구조에 값이 있는지 없는지 확인하는 방법
+console.log(d.size); // set size을 확인하는 방법
+
+d.delete('koala3121'); // set의 요소를 지우는 방법
+console.log(d.size);
+
+d.clear(); // set을 완전히 비우는 방법
+console.log(d.size);
+
+const d1 =new Set([1,2,3,4,5,6,7,8,9,10]);
+d1.forEach((currentValue, idx, arr) => {
+    console.log(currentValue);
+})
+
+// entries, values, key는 map과 상호작용하기 위해 만들어진 메서드이다.
+
+const d2 = [...d1]; // Set 데이턱 구조를 배열로 바꾸는 첫 번쨰 방법
+console.log(d2); 
+
+const d3 = Array.from(d1); // Set 데이터 구조를 배열로 바꾸는 두 번째 방법
+console.log(d3);
