@@ -116,3 +116,21 @@ console.log(d2);
 
 const d3 = Array.from(d1); // Set 데이터 구조를 배열로 바꾸는 두 번째 방법
 console.log(d3);
+
+
+console.log('-----------------------------------------------------------------------------')
+console.log('Map 데이터 구조')
+
+// map은 객체와 유사하다. 순서를 보장하고 중복을 허용한다.
+// 키를 가진 데이터 구조이다. 다만 객체와 다른 것은 객체는 키로 문자열만 받는데 map은 키의 제약사항이 없다.
+
+const e = new Map();
+e.set({name : 'HWT', age : 26},5)
+console.log(e); // 키는 객체이고 value는 5인 다소 황당한 데이터를 가질 수 있다.
+
+const e1 = new Map([['hwt',5],['ko','ko']]);
+console.log(e1);
+
+// const e2 = new Map([{name : 'd', age : 3},{name : 'koa'}]);
+// console.log(e2); Map()의 생성자에 바로 객체를 넣으면 작동하지 않는다.
+
