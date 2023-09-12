@@ -1,0 +1,25 @@
+1. OOP 코드로 시작하기
+oop-01-starting-setup => 참고
+
+for(const prod of this.products)
+....
+productList.render();
+=> productList의 객체 products를 참조한다.
+
+const productList = {
+    products :[
+    {
+        title : 'A soocer player',
+        imageURL : 'https://cdn.pixabay.com/photo/2023/05/25/07/31/woman-8016553_1280.jpg',
+        price : 2000,
+        des : 'A cool girl'
+    },
+    {
+        title : 'S soccer player',
+        imageURL : 'https://cdn.pixabay.com/photo/2023/08/28/23/17/superb-fairywren-8220199_1280.jpg',
+        price : 2000,
+        des : 'He is good player'
+    }
+]
+
+=> 그니까 productList의 products : => [] 여기부터 값을 가진다. 그러므로 for-of 반복문을 사용할 수 있다.
