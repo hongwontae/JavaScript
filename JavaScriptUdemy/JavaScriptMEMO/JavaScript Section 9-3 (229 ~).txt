@@ -34,3 +34,67 @@ var ken = {
 ken.foo();
 => 위 코드에서 this.age의 this는 ken을 가리킨다. 그러므로 this.age는 ken.age와 같기 때문에 35가 출력된다.
 => let,const,var다 같은 로직으로 움직인다.
+
+
+2. 메서드 축약어 구문
+
+ex) const newMovie = {
+    info: {
+      title,
+      [extraName]: extraValue
+    },
+    id: Math.random().toString(),
+    getFormattedTitle() {
+      console.log(this);
+      return this.info.title.toUpperCase();
+    }
+  };
+
+=> getFormatteredTitle을 보면 키 : 값으로 이루어져 있지 않다. 축약어 버전이다.
+=> 함수이름 () {로직} => 메서드를 작용한다.
+=> 화살표 함수는 사용하면 안된다.
+
+
+3. This 키워드와 이상한 작동 방식
+this가 참조할 사항을 미리 구성할 떄 bind()를 사용한다.
+bind()의 첫 번쨰 인자는 함수 내에서 this가 참조로 할 대상을 가리킨다.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
