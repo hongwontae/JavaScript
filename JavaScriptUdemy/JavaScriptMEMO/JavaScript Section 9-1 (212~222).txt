@@ -76,7 +76,7 @@ console.log(person.level)
 => []에 넣지 않으면 전역에서 생성한 변수를 인식하지 못해서 []안에 넣어서 키값을 부여해야 한다.
 
 
-5. 데모 앱 & 축약어 프로퍼티 구문
+5. 데모 앱 & 축약어 프로퍼티 구문 (objects-06)
 객체의 키와 값을 가져올 변수명의 이름이 같을 경우 중복해서 적을 필요는 없다. 하나만 작성하면 된다.
 input.value => 인풋태그의 값만 취하겠다.
 
@@ -90,7 +90,7 @@ ex) const titleInput = document.getElementById('title').value;
   }
 
 
-6. 객체에 기반해 요소 렌더링하기
+6. 객체에 기반해 요소 렌더링하기 (objects-07-rendering-movies)
 const rendering = () => {
   const moveList = document.getElementById('movie-list');
 
@@ -124,6 +124,20 @@ textContent도 kk를 출력한다. => 숨겨진 텍스트도 함꼐 (display:non
 const a1 = document.querySelector('#ko')
 a1.innerHTML = '';
 console.log(a1); => 결과는 안쪽의 태그와 텍스트들은 없어진다. (태그안의 내용을 반환하니까)
+
+
+7. For-in 반복문/ 동적 프로퍼티 출력하기 (objects-08-dynamic-property-access)
+for-in vs for-of
+for-of 
+=> 배열에 사용
+=> iterable 객체에 사용한다. (순회가능한 객체에 사용된다.)
+
+for-in 
+=> 객체에 사용
+=> 열거가능한 곳에 사용한다.
+=> key값을 내놓는다.
+
+동적으로 프로퍼티를 반환하려면 const a1 = {age : 20} => a1[age] = 20, 대괄호에 키를 넣으면 값을 반환한다는 사실을 정확히 인지하고 있어야 한다.
 
 
 
