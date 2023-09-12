@@ -37,6 +37,28 @@ let a1 = Object.assign({},a);
 console.log(a1) => 그대로 복사된다. 단 중첩참조값은 원본이다. 새롭게 만들어줘야 한다.
 
 
+5. 객체 구조 분해
+배열 구조 분해와 비슷하지만 차이점이 존재한다.
+
+ex) const a = [1,2,3,4,5]
+   const [a1,a2,a3] = a;
+   a =>1, a2=>2, a3 => [3,4,5]
+=> 구조분해할당을 받을 변수명이 어떤 것이여도 상관없다.
+
+ex) const b = {name : 'hwt', age : 20}
+   const {name,b1} = b;
+   name => 'hwt', b1 => undefined
+=> 객체을 받을 변수명과 키값이 일치하지 않으면 undefined가 부여된다.
+
+ex) const c = {name : 'hwt', age : 20, ko : [1,2,3,4]}
+   const [name,...c2] = c
+   c1 => 'hwt', c2 => {age : 20, ko : [1,2,3,4]}
+=> ...은 변수명에 구애받지 않는다.
+
+=> 배열과 객체는 rest연산자로 둘러싸여 받았을 때 [],{}로 감싸서 대입된다.
+
+객체 구조 분해 할당에서 객체에서 프로퍼티를 빼낼 떄는 키 이름을 사용해야 한다. 다른 이름을 사용하는 경우가 생긴다. 그럴떄는 const {title : movieTitle} = info로 바꿔주면 기존의 키 이름 title이 구조 분해 할당된 변수에서는 movieTitle로 변한다.
+ 
 
 
 

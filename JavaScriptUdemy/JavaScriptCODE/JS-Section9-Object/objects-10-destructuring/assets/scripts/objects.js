@@ -3,7 +3,7 @@ const searchBtn = document.getElementById('search-btn');
 
 const movies = [];
 
-const renderMovies = (search = '') => {
+const renderMovies = (filter = '') => {
   const movieList = document.getElementById('movie-list');
 
   if (movies.length === 0) {
@@ -14,14 +14,19 @@ const renderMovies = (search = '') => {
   }
   movieList.innerHTML = '';
 
-  const mo = !search ? movies : movies.filter(fil =>  fil.info.title.includes(search))
+  const filteredMovies = !filter
+    ? movies
+    : movies.filter(movie => movie.info.title.includes(filter));
 
-  mo.forEach(movie => {
+  filteredMovies.forEach(movie => {
     const movieEl = document.createElement('li');
-    let text = movie.info.title + ' - ';
-    for (const key in movie.info) {
+    const { info, ...otherProps } = movie; // info => {title, [extraName] : extraValue}, otherProps => {id}
+    console.log(otherProps);
+    const { title: movieTitle } = info; // title의 키이름을 movieTitle로 바꾸고 movieTitle => {title, [extraName] : extraValue}
+    let text = movieTitle + ' - ';
+    for (const key in info) {
       if (key !== 'title') {
-        text = text + `${key}: ${movie.info[key]}`;
+        text = text + `${key}: ${info[key]}`;
       }
     }
     movieEl.textContent = text;
@@ -47,7 +52,7 @@ const addMovieHandler = () => {
       title,
       [extraName]: extraValue
     },
-    id: Math.random()
+    id: Math.random().toString()
   };
 
   movies.push(newMovie);
@@ -55,12 +60,9 @@ const addMovieHandler = () => {
 };
 
 const searchMovieHandler = () => {
-  const search = document.getElementById('filter-title').value;
-  console.log(search);
-  renderMovies(search)
+  const filterTerm = document.getElementById('filter-title').value;
+  renderMovies(filterTerm);
 };
 
 addMovieBtn.addEventListener('click', addMovieHandler);
 searchBtn.addEventListener('click', searchMovieHandler);
-
-
