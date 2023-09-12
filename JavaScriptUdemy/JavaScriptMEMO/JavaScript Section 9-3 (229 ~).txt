@@ -1,6 +1,6 @@
 JavaScript Section 9-3 (229 ~)
 
-1. this
+1. this(JS-this)
 
 1-1. 일반 함수 실행 방식 (Regular Function Call)
 일반 함수 실행 방식으로 함수를 실행했을 때 this의 값은 Global Object를 가리킨다. (브라우저 상에서는 window 객체)
@@ -35,6 +35,8 @@ ken.foo();
 => 위 코드에서 this.age의 this는 ken을 가리킨다. 그러므로 this.age는 ken.age와 같기 때문에 35가 출력된다.
 => let,const,var다 같은 로직으로 움직인다.
 
+=> this는 호출한 함수의 앞의 객체를 참조한다고 보면된다. 아무것도 없으면 당연히 window객체를 참조하는 뜻이고 window는 전역객체이다.
+
 
 2. 메서드 축약어 구문
 
@@ -58,6 +60,13 @@ ex) const newMovie = {
 3. This 키워드와 이상한 작동 방식
 this가 참조할 사항을 미리 구성할 떄 bind()를 사용한다.
 bind()의 첫 번쨰 인자는 함수 내에서 this가 참조로 할 대상을 가리킨다.
+
+
+4. bind(), call(), apply()
+bind, call, apply의 첫 번쨰 인자는 this가 참조할 객체이다.
+bind는 함수를 직접 실행시키지 않는다. call과 apply는 함수를 바로 실행시킨다.
+bind,call,apply의 두 번째 인자부터는 함수가 가질 매개변수를 넣는다.
+bind,call은 리스트 요소로 넣고 apply는 배열로 넣는다.
 
 
 
