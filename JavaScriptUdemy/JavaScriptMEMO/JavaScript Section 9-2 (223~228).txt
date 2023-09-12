@@ -58,12 +58,17 @@ ex) const c = {name : 'hwt', age : 20, ko : [1,2,3,4]}
 => 배열과 객체는 rest연산자로 둘러싸여 받았을 때 [],{}로 감싸서 대입된다.
 
 객체 구조 분해 할당에서 객체에서 프로퍼티를 빼낼 떄는 키 이름을 사용해야 한다. 다른 이름을 사용하는 경우가 생긴다. 그럴떄는 const {title : movieTitle} = info로 바꿔주면 기존의 키 이름 title이 구조 분해 할당된 변수에서는 movieTitle로 변한다.
- 
 
 
+6. 프로퍼티 존재 확인하기
+in operator
+let a {name : 'asd'}
+if('name' in a){
+  console.log('key true')
+} => name이라는 키가 있느냐?
 
-
-
+undefined로 확인하는 경우도 있다.
+undefinde가 키에 대한 값이라면 존재하지 않거나 삭제한 값이라는 뜻이다.
 
 
 

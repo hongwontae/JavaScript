@@ -1,0 +1,36 @@
+JavaScript Section 9-3 (229 ~)
+
+1. this
+
+1-1. 일반 함수 실행 방식 (Regular Function Call)
+일반 함수 실행 방식으로 함수를 실행했을 때 this의 값은 Global Object를 가리킨다. (브라우저 상에서는 window 객체)
+
+ex) var age = 100;
+ 
+function foo () {
+  var age = 99;
+  bar(age)
+}
+ 
+function bar () {
+  console.log(this.age);
+}
+ 
+foo();
+=> strict모드나 let,const는 1의 경우에 항상 undefined가 반환된다.
+
+
+1-2. 도트 표기법 (Dot Notation)
+Dot Notation으로 함수가 실행되면, this는 그 도트 앞에 써있는 객체 자체를 가리킨다
+
+ex) var age = 100;
+ 
+var ken = {
+  age: 35,
+  foo: function () {
+    console.log(this.age);	// 35
+  }
+}
+ken.foo();
+=> 위 코드에서 this.age의 this는 ken을 가리킨다. 그러므로 this.age는 ken.age와 같기 때문에 35가 출력된다.
+=> let,const,var다 같은 로직으로 움직인다.
