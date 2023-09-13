@@ -1,0 +1,110 @@
+객체 => 키-값으로 이루어진 참조 데이터 형태
+
+프로퍼티 => {name : 'gwt', age : 20} => 객체의 한 쌍을 프로퍼티라고 부른다.
+메서드 => {go : function () {console.log('Lets go')}} => 객체의 값이 함수인 것을 의미한다.
+속성 => html
+
+객체의 접근 => 객체명.키/ 객체명.키()/ 객체명[키]
+
+
+객체의 추가 => 객체명.만들고 싶은 키 이름 = 값
+객체의 수정 => 객체명.키 = 수정할 값
+객체의 삭제 => delete 객체명.키 => undefined가 부여된다. 즉 객체의 삭제는 undefined
+
+객체의 키값은 모조리 String으로 전환된다. 문자열로 된다.
+키값으로 first-name같은 것을 사용하고 싶다면 => k = {'fist-name' : 'wt'} = k['first-name'] => 'wt';
+
+
+객체의 순서는 넣은 순서부터, 숫자는 오름차순부터 정렬된다.
+const asd = 'dk-dk'/ let g = {[asd] : ''} g[dk-dk] = '';
+
+
+키는 []으로 부르기 때문에 일반적으로 불려지는 것은 값이다. 키-값이 이름이 같다면 하나만 써줘도 된다.
+인풋태그의 값만 취하겠다. => querySelector('input').value
+
+
+inertHTML, innerText, textContent => 모두 안의 값들만 가져오는 것이다. <div id ='app'>asd<div>
+=> 모두 asd를 가져온다. but div의 태그내의 태그가 있다면 달라진다.
+
+대괄호에 키를 넣으면 값을 가져온다라는 사실 인지
+
+
+삼항 연산자는 할당이 가능하다.
+
+
+전개연산자 => let a = {name : 1}/ let a1 = {...a} => a1에 완전히 새로운 참조값 객체가 들어간다.
+=> 배열 전개 연산자와 같은 로직이다. 객체 내의 배열이 있다면(중첩참조값)은 새로운 참조값을 가지지는 않는다.
+
+
+Object.assign() => 전개연산자와 같은 역할을 한다. let a = {name : 'hwt'} let a1 = Object.assign({},a) => 새로운 참조값이 복사된다.
+
+
+객체 구조 분해 할당
+let a = {name : 'hwt', age : 20}/ let {name,age} = {a}/ let name = 'hwt', let age = 20이 된것과 같다.
+
+let a3 = {name : 'hwt', age : 30, ko : function(){console.log('a')}}/ let {name, ...twoObj} = {a3}
+let name = 'hwt'/ let twoObj = {age : 30, ko : function(){console.log('a')}}가 되는 것이다.
+
+불편한것은 구조분해할당을 받을 변수명이 키값과 일치해야 된다는 점이다. 이를 해결하기 위해서
+let {name : name1} = {a} => let name1 = 'hwt' => 이렇게 하면 된다. 
+
+
+in 연산자
+in 키워드를 사용하면 boolean값을 내놓는다.
+let b = {a : 'hwt'};
+console.log('a' in b) => b객체안에 a라는 키값이 있느냐? 있으면 true, 없으면 false/ 지금의 콘솔은 true를 반환한다.
+
+
+현재 내가 아는 this
+일반적으로 this를 사용하면 window를 가르킨다. 전역객체를 가르킨다라는 뜻이다. let과 const의 변수에 사용하면 undefined가 반환된다.
+일반 함수에 사용되어진 this도 window를 가르킨다.
+
+메서드에 this가 있으면 앞의 객체를 this는 가르킨다.
+
+
+메서드 축약어
+let a = {getad(){console.log('good')}} => 이렇게 사용하면 키와 값이 다 있는 것으로 친다.
+
+
+bind(), apply(), call()
+this가 바인딩할 객체를 첫 번쨰 매개변수로 두고 두 번쨰 매개변수부터는 해당 함수가 가질 인자를 넣는다.
+bind는 함수를 만들어주고 실행은 시키지 않는다. apply()와 call()은 바로 실행시킨다. call은 인자로 리스트 요소로 받고, apply는 배열로 받는다.
+
+
+getter와 setter
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
