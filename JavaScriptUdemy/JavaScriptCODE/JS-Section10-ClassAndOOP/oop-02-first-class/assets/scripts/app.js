@@ -1,44 +1,32 @@
-class Product{
-
+class Product {
   // title = 'DEFAULT';
-  // imageURL;
+  // imageUrl;
   // description;
   // price;
 
-  constructor (title, image, desc, price) {
+  constructor(title, image, desc, price) {
     this.title = title;
-    this.imageURL = image;
+    this.imageUrl = image;
     this.description = desc;
     this.price = price;
   }
-
 }
 
-class ProductItem{
-
-  constructor(product){
-    this.product = product;
-  }
-
-}
-
-class ProductList{
-
-   products = [
+const productList = {
+  products: [
     new Product(
       'A Pillow',
-      'https://images.unsplash.com/photo-1687360441296-fddbccf0acb3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHx8&auto=format&fit=crop&w=800&q=60',
+      'https://www.maxpixel.net/static/photo/2x/Soft-Pillow-Green-Decoration-Deco-Snuggle-1241878.jpg',
       'A soft pillow!',
       19.99
     ),
     new Product(
       'A Carpet',
-      'https://images.unsplash.com/photo-1694396641992-193eb434d157?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxMHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=60',
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Ardabil_Carpet.jpg/397px-Ardabil_Carpet.jpg',
       'A carpet which you might like - or not.',
       89.99
     )
-  ]
-
+  ],
   render() {
     const renderHook = document.getElementById('app');
     const prodList = document.createElement('ul');
@@ -61,8 +49,6 @@ class ProductList{
     }
     renderHook.append(prodList);
   }
-}
+};
 
-
-const productList = new ProductList();
 productList.render();
