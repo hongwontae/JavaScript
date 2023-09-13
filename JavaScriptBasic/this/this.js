@@ -3,12 +3,13 @@ a.k1();
 
 console.log('Arrow this')
 
-let obj = {
-    strValue: 'Hello',
-    normalFunc: function() {
-      let arrowFunc = () => { console.log(this) }
-      arrowFunc();
+let k = {
+    name : 'hwt',
+    k1 : function(){
+        let k2 = () => {console.log(this)}
+        k2();
     }
-  }
-  
-  obj.normalFunc();
+}
+
+k.k1();
+
