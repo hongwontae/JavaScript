@@ -1,5 +1,7 @@
 1. OOP 코드로 시작하기
 oop-01-starting-setup => 참고
+=> 클래스를 사용하는 이유는 재사용성 때문이다.
+=> 자신이 원하는 객체를 쉽게 만들기 위해서 class를 생성하고 new 연산자를 통해 객체를 생성한다.
 
 for(const prod of this.products)
 ....
@@ -28,6 +30,11 @@ const productList = {
 2. 클래스 정의와 사용하기
 클라스 기반으로 객체를 만든다 => 자바의 객체지향과 유사하다.
 new는 클래스를 기반으로 한 함수의 실행과 함꼐 인식된다. => 새로운 객체를 생성한다.
+객체를 위한 청사진이라고 생각하면 된다.
+객체는 class의 인스턴스이다. 생성자 함수를 통해 만든 객체는 class로 만든 것이다. 이를 인스턴스라고 한다.
+class를 만드는 방법 => class 클래스이름(첫 문자는 대문자로 하는것이 좋다.) {logic...}
+필드 = 객체의 프로퍼티/ const prod = new Product() => prod{product 프로퍼티와 메서드};
+
 
 ex) class Product {
   title;
@@ -41,6 +48,7 @@ console.log(new Product())
 
 
 3. 생성자 메서드로 작업하기
+클래스에도 사용자 지정 메서드를 만들 수 있다. => someOne() {};
 java 생성자 메서드와 비슷하다.
 
 ex)   constructor (title, image, desc, price) {
@@ -50,9 +58,11 @@ ex)   constructor (title, image, desc, price) {
     this.price = price;
   }
 
-=> constructor라는 키워드 () {}
+constructor라는 키워드 () {}
+컨스트럭터는 new로 클래스의 새 인스턴스를 만들면 JavaScript가 자동으로 호출을 한다.
 => () 인자에는 new class이름() 할떄 매개변수로 받을 객체의 값이다.
 => {}의 로직은 this는 class의 필드를 의미한다. 
+=> this.title은 필드의 title을 의미하고(객체의 키) 인자 title의 title은 대입될 값(객체의 값)을 의미한다.
 
 
 4. 필드 vs 프로퍼티
@@ -85,15 +95,8 @@ class Product{
 
 5. 다수의 클래스 사용하고 연결하기
 클래스는 실행할 코드 전에 정의되어야 한다.
+생성자내의 this는 클래스 기반으로 생성된 객체를 인용한다.
 
-
-6. JS
-객체를 생성하는 방법은 두 가지이다. 객체 리터럴을 사용하는 방법과 생성자 함수를 사용하는 방법이다.
-
-생성자함수를 사용하는 방식 => const a = new Date();
-사용자가 직접 생성자 함수를 만들어서 사용할 수 도 있다.
-
-이벤트 발생 시에 this는 이벤트가 발생한 DOM을 의미한다. 그러나 메소드 내에서 this는 클래스 오브젝트를 의미한다.
 
 
 

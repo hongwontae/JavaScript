@@ -26,7 +26,7 @@ let b2 = {
             this.b1+=1;
             console.log('fun2 ='+b1)
         }
-        func2();
+        func2(); 
     }
 }
 
