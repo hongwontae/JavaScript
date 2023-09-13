@@ -1,28 +1,32 @@
-class Product {
-  // title = 'DEFAULT';
-  // imageUrl;
-  // description;
-  // price;
+class Product{
 
-  constructor(title, image, desc, price) {
+  title = 'DEFAULT';
+  imageURL;
+  description;
+  price;
+
+  constructor (title, image, desc, price) {
     this.title = title;
-    this.imageUrl = image;
+    this.imageURL = image;
     this.description = desc;
     this.price = price;
   }
+
 }
+
+console.log(new Product());
 
 const productList = {
   products: [
     new Product(
       'A Pillow',
-      'https://www.maxpixel.net/static/photo/2x/Soft-Pillow-Green-Decoration-Deco-Snuggle-1241878.jpg',
+      'https://images.unsplash.com/photo-1687360441296-fddbccf0acb3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHx8&auto=format&fit=crop&w=800&q=60',
       'A soft pillow!',
       19.99
     ),
     new Product(
       'A Carpet',
-      'https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Ardabil_Carpet.jpg/397px-Ardabil_Carpet.jpg',
+      'https://images.unsplash.com/photo-1694396641992-193eb434d157?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxMHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=60',
       'A carpet which you might like - or not.',
       89.99
     )
