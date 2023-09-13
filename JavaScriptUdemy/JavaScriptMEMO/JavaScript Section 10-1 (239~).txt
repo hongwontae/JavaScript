@@ -55,6 +55,42 @@ ex)   constructor (title, image, desc, price) {
 => {}의 로직은 this는 class의 필드를 의미한다. 
 
 
+4. 필드 vs 프로퍼티
+class Product{
+
+  //title = 'DEFAULT';
+  //imageURL;
+  //description;
+  //price;
+
+  constructor (title, image, desc, price) {
+    this.title = title;
+    this.imageURL = image;
+    this.description = desc;
+    this.price = price;
+  }
+
+  printInfo() {
+  console.log('asd')
+}
+
+}
+
+=> title = 'DEFAULT'를 부를 때 클라스의 필드라고 부른다.
+=> this.title = title => 클라스의 속성이라고 부른다.
+=> 클라스 기반으로 객체를 생성하면 필드가 속성이 된다.
+=> printInfo(){} => 클래스의 메서드라고 부른다.
+=> 생성자를 만들면 필드가 의미가 없어진다. 자바와는 다르게 생성자가 있으면 필드를 거치지 않고 자동으로 객체를 생성한다.
+
+
+5. 다수의 클래스 사용하고 연결하기
+클래스는 실행할 코드 전에 정의되어야 한다.
+
+
+6. 생성자 함수 this
+=>
+
+
 
 
 

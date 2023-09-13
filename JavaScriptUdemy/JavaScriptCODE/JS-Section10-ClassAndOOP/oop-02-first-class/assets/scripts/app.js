@@ -1,9 +1,9 @@
 class Product{
 
-  title = 'DEFAULT';
-  imageURL;
-  description;
-  price;
+  // title = 'DEFAULT';
+  // imageURL;
+  // description;
+  // price;
 
   constructor (title, image, desc, price) {
     this.title = title;
@@ -14,10 +14,17 @@ class Product{
 
 }
 
-console.log(new Product());
+class ProductItem{
 
-const productList = {
-  products: [
+  constructor(product){
+    this.product = product;
+  }
+
+}
+
+class ProductList{
+
+   products = [
     new Product(
       'A Pillow',
       'https://images.unsplash.com/photo-1687360441296-fddbccf0acb3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHx8&auto=format&fit=crop&w=800&q=60',
@@ -30,7 +37,8 @@ const productList = {
       'A carpet which you might like - or not.',
       89.99
     )
-  ],
+  ]
+
   render() {
     const renderHook = document.getElementById('app');
     const prodList = document.createElement('ul');
@@ -53,6 +61,8 @@ const productList = {
     }
     renderHook.append(prodList);
   }
-};
+}
 
+
+const productList = new ProductList();
 productList.render();
