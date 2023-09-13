@@ -13,3 +13,21 @@ let k = {
 
 k.k1();
 
+
+let b1 = 10;
+
+let b2 = {
+    b1 : 1,
+    func1 : function(){
+        this.b1+=1;
+        console.log('func1 ='+this.b1)
+
+        function func2(){
+            this.b1+=1;
+            console.log('fun2 ='+b1)
+        }
+        func2();
+    }
+}
+
+b2.func1();
