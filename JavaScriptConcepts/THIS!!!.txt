@@ -59,7 +59,9 @@ JavaScript 엔진은 함수 앞에 new 연산자가 존재하는 경우 다음�
 
 
 
+함수와 this
 
+메서드 내부의 함수의 this
 
 
 
