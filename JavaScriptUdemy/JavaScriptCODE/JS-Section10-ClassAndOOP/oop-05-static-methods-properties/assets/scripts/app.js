@@ -12,26 +12,24 @@ class Product {
   }
 }
 
-class ShoppingCart{
-
+class ShoppingCart {
   items = [];
 
-  addProduct(product){
-    this.items.push(product)
-    this.totalOutput =  `<h2>\$${1}</h2>`;
+  addProduct(product) {
+    this.items.push(product);
+    this.totalOutput.innerHTML = `<h2>Total: \$${1}</h2>`;
   }
 
-  render(){
+  render() {
     const cartEl = document.createElement('section');
     cartEl.innerHTML = `
-    <h2>\$${0}</h2>
-    <button>Order Now!</button>
+      <h2>Total: \$${0}</h2>
+      <button>Order Now!</button>
     `;
     cartEl.className = 'cart';
     this.totalOutput = cartEl.querySelector('h2');
     return cartEl;
   }
-
 }
 
 class ProductItem {
@@ -40,10 +38,7 @@ class ProductItem {
   }
 
   addToCart() {
-    console.log('Adding product to cart...');
-    console.log(this);
-    console.log(this.product);
-    console.log(this.render);
+    App.addProductToCart(this.product);
   }
 
   render() {
@@ -70,7 +65,7 @@ class ProductList {
   products = [
     new Product(
       'A Pillow',
-      'https://images.unsplash.com/photo-1682686578456-69ae00b0ecbd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHx8&auto=format&fit=crop&w=800&q=60',
+      'https://www.maxpixel.net/static/photo/2x/Soft-Pillow-Green-Decoration-Deco-Snuggle-1241878.jpg',
       'A soft pillow!',
       19.99
     ),
@@ -96,12 +91,13 @@ class ProductList {
   }
 }
 
-class Shop{
-  render(){
+class Shop {
+  
+  render() {
     const renderHook = document.getElementById('app');
 
-    const cart = new ShoppingCart();
-    const cartEl = cart.render();
+    this.cart = new ShoppingCart();
+    const cartEl = this.cart.render();
     const productList = new ProductList();
     const prodListEl = productList.render();
 
@@ -110,5 +106,22 @@ class Shop{
   }
 }
 
-const shop = new Shop();
-shop.render();
+class App {
+  static cart;
+
+  static init() {
+    const shop = new Shop();
+    shop.render();
+    this.cart = shop.cart;
+  }
+
+  static addProductToCart(product) {
+    this.cart.addProduct(product);
+  }
+}
+
+App.init();
+
+
+
+
