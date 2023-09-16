@@ -48,4 +48,4 @@ function UserInfo1(name, age) {
 
 console.log(UserInfo2.prototype === obj2.__proto__)
 console.log(obj2.__proto__.constructor === UserInfo2.prototype.constructor);
-// => 생성자 함수의 prototype 프로퍼티는 이 생성자 함수로 만들어낼 객체가 가질게될 [[prototype]]이다.
+// => 생성자 함수의 prototype 프로퍼티는 이 생성자 함수로 만들어낼 객체가 가질게 될 [[prototype]]이다.
