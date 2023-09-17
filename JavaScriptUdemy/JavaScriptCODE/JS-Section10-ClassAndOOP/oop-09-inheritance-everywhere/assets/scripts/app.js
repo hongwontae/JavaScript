@@ -32,6 +32,7 @@ class Component {
     if (attributes && attributes.length > 0) {
       for (const attr of attributes) {
         rootElement.setAttribute(attr.name, attr.value);
+        console.log(rootElement);
       }
     }
     document.getElementById(this.hookId).append(rootElement);
@@ -151,7 +152,7 @@ class App {
   static init() {
     const shop = new Shop();
     shop.render();
-    this.cart = shop.cart;
+    this.cart = shop.cart; // 스태틱 메서드에서 shop 클래스에서 만든 객체를 가지고 올 수 있다. shop이 this.cart로 내부에 저장을 했기 때문이다.
   }
 
   static addProductToCart(product) {
