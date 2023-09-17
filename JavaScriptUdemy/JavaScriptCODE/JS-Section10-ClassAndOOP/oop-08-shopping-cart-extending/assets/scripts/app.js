@@ -21,7 +21,9 @@ class ElementAttribute {
 
 class Component {
   constructor(renderHookId) {
-    this.hookId = renderHookId;
+    console.log('called')
+    this.hookId = renderHookId; 
+    console.log(this) // app
   }
 
   createRootElement(tag, cssClasses, attributes) {
@@ -56,7 +58,7 @@ class ShoppingCart extends Component {
   }
 
   constructor(renderHookId) {
-    super(renderHookId);
+    super(renderHookId); // 인자로 app이 들어간다.
   }
 
   addProduct(product) {

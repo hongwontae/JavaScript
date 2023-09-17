@@ -31,7 +31,7 @@ class ShoppingCart {
   addProduct(product) {
     const updatedItems = [...this.items];
     updatedItems.push(product);
-    this.cartItems = updatedItems;
+    this.cartItems = updatedItems; // 값을 할당하겠다.    
   }
 
   render() {
