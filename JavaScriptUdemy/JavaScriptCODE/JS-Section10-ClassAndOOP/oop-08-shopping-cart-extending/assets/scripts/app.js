@@ -21,12 +21,11 @@ class ElementAttribute {
 
 class Component {
   constructor(renderHookId) {
-    console.log('called')
     this.hookId = renderHookId; 
-    console.log(this) // app
+    console.log(this.hookId);
   }
 
-  createRootElement(tag, cssClasses, attributes) {
+  createRootElement(tag, cssClasses, attributes) { // section, cart
     const rootElement = document.createElement(tag);
     if (cssClasses) {
       rootElement.className = cssClasses;
@@ -80,6 +79,7 @@ class ShoppingCart extends Component {
 class ProductItem {
   constructor(product) {
     this.product = product;
+    console.log(this.product)
   }
 
   addToCart() {
