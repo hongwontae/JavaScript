@@ -120,7 +120,9 @@ oop-5 => this.cart = new ShoppingCart()
 
 클래스 내부에서 인스턴스 프로퍼티나 메서드에 접근할 때는 this를 사용하고 const,let 객체는 그냥 사용한다.
 
+
 8. Getter/Setter
+
 
 8-1. getter
 => get 게터이름() {
