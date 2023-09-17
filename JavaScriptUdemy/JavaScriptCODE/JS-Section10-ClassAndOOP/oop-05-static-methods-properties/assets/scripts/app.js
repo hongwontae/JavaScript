@@ -96,7 +96,7 @@ class Shop {
   render() {
     const renderHook = document.getElementById('app');
 
-    this.cart = new ShoppingCart();
+    this.cart = new ShoppingCart(); // => Shop 클래스에 cart라는 프로퍼티를 저장하겠다.
     const cartEl = this.cart.render();
     const productList = new ProductList();
     const prodListEl = productList.render();
@@ -109,12 +109,13 @@ class Shop {
 }
 
 class App {
+
   static cart;
 
   static init() {
-    const shop = new Shop();
+    const shop = new Shop(); // shop이라는 객체를 생성했다. cart라는 프로퍼티도 존재한다.
     shop.render();
-    this.cart = shop.cart;
+    this.cart = shop.cart; // shop.cart === Class ShoppingCart() => this.cart로 넣어줌. 가독성을 위해서
   }
 
   static addProductToCart(product) {
