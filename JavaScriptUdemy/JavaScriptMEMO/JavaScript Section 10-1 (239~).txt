@@ -127,6 +127,7 @@ oop-5 => this.cart = new ShoppingCart()
 8-1. getter
 => get 게터이름() {
   
+  return ;
 }
 
 8-2. setter
@@ -136,6 +137,9 @@ oop-5 => this.cart = new ShoppingCart()
 
 toFixed() => 인자로 받은 숫자까지 부동 소수점으로 인식하게 한 문자열로 치환한다.
 getter와 setter도 this로 불러야 한다.
+
+getter 메서드는 값을 사용하려고 시도하면 getter를 호출하고 setter 메서드는 값을 할당하려고 시도할 때 setter를 호출한다.
+=> 일반 객체의 getter와 setter와 다른점은 클래스는 클래스 내부의 프로퍼피에 접근할 떄 발동한다. New를 통해 객체를 만들거나 클래스 메서드를 사용할 떄(메서드가 클래스의 프로퍼티에 접근하는 것일 떄)
 
 
 9. 상속
