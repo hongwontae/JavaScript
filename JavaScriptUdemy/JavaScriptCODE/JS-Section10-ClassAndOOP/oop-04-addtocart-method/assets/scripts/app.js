@@ -61,7 +61,13 @@ class ProductItem {
         </div>
       `;
     const addCartButton = prodEl.querySelector('button');
-    addCartButton.addEventListener('click', this.addToCart.bind(this));
+    addCartButton.addEventListener('click', this.addToCart.bind(this)); 
+    // this => e.currentTarget => button
+    // bind(this) => 바인드의 첫 번쨰 매개변수는 this가 향할 곳이 어디냐?
+    // this가 향할 곳은 this => class내부의 전체 객체를 의미한다.
+    // addToCart메서드의 this는 클래스 전체를 향한다.
+    // this.product는 생생된 객체의 product
+    // this.render는 클래스 내부의 render() 메서드이다.
     return prodEl;
   }
 }
