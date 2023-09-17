@@ -12,6 +12,7 @@ class Product {
   }
 }
 
+
 const productList = {
   products: [
     new Product(

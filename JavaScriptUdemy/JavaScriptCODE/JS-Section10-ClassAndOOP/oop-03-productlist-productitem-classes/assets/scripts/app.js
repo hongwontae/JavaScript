@@ -69,6 +69,7 @@ class ProductList {
       // prodcucts로 가보자.
       const productItem = new ProductItem(prod);
       console.log(prod);
+      console.log("prod0-")
       console.log(productItem);
       // 배열의 하나의 값 씩 prod에 생성자 함수를 통해 객체가 만들어진다.
       const prodEl = productItem.render();
