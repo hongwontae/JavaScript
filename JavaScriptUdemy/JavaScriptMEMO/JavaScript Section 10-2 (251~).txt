@@ -74,13 +74,15 @@ const p = new Person();
 p instanceof Person => true => p라는 값이 person을 통해 만들어졌는가?
 
 
+9. 객체 설명자 이해하기
+Object.getOwnPropertyDescriptiors(obj) => 인자에 해당하는 새로운 객체가 반환되는 이를 프로퍼티 설명자라고 한다.JS가 이면에서 저장하는 메타데이터로 프로퍼티가 어떻게 사용될 수 있는지에 영향을 준다.
 
+writable => true이면 새로운 값을 할당할 수 있다.
+configurable => 삭제할 수 있다.
+emumerable => for-in 루프을 사용할 수 잇다.
 
-
-
-
-
-
+Object.defineProperty(a,b,{}) => 인자 a는 객체, b는 키를 가져와서 그 값에 해당하는 설명자를 {}로 만든다.
+{} => 여기에 내가 설정하고 싶은 값을 설정하면 된다.
 
 
 
