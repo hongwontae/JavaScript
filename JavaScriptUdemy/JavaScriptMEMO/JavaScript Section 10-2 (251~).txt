@@ -54,6 +54,10 @@ java와 비슷하게 하나만 상속받을 수 있다.
 order => Parents Constructor => sub Constructor
 
 
+6. () => {} this
+화살표 내부의 this는 화살표 함수 외부의 this인 것으로 인식하자.
+
+
 
 
 
