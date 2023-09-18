@@ -58,6 +58,15 @@ order => Parents Constructor => sub Constructor
 화살표 내부의 this는 화살표 함수 외부의 this인 것으로 인식하자.
 
 
+7. private 프로퍼티
+public => 클래스와 객체 외부에서 이들에게 접근할 수 있다.
+private => 클래스 안에서만, 클래스 기반으로 생성된 객체 내에서만 사용된다.
+ex) productList에서 product라는 필드가 존재한다. private product는 productList에서만 사용할 수 있다. => 이것이 private 프로퍼티라는 것이다. 자바와는 다르게 앞에 #을 붙이면 된다. 클래스 내부에서 private에 접근할 때도 #를 붙여서 접근한다.
+
+
+Constuctor super() this.render가 실행되면 생성중인 객체를 참조하기 때문에 하위 클래스의 render가 실행되지만 주체는 부모 클래스의 생성자임으로 하위 클래스의 render()안에서 private 프로퍼티에 접근하지 못하는 것이다.
+
+
 
 
 
