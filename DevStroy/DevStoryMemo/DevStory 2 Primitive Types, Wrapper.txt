@@ -1,4 +1,4 @@
-(DevStroy2 reference)
+(DevStroy2 reference) (Dev2Belog)
 
 Primitive Type => 원시타입(기본  타입)
 객체가 아니며, 메서드와 프로퍼티가 존재하지 않는 데이터를 의미한다. 7개가 존재한다.

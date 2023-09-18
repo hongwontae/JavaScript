@@ -21,4 +21,21 @@ console.log(typeof a);
 console.log(typeof a2);
 
 
+let b = 'str1';
+console.log(typeof b);
+
+let b2 = 'sss';
+b2.name = 'dd';
+console.log(b2.name);
+
+
+let b3 = 1000n;
+console.log(b3);
+console.log(typeof b3);
+
+console.log(typeof typeof b3);
+
+let b4;
+console.log(typeof b4);
+
 
