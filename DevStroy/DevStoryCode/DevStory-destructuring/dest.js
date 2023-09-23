@@ -37,3 +37,21 @@ console.log(one);
 console.log(two);
 console.log(first);
 
+
+let f =function(){return {f1:'hwt', f2 : 300, f3 : function(){console.log('도객 일도살')}}} 
+
+let {f1,f2,f3} = f();
+console.log(f1);
+console.log(f2);
+console.log(f3());
+
+
+let g = {g1: 'hwt', g2 : '시게히라', g3 : '난기'}
+
+function g4({g1 : myName, g2 : choIn1 ,g3 : choin2}) {
+    console.log(`g1 = ${myName}, g2 = ${choIn1}, g3 = ${choin2}`)
+}
+
+g4(g);
+
+

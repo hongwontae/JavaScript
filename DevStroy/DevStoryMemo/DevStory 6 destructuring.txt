@@ -40,6 +40,28 @@ let {d1 : {d4}} = d;
 console.log(d4);
 
 
+6. 함수의 return값이 배열이나 객체라면 구조분해할당을 사용할 수 있다.
+
+ex)
+let f =function(){return {f1:'hwt', f2 : 300, f3 : function(){console.log('도객 일도살')}}} 
+let {f1,f2,f3} = f();
+console.log(f1);
+console.log(f2);
+console.log(f3());
+
+
+7. 함수 호출 시 인자에 객체를 전달하고 함수의 매개변수에 구조 분해를 사용할 수 있다.
+
+ex)
+let g = {g1: 'hwt', g2 : '시게히라', g3 : '난기'}
+
+function g4({g1 : myName, g2 : choIn1 ,g3 : choin2}) {
+    console.log(`g1 = ${myName}, g2 = ${choIn1}, g3 = ${choin2}`)
+}
+
+g4(g);
+
+
 
 
 
