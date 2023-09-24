@@ -90,4 +90,87 @@ let d7 = function(d10=d6){ // 디폴트 파라미터에 객체를 전달할 수 
 
 d7();
 
+// 1. 디폴트 파라미터는 취사선택하여 사용할 수 없다.
+// 2. 디폴트 파라미터는 동적으로 사용될 수 있다.
+// 3. 디폴트 파라미터에 객체를 넣을 수 있다.
+
+
+// Dev5
+
+// array sort
+// 배열을 정렬하는 메서드이다. 기존 배열을 수정하는 메서드이다.
+// 콜백함수를 넣어서 정렬기준을 만들어준다.
+
+let f = [1,2,3,4,5,6,7,8,9,10];
+
+f.sort(((a,b)=>{
+    return a-b // a-b는 오름차순, b-a 내림차순이다.
+}));
+
+console.log(f);
+
+
+// Dev6
+
+// 객체와 배열의 구조분해할당
+
+let h1 = [1,2,3,4,5];
+let [h2, ,...h3] = h1;
+console.log(h2);
+console.log(h3);
+
+let h4 = {
+    player : 'hwt',
+    playerAge : 20,
+    playerTeam : 'Riverpool'
+}
+
+let {player, playerAge, playerTeam} = h4;
+
+console.log(player);
+console.log(playerAge);
+console.log(playerTeam);
+
+
+let {player : 이름, playerTeam : Team, BeforeTeam = 'Real Madrid'} = h4;
+
+console.log(BeforeTeam);
+console.log(Team); // riverpool
+
+
+let person = {
+    perName : '난기',
+    perAge : 30,
+    perTeam : 'Japan',
+    perContry : {
+        p1 : 1,
+        p2 : 2,
+        p3 : 3,
+    }
+}
+
+let {perContry : {p1}} = person;
+console.log(p1);
+// 중첩 구조 분해 할당
+// let {perContry : {p1}} = person; => perContry의 {pl}를 p1을 변수명으로 키값을 변수 값으로 넣는다.
+
+
+
+let h5 = function(){
+   return {kkk : '차별', yyy : '인정'}
+}
+
+let {kkk,yyy} = h5();
+console.log(kkk);
+// 함수식내에 return이 객체라면 구조 분해 할당이 가능하다.
+
+
+let g = {aaa : 'hwt', bbb : '시게히라', ccc : '세인트 펄'}
+
+let g1 = function({aaa, bbb, ccc}){
+    console.log(`aaa => ${aaa}, bbb => ${bbb}, ccc => ${ccc}`)
+}
+
+g1(g);
+// 함수호출 인자에 객체를 전달하고 함수 매개변수에 구조분해할당 구문을 적으면 함수문 내부에서 구조분해할당이 된 결과값을 사용할 수 있다.
 
