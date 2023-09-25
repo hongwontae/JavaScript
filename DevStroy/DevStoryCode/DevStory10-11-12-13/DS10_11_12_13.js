@@ -63,3 +63,26 @@ console.log(c2); // set 객체는 중복을 허용하지 않는다. 그 객체�
 let c3 = [...c1];
 console.log(c3); // set객체를 spread 연산자를 사용하여 배열로 변환시킬 수 있다.
 
+
+let arr4 = [1, 2, 3, 4, 5, 1, 2, 3, 4, 5];
+console.log(arr4);
+
+let uniqueArr = arr4.filter(function(item, idx, self) {
+    return self.indexOf(item) == idx;
+})
+
+console.log(uniqueArr);
+// [1, 2, 3, 4, 5]
+
+console.log('filter+hasOwnProperty')
+let arr5 = [1, 2, 3, 4, 5, 1, 2, 3, 4, 5];
+let emptyArr = {};
+
+let uniqueArr1 = arr.filter(function(item) {
+    return emptyArr.hasOwnProperty(item) ? false : (emptyArr[item] = true);
+})
+
+console.log(uniqueArr1);
+
+let o = {name : 'ko'}
+console.log(o.hasOwnProperty(o.name))
