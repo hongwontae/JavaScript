@@ -85,4 +85,4 @@ let uniqueArr1 = arr.filter(function(item) {
 console.log(uniqueArr1);
 
 let o = {name : 'ko'}
-console.log(o.hasOwnProperty(o.name))
+console.log(o.hasOwnProperty("name")) // true
