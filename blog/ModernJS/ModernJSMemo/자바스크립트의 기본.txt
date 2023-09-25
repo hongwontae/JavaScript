@@ -1,0 +1,47 @@
+1. ModernJS 자료형
+
+자료형 => 데이터 타입
+
+8가지가 존재한다. => String, Number, BigInt, Boolean, Object, null, undefined, Symbol
+JS의 변수내의 타입들은 자유롭게 바뀔 수 있다. => 동적 타입이다.
+
+typeof 
+=> 자료형을 반환한다. 7가지 형식으로 반환한다. String, Number, BigInt, Boolean, Object, Function, Symbol
+=> function도 객체이다. 근데 JS 초기의 설정이기에 바꾸지 않았다. 값-타입이 null이면 Object이다. function과 같다.
+
+* BigInt => 뒤에 n을 붙여주면 된다.
+* typeof/ typeof() => 둘 다 가능하다.
+
+
+
+2. ModernJS alert(), prompt(), confirm()
+
+브라우저와 상호작용할 수 있는 함수들이다.
+
+2-1. alert()
+=> 확인을 누르기전에 메시지 창이 지속되는 모달 창(메시지가 있는 작은 창을 뜻한다.)을 보여준다.
+
+2-2. prompt(title, default)
+=> 함수가 실행되면 텍스트 메시지와 함께 사용자의 input, 확인 button이 있는 모달 창을 보여준다. 사용자의 input값을 받아오기 위해 자주 사용된다.
+=> title => 사용자에게 보여줄 메시지, default => 입력 필드의 초기값
+
+2-3. confirm()
+=> 확인과 취소가 있는 모달 창을 보여준다. => 확인 버튼은 true, 그 외의 경우는 false를 반환한다.
+
+위 함수들은 모달 창이 떠 있는 동안에는 스크립트 실행이 중단된다.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
