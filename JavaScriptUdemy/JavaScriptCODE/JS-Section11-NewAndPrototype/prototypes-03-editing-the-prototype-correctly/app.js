@@ -46,4 +46,6 @@ p.greet();
 p.printAge();
 console.log(p.__proto__);
 const p2 = new p.__proto__.constructor();
+console.log(p);
 console.log(p2);
+

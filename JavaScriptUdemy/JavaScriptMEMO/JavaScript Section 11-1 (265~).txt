@@ -116,6 +116,14 @@ prototype 프로퍼티 => console.log(Friend.prototype === friend1.__proto__);  
 => Person.prototype에 프로퍼티를 설정하면 이를 기반으로 생성된 객체의 [[ProtoType]]에 할당된다.
 
 
+4. 프로토타입으로 작업하기
+클래스에 extends를 사용하면 프로토타입과 함께 작동한다.
+Person extneds agedPerson => Person의 객체의 [[protoType]]은 AgedPerson이다.
+constructor 프로퍼티 => 만든 주체가 누구냐? 이 메서드는 생성자 함수를 참조한다.
+[[protoType]]에는 Constructor메서드, 프로토타입 체인에 사용될 객체, 부모 [[prototype]]이 존재한다.
+
+
+
 
 
 
