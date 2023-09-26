@@ -105,6 +105,16 @@ prototype 프로퍼티 => console.log(Friend.prototype === friend1.__proto__);  
 =>프로토타입 프로퍼티를 덮어쓰는 것이 아니라 인스턴스 프로퍼티로 추가한다. ⇒ 오버라이딩
 
 
+프로토타입 
+=> JS가 코드를 공유하는 방식이다.
+=> JS가 기존 객체의 프로퍼티나 메서드를 찾는데 없으면 부모 객체([[protoType]])에서 찾는다.
+=> person Class = person function => 이를 토대로 객체를 생성하면 프로퍼티, 메서드, [[protoType]] 특성이 있다.
+=> [[protoType]]안에 생성자 메서드 메서드와 [[protoType]]이 존재한다.
+=> prototype 특성은 함수 객체에만 존재한다. 이 prototype은 기존 class(function)의 [[prototype]]에서 가져와서 이 클래스를 기반으로 생성된 객체의 [[prototype]]에 할당된다.
+=> prototype의 this는 언제나 메서드를  호출하는 객체를 의미한다.
+
+=> Person.prototype에 프로퍼티를 설정하면 이를 기반으로 생성된 객체의 [[ProtoType]]에 할당된다.
+
 
 
 
