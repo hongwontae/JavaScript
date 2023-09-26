@@ -88,3 +88,32 @@ console.log(true == '1'); //true => 서로 다른 자료형끼리의 비교는 N
 
 
 
+console.log('-----------------------JSBasic-2.4------------------------------')
+
+// let d = prompt('자바스크립트의 공식 이름은 무엇일까요?', '');
+// if(d == 'ECMAScript'){
+//     alert('정답입니다.')
+// } else{
+//     alert('모르셨나요? 정답은 ECMAScript입니다.')
+// }
+
+// let player = 'Hong Won Tae';
+
+// let playerTeam = player === prompt('정답을..','') ? 'RiverPool' : 'Manchester City';
+// console.log(playerTeam)
+
+
+
+console.log('-----------------------JSBasic-2.5------------------------------')
+
+let k1 = undefined || null || 1 || false || 3;
+console.log(k1); //1
+
+let k2 = 1 && 0 && 'HWT' && null;
+console.log(k2);  
+
+
+
+
+
+
