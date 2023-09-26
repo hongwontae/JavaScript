@@ -114,6 +114,11 @@ console.log(k2);
 
 
 
+let korea = 'korea';
+let NorthKorea = null;
+
+let k = NorthKorea ?? korea;
+console.log(k);
 
 
 
