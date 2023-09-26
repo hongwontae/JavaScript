@@ -67,6 +67,80 @@ ex) let apple ='10'; let water = '20';
 
 
 
+3. 비교 연산자
+
+비교 연산자는 Boolean을 반환한다. 비교연산자를 통해 값을 할당 할 수 있다.
+
+문자열을 비교할 때는 유니코드로 변환해서 비교한다.
+비교하려는 값의 자료형이 다르다면 이 값들을 숫자로 치환하여 비교한다.
+
+== : 동등연산자/ === : 일치 연산자
+
+
+Null과 undefined 비교
+Null == undefined => true/ Null === undefined => false
+동등연산자일 때는 피연산자가 null이나 undefined일 떄는 형 변환을 하지 않는다. undefined나 null을 null로 비교했을 때만 형변환을 실시하여 연산한다.
+
+console.log('2'>'12') => true, 유니코드상 '2'가 더 높기 떄문이다.
+
+
+
+4. truthy/ false
+0,"",Null, undefined, NaN => false로 평가한다. => falsy
+그 외 나머지 => truthy
+
+
+feat. 삼항 연산자
+조건 ? value1 : value2 => 조건이 true라면 value1이고 그렇지 않으면 value2이다.
+value2가 조건일 떄는 else if가 된다고 생각하면 된다.
+
+할당가능하다.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

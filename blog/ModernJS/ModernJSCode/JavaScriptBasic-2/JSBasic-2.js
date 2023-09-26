@@ -77,3 +77,14 @@ console.log(c5++)
 
 
 console.log('-----------------------JSBasic-2.3------------------------------')
+console.log(null == undefined);
+console.log(null === undefined);
+console.log(null == 0);
+console.log(undefined == NaN); // 동등연산자나 일치연산자에서 피연산자가 undefined나 null이면 형변환하지 않고 비교한다.
+
+console.log('1' == 1); // true
+console.log('1' === 1); // false
+console.log(true == '1'); //true => 서로 다른 자료형끼리의 비교는 Number타입으로 치환해서 변환한다.
+
+
+
