@@ -61,6 +61,7 @@ console.log('11'-2);
 
 console.log(+true + +'12')
 console.log(+undefined+'11');
+
 // 대전제는 +연산에서 string이 하나라도 있다면 결합시켜버린다.
 
 console.log(+false)
@@ -119,6 +120,8 @@ let NorthKorea = null;
 
 let k = NorthKorea ?? korea;
 console.log(k);
+
+console.log(true + 'koala3121');
 
 
 

@@ -85,7 +85,7 @@ console.log('2'>'12') => true, 유니코드상 '2'가 더 높기 떄문이다.
 
 
 
-4. truthy/ false
+4. truthy/ falsy
 0,"",Null, undefined, NaN => false로 평가한다. => falsy
 그 외 나머지 => truthy
 
