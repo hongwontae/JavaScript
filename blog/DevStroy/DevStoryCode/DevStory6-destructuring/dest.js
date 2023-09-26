@@ -55,3 +55,20 @@ function g4({g1 : myName, g2 : choIn1 ,g3 : choin2}) {
 g4(g);
 
 
+let z = {z1 : 'hwt', z2 : 20};
+let {z1,z2 : z3, z4 = 3000} = z;
+console.log(z1)
+console.log(z3);
+console.log(z4);
+
+
+let music = {musicName : 'Opera', avgAge : 30, totalAudience : 500}
+
+let musicFuc = function({musicName, avgAge, totalAudience, speed = 1000}){
+    console.log(musicName);
+    console.log(avgAge);
+    console.log(totalAudience);
+    console.log(speed);
+}
+
+musicFuc(music);
