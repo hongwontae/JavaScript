@@ -124,4 +124,18 @@ console.log(k);
 console.log(true + 'koala3121');
 
 
+console.log('-----------------------JSBasic-2 test------------------------------')
+console.log(true+true); //2
+console.log(true + +"10"); //11
+let zk = 1;
+zk+=5;
+console.log(zk)
+
+let zk1 = null || 3 || undefined;
+console.log(zk1);
+let zk2 = 3 && 4 && 5 && false;
+console.log(zk2);
+
+
+
 

@@ -17,3 +17,6 @@ console.log(!a2); //false
 
 let a3 = function(){console.log('a3')};
 console.log(typeof a3);
+
+let b = confirm();
+console.log(b); //true
