@@ -111,3 +111,19 @@ student.printProgress();
 console.log(student);
 
 course.printRating();
+
+const music = Object.create({add : function(a,b){
+  return a+b;
+}},
+  {
+    name : {
+      configurable : true,
+      enumerable : true,
+      writable : true,
+      value : 'Max'
+    }
+  }
+);
+console.log(music);
+let mu = music.add(1,2);
+console.log(mu)
