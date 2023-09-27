@@ -55,3 +55,32 @@ switch (con) {
     default: console.log('실패입니다.')
         break;
 }
+
+
+console.log('---------------------------JSBasic3.2~3.4')
+
+function ko(){
+    console.log('그댄 많이 힘든가봐요')
+} // 함수 선언문
+
+ko();
+
+let ko2 = function(){
+    console.log('그래서 그대는 날 잊고 사는지')
+} // 함수 표현식
+
+ko2();
+
+let ko3 = [1,2,3,4,5];
+ko3.forEach( function (currentValue) {
+    console.log(currentValue);
+}) // 익명함수, 콜백함수
+
+
+let ko4 = ['내 아름다운', '사랑아', '머물수 있게'];
+
+let zkzk = ko4.map( (currentValue, idx, arr) => {
+    return currentValue;
+}) // 화살표 함수 사용
+
+console.log(zkzk);
