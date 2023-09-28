@@ -4,6 +4,7 @@
 => 형변환
 
 명시적 형 변환 => String(), Number(), Boolean()... 인자에 변수나 값을 주어서 형 변환을 한다.
+(명시적 형 변환은 원시값을 해당 자료 원시값으로 바꿔주는 것이다. 객체로 만드는 것이 아니다.)
 
 Primitive Type => PrimitiveType
 alert() => 문자열을 인자로 받는다. 
