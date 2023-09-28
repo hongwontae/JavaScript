@@ -1,3 +1,12 @@
+class DOMHelper{
+    static moveElement(elementId, newDestinationSelector){
+        const element = document.getElementById(elementId);
+        const destinationElement = document.querySelector(newDestinationSelector);
+        destinationElement.append(element);
+    }
+}
+
+
 class Tooltip{
 
 }
@@ -18,7 +27,7 @@ class ProjectItem{
     connectSwitchButton(){
         const projectItemElement = document.getElementById(this.id);//p1,p2
         const switchButton = projectItemElement.querySelector('button:last-of-type'); // finish버튼, activate버튼을 선택
-        switchButton.addEventListener('click',this.updateProjectListHandler);
+        switchButton.addEventListener('click',this.updateProjectListHandler.bind(null, this.id));
         // 이 finish버튼이나 activate 버튼이 눌리면 swtichProject()메서드가 실행된다.
     }
 }
@@ -42,8 +51,10 @@ class ProjectList{
         this.switchHandlerFunction = switchHandlerFunction;
     }
 
-    addProject(){
-        console.log(this);
+    addProject(project){
+        this.projects.push(project);
+        DOMHelper.moveElement(project.id, `#${this.type}-projects ul`);
+        
     }
 
     switchProject(projectId){
