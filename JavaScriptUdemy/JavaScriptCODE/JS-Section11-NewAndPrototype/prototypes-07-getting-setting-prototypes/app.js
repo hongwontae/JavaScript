@@ -127,3 +127,30 @@ const music = Object.create({add : function(a,b){
 console.log(music);
 let mu = music.add(1,2);
 console.log(mu)
+
+let a = {name : 'hwt', age : 20};
+console.log(a);
+
+function Cool(){
+  this.name = 'hwt';
+  this.age = 20;
+  this.AI = function(){
+    console.log('good')
+  }
+}
+const cool = new Cool();
+console.log(cool);
+const cool1 = Object.getPrototypeOf(cool);
+console.log(cool1);
+
+
+Object.setPrototypeOf(cool1, {
+  ...Object.getPrototypeOf(cool1),
+  print : function(){
+    console.log(this.name);
+  }
+})
+
+console.log(cool1);
+
+
