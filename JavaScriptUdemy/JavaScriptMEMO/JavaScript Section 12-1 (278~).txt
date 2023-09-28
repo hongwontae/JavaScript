@@ -13,6 +13,18 @@ constructor(type){document.querySelector(`#${type}-projects li`)}
 => type에 해당하는 type-projects의 li들을 nodeList 유사배열객체로 가져온다.
 
 
+3. Switch 프로젝트 논리로 시작하기
+element:last-of-type => 형제 요소들중 같은 태그를 갖는 마지막 태그를 선택한다.
+element:first-of-type => 형제 요소들중 같은 태그를 갖는 첫 번째 태그를 선택한다. 
+
+splice() => 
+findIndex =>
+
+
+4. 메서드 참조 전달하기
+
+
+
 
 
 
