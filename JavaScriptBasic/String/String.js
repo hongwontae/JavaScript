@@ -38,10 +38,49 @@ let a13 = 'Abrahima Konate';
 let a15 = a13.substring(0,2);
 let a16 = a13.substring(0,5);
 let a17 = a13.substring(2,10);
+let a177 = a13.substring();
 // 첫번째 인수로 전달한 인덱스에 해당하는 문자부터 두번째 인자에 전달된 인덱스에 해당하는 문자의 바로 이전 문자까지를 모두 반환한다.
 
 
-console.log(a14);
-console.log(a15);
-console.log(a16);
-console.log(a17);
+console.log(a15); // Ab
+console.log(a16); // Abrah
+console.log(a17); // rehima K
+console.log(a177); // 아무것도 전달하지 않으면 모든 문자열을 반환한다.
+
+
+let a18 = 'Mac Alistrt';
+let a19 = a18.slice(-1);
+ // slice() => substirng과 같은 로직이지만 음수를 전달하여 사용할 수 있다.
+ // 음수는 뒤에서부터 가져온다는 뜻이고 인덱스가 아니라 길이 로직으로 받아들인다.
+ // 음수 로직은 매개변수가 하나여야만 작동된다.
+let a20 = a18.slice(-5);
+
+console.log(a19);
+console.log(a20);
+
+let a21 = 'Coutinew ';
+console.log(a21.repeat(2)); // repeat() => 해당 문자열을 반복해주는 메서드이다. 숫자를 넣으면 그 숫자만큼 반복한다.
+
+let a22 = 'Lovren';
+console.log(a22.includes('L')); // includes() => 인자의 문자열이 해당 문자열에 존재하는 Boolean으로 반환한다.
+
+let a23 = 'QuanSa';
+console.log(a23.startsWith('Q')); // startsWith() => 인자의 문자열로 해당 문자열이 시작하는지 Boolean으로 반환한다.
+console.log(a23.startsWith('q'));
+
+let a24 = 'Cutis Jones';
+console.log(a24.endsWith('s')); // endsWith() => 인자의 문자열로 해당 문자열의 마지막이 맞는지 Boolean으로 반환한다.
+console.log(a24.endsWith('S'));
+
+
+let a25 = new String('Firmino');
+let a26 = 'Firmino';
+console.log(a25 == a26);
+console.log(a25 === a26);
+
+a25 = a25.valueOf();
+console.log(a25 === a26); // true 
+// a25는 객체, a26은 원시값이다. 일치 연산자는 false => valueOf로 객체의 값을 원시값으로 바꾸고 일치 연산자 사용 => true;
+
+
+
