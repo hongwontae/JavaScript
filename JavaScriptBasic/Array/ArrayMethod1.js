@@ -88,3 +88,16 @@ console.log(b);
 
 let c = [5,1,2,5,1,2,5];
 console.log(c.indexOf(5,4)); //4
+
+
+let d = ['hwt', 'zero', 'Patio'];
+let dise = [{name : 'Zero Back', age : 30},{techName : 'Absolute Zero', age : 40}]
+let d1 = d.find(function(ele, idx, arr){
+    return ele === 'hwt'
+})
+console.log(d1);
+
+let d2 = dise.find((ele, idx, arr) => {
+    return ele.name == 'Zero Back'
+})
+console.log(d2);
