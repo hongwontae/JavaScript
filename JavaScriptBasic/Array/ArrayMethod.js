@@ -79,3 +79,12 @@ let a14 = a13.find((element, idx, arr) => {
 }); // element는 객체의 이름이다. 그래서 객체.키 = 값
 
 console.log(a14);
+
+console.log('---------------review2day test------------------------------------')
+
+let b = [1,2,3,4,5];
+b.splice(-1,1,'good');
+console.log(b);
+
+let c = [5,1,2,5,1,2,5];
+console.log(c.indexOf(5,4)); //4
