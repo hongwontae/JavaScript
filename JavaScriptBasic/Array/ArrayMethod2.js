@@ -46,3 +46,32 @@ console.log(a11);
 let a12 = ['hwt', '1', '2'];
 let a13 = a12.join(' ');
 console.log(a13);
+
+
+let a14 = ['A','B','C']
+console.log(a14.includes('A')); // true
+console.log(a14.includes('b')); //false
+
+
+let a15 = ['A','B','C',1,2,3];
+a15.forEach(function(currentValue, idx, arr){
+    console.log(currentValue % 2)
+}); // forEach는 배열 향상 반복문이라고 생각하면 된다.
+
+
+let a16 = [1,2,3,4,5,6,7,8,9,10];
+let a17 = a16.map((ele,idx,arr) => ele*2);
+console.log(a17); // 반환값은 배열
+
+
+let a18 = [1,2,3,4,5,6,7,8,9,100];
+let a19 = a18.filter((ele, idx, arr) => {
+    return ele === arr[idx];
+}) // 배열을 순회하면서 조건에 맞는 것만 취합하여 배열로 반환한다.
+console.log(a19);
+
+
+let b = [1,'a',2,'b',3,4,'c'];
+console.log(b.reverse());
+console.log(b.sort((a,b)=>b-a));
+
