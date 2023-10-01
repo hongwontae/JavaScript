@@ -75,3 +75,16 @@ let b = [1,'a',2,'b',3,4,'c'];
 console.log(b.reverse());
 console.log(b.sort((a,b)=>b-a));
 
+
+let b1 = [10,20,30,40,50,60,70,80,90,100];
+let b2 = b1.reduce((acc,cur,idx,arr) => {
+    return acc+arr[idx];
+},1000);
+console.log(b2);
+
+let b3 = 'koala3121 dnjsxoghd, q2tlxm@12';
+let b4 = b3.split(' ',2);
+console.log(b4);
+
+let b5 = b4.join(' ');
+console.log(b5);
