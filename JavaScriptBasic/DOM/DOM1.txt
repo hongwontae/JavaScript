@@ -1,0 +1,18 @@
+1. querySelector();
+=> 인자에 태그나 id,css를 넣으면 첫 번쨰로 해당하는 문서객체를 가져온다.
+
+2. querySelectorAll();
+=> 인자에 태그나 id, class를 넣으면 해당하는 모든 문서객체를 가져온다. => nodeList라는 유사 배열 객체로 가져온다.
+
+*** => querySelector들은 id나 class를 넣을 떄 식별자 규칙도 넣어줘야 한다. 태그은 상관없다.
+
+3. getElementById();
+=> 인자에 id를 넣으면 해당하는 문서객체를 가져온다.
+
+4. getElementByTagName();
+=> 인자에 태그이름을 넣으면 해당하는 태그 전부를 가져온다. => htmlCollection이라는 유사 배열 객체로 가져온다.
+
+5. getElementByClassName();
+=> 인자에 클래스 이름을 넣으면 해당하는 클래스 전부를 가져온다. => htmlCollectio이라는 유사 배열 객체로 가져온다.
+
+=> 쿼리셀렉터든 겟엘리멘트든 인자에 들어가는 값들은 모두 문자열로 넣어야 한다.
