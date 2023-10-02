@@ -101,3 +101,11 @@ let d2 = dise.find((ele, idx, arr) => {
     return ele.name == 'Zero Back'
 })
 console.log(d2);
+
+
+console.log('-------------------------------------------------------')
+let e = [1,2,3,4,5];
+let e1 = e.find((ele,idx,arr) => {
+    return ele%2 === 0 
+})
+console.log(e1); // 첫 번쨰 값을 찾으면 종료한다.

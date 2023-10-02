@@ -88,3 +88,26 @@ console.log(b4);
 
 let b5 = b4.join(' ');
 console.log(b5);
+
+let a100 = [1,2,3,4,5];
+  let b100 = a100.reduce((acc, cur, idx, arr) => {
+    return acc+cur
+  },10) // => 25
+  console.log(b100);
+
+
+let o = [1,2,3,4,5];
+let o1 = ['start',,...o,'end']; // 나머지 값들을 다 받아서 배열이나 객체로 만든다. => rest
+console.log(o1);
+
+let [o2,...o3] = o;
+console.log(o2); // 1
+console.log(o3); // [2345] // 압축된 값들을 풀어내버린다. => spread
+
+let o4 = {nam : 'hhwtt', ages : 300, games : 'good games'};
+let o5 = {...o4};
+console.log(o5); 
+
+let {nam, ages} = o4; 
+console.log(nam);
+console.log(ages);
