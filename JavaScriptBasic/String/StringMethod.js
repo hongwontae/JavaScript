@@ -15,12 +15,16 @@ for(i of a1){
 
 let a2 = 'Big Bang';
 let a3 = a2.charAt(5);
+let b1 = a2.charAt(3);
 console.log(a3);
+console.log(b1); // 공백 반환
 
 
 let a4 = 'IDWP IDWP';
 let a5 = a4.indexOf('W',2);
+let b2 = a4.indexOf('P',4); //8, 두 번째 매개변수는 해당 인덱스 다음부터
 console.log(a5);
+console.log(b2);
 
 
 let a6 = 'Apple Apple';
@@ -86,6 +90,11 @@ console.log(a25);
 console.log(a26);
 // startsWith() => 인자로 준 문자열이 해당 문자열의 시작점이 맞는가? Boolean으로 나타낸다.
 // endsWith() => 인자로 준 문자열이 해당 문자열이 마지막이 맞는가? Boolean으로 나타낸다.
+
+
+// let kkk = 'al al al al al';
+// let k2 = kkk.split(' ',2);
+// console.log(k2); => split() 두 번쨰 인자 논리 확인
 
 
 
