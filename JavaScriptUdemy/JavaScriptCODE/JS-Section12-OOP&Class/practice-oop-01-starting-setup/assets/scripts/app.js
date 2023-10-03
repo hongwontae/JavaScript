@@ -28,7 +28,9 @@ class ProjectList{
     products = [];
 
     constructor(type){
+        
         this.type = type;
+
         const prjItems = document.querySelectorAll(`#${type}-projects li`)
         console.log(prjItems);
         for(const prjitem of prjItems){
@@ -59,6 +61,8 @@ class App{
         const activeProjectsList = new ProjectList('active');
         const finishedProjectList = new ProjectList('finished');
         activeProjectsList.setSwitchHandlerFunction(finishedProjectList.addProject.bind(finishedProjectList));
+        // finishedPList의 addPro에 bind finishedProList객체를 바인딩 시켰다. this
+        // 두 번쨰 인자의 함수호출은 click시이다. bind는 함수를 생성시키기만 하고 호출은 함수에 맡긴다.
         finishedProjectList.setSwitchHandlerFunction(activeProjectsList.addProject.bind(activeProjectsList));
     }
 }
