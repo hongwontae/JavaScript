@@ -7,3 +7,7 @@ for(let i=0; i<a.length; i++){
 for(const i of a){
     console.log(a[i-1])
 }
+
+let a1 = '';
+console.log(Number(a1)); // 0반환 
+

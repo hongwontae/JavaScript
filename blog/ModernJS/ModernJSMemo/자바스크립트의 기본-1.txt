@@ -8,6 +8,7 @@ JS의 변수내의 타입들은 자유롭게 바뀔 수 있다. => 동적 타입
 typeof 
 => 자료형을 반환한다. 7가지 형식으로 반환한다. String, Number, BigInt, Boolean, Object, Function, Symbol
 => function도 객체이다. 근데 JS 초기의 설정이기에 바꾸지 않았다. 값-타입이 null이면 Object이다. function과 같다.
+=> undefined는 typeof의 대상이 안되는 듯.. let i; typeof i => 오류발생
 
 * BigInt => 뒤에 n을 붙여주면 된다.
 * typeof/ typeof() => 둘 다 가능하다.
