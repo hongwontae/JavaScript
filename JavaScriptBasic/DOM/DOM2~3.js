@@ -73,4 +73,9 @@ console.log(b14);
 b11.remove(); // 해당 dom을 삭제한다.
 // removeChild() => 해당 자식을 삭제한다.
 
+const b15 = document.querySelector('.kkk');
+//b15.classList.remove('kkk'); // 기존의 kkk이 삭제된다.
+const b16 = document.createElement('div');
+b16.textContent = 'ddddddd';
+b15.before(b16);
 
