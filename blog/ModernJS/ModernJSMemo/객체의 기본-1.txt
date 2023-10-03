@@ -90,6 +90,15 @@ delete user?.name => user가 존재하면 user.name을 삭제한다.
 3. obj?.method() – obj가 존재하면 obj.method()를 호출하고, 그렇지 않으면 undefined를 반환함
 
 
+6. 객체를 원시형으로 변환하기
+객체끼리 연산을 하는 경우 자동 형변환(원시값으로 변환)되어 계산된다.
+
+hint => 목표로 하는 자료형
+
+alert같이 문자열을 기대하는 함수나 무엇가를 출력하는 함수에서 객체는 string이 된다.
+수학 연산을 적용할려 할 떄는 hint가 number가 된다.
+연산자가 기대하는 자료형이 확실하지 않을 때는 default가 된다.
+
 
 
 
