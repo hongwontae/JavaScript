@@ -12,9 +12,34 @@ class DOMHelper {
   }
 }
 
-class Tooltip {}
+class Tooltip {
+
+  constructor(closeNotofierFunction){
+    this.closeNotifier = closeNotofierFunction;
+  }
+
+  closeTooltip = () => {
+    this.detach();
+    this.closeNotofier();
+  }
+
+  detach = () => {
+    this.element.remove();
+  }
+
+  attach(){
+    const tooltipElement = document.createElement('div');
+    tooltipElement.className = 'card';
+    tooltipElement.textContent = 'Dummy'
+    tooltipElement.addEventListener('click', this.detach);
+    this.element = tooltipElement;
+    document.body.append(tooltipElement);
+  }
+}
 
 class ProjectItem {
+
+  hsaActiveTooltip = false;
 
   constructor(id, updateProjectListsFunction, type) {
     this.id = id; // p1,p2,p3
@@ -23,21 +48,33 @@ class ProjectItem {
     this.connectSwitchButton(type); // this type => active, finished/ 함수를 실행한다.
   }
 
-  connectMoreInfoButton() {}
+  showHandler(){
+    if(this.hsaActiveTooltip){
+      return;
+    }
+    const tooltip = new Tooltip(() => {
+      this.hsaActiveTooltip = false;
+    });
+    tooltip.attach();
+    this.hsaActiveTooltip = true;
+  }
 
-  connectSwitchButton(type) { // active, finished
-    const projectItemElement = document.getElementById(this.id); // p1,p2,p3 => li
-    let switchBtn = projectItemElement.querySelector('button:last-of-type'); // li 중에서 마지막에 있는 버튼
+  connectMoreInfoButton() {
+    const projectItemElement = document.getElementById(this.id);
+    let moreInfoBtn = projectItemElement.querySelector('button:first-of-type'); 
+    moreInfoBtn.addEventListener('click',this.showHandler)
+  }
+
+  connectSwitchButton(type) { 
+    const projectItemElement = document.getElementById(this.id);
+    let switchBtn = projectItemElement.querySelector('button:last-of-type'); 
     switchBtn = DOMHelper.clearEventListeners(switchBtn); 
-    // 버튼을 매개변수로 하여 clearEventListners를 작동시킨다.
-    // 메서드를 통해서 새롭게 복사된 버튼 => switchBtn
+
     switchBtn.textContent = type === 'active' ? 'Finish' : 'Activate';
-    // textContent에 textContent button의 text는 active라면 finish, 아니라면 Activate가 반환된다.
     switchBtn.addEventListener(
       'click',
       this.updateProjectListsHandler.bind(null, this.id)
     );
-    // switchBtn이 클릭되었을 떄 updateProjectListsHandler가 this.id 매개변수를 갖고 실행된다.
   }
 
   update(updateProjectListsFn, type) {

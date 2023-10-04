@@ -28,7 +28,7 @@ class ProjectItem{
 
     }
 
-    connectMoreInfoButton(){
+    connectMoreInfoButton(type){
         const projectItemElement = document.getElementById(this.id);
         let switchBtn = projectItemElement.querySelector('button:last-of-type');
         switchBtn = DOMHeler.clearEventListners(switchBtn);
@@ -65,7 +65,7 @@ class ProjectList{
     }
 
     addProject(product){
-        this.products.push(product);
+        this.products.push(product); // 일치하는 li
         DOMHeler.moveElement(product.id, `#${this.type}-projects ul`)
         product.update(this.switchProject.bind(this), this.type);
     }
@@ -73,7 +73,7 @@ class ProjectList{
     switchProject(projectId){
         //const projectIndex = this.products.findIndex(p => p.id === projectId);
         //this.products.splice(projectIndex,1); // 버튼 클릭으로 활성화되었을 떄 해당 배열을 삭제하는 메서드이다.
-        this.switchHandler(this.products.find(p => p.id === projectId));
+        this.switchHandler(this.products.find(p => p.id === projectId)); // addProject의 인자
         this.products = this.products.filter(p => p.id !== projectId);
         // 위의 있는 메서드의 로직과 정반대이다. 인자의 id와 배열의 id가 일치하지 않는 것만 products에 추가한다.
     }
