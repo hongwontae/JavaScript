@@ -12,10 +12,22 @@ class DOMHelper {
   }
 }
 
-class Tooltip {
+class Component{
+  detach = () => {
+    this.element.remove();
+  }
+
+  attach(){
+    document.body.append(this.element);
+  }
+}
+
+class Tooltip extends Component {
 
   constructor(closeNotofierFunction){
+    super();
     this.closeNotifier = closeNotofierFunction;
+    this.create();
   }
 
   closeTooltip = () => {
@@ -23,18 +35,14 @@ class Tooltip {
     this.closeNotofier();
   }
 
-  detach = () => {
-    this.element.remove();
-  }
-
-  attach(){
+  create(){
     const tooltipElement = document.createElement('div');
     tooltipElement.className = 'card';
     tooltipElement.textContent = 'Dummy'
     tooltipElement.addEventListener('click', this.detach);
     this.element = tooltipElement;
-    document.body.append(tooltipElement);
   }
+
 }
 
 class ProjectItem {
