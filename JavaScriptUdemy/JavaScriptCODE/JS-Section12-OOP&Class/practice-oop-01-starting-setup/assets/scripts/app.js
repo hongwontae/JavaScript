@@ -1,12 +1,27 @@
+class DOMHeler{
+
+    static clearEventListners(element){
+        const cloneElement = element.cloneNode(true);
+        element.replaceWith(cloneElement);
+        return cloneElement;
+    }
+
+    static moveElement(elementId, newDestinationSelector){
+        const element = document.getElementById(elementId);
+        const destinationElement = document.querySelector(newDestinationSelector);
+        destinationElement.append(element);
+    }
+}
+
 class ToolTip{}
 
 class ProjectItem{
 
-    constructor(id, updateProjectListsFunction){
+    constructor(id, updateProjectListsFunction,type){
         this.id = id;
         this.updateProjectListsHandler = updateProjectListsFunction;
         this.connectSwitchButton();
-        this.connectMoreInfoButton();
+        this.connectMoreInfoButton(type);
     }
 
     connectSwitchButton(){
@@ -15,10 +30,15 @@ class ProjectItem{
 
     connectMoreInfoButton(){
         const projectItemElement = document.getElementById(this.id);
-        const switchBtn = projectItemElement.querySelector('button:last-of-type');
-        switchBtn.addEventListener('click', this.updateProjectListsHandler); 
-        // switchBtn에 나는 속해있는 클래스의 메서드 뿐만 아니라 다른 클래스의 메서드를 addEvent에 넣고 싶다.
-        // 콜백 함수를 사용하자.
+        let switchBtn = projectItemElement.querySelector('button:last-of-type');
+        switchBtn = DOMHeler.clearEventListners(switchBtn);
+        switchBtn.textContent = type === 'active' ? 'finish' : 'Activate'
+        switchBtn.addEventListener('click', this.updateProjectListsHandler.bind(null, this.id)); 
+    }
+
+    update(updateProjectListFn, type){
+        this.updateProjectListsHandler = updateProjectListFn;
+        this.connectMoreInfoButton(type);
     }
 
 }
@@ -34,7 +54,8 @@ class ProjectList{
         const prjItems = document.querySelectorAll(`#${type}-projects li`)
         console.log(prjItems);
         for(const prjitem of prjItems){
-            this.products.push(new ProjectItem(prjitem.id, this.switchProject.bind(this)));
+            this.products.push(new ProjectItem(prjitem.id, this.switchProject.bind(this), this.type));
+             // this는 여기있는 필드들을 의미한다.
         }
         console.log(this.products); // li의 id만 가져와서 배열에 넣었다.
     }
@@ -43,8 +64,10 @@ class ProjectList{
         this.switchHandler = switchHandlerFunction;
     }
 
-    addProject(){
-        console.log(this);
+    addProject(product){
+        this.products.push(product);
+        DOMHeler.moveElement(product.id, `#${this.type}-projects ul`)
+        product.update(this.switchProject.bind(this), this.type);
     }
 
     switchProject(projectId){
@@ -64,6 +87,7 @@ class App{
         // finishedPList의 addPro에 bind finishedProList객체를 바인딩 시켰다. this
         // 두 번쨰 인자의 함수호출은 click시이다. bind는 함수를 생성시키기만 하고 호출은 함수에 맡긴다.
         finishedProjectList.setSwitchHandlerFunction(activeProjectsList.addProject.bind(activeProjectsList));
-    }
+    }s
 }
+
 App.init(); 
