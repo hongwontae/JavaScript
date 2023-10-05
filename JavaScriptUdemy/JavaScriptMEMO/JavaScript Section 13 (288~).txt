@@ -15,6 +15,40 @@ width과 height은 요소의 넓이와 높이를 의미한다.
 
 
 3. 요소 크리 & 위치로 작업하기
-브라우저의 좌표상 해당 요소의 위치지점을 알려주는 속성은 top, bottom, left, right이다.
-offsetTop(), offsetBottom(), offsetTop(), offsetLeft() => 각 좌표 상 요소의 위치를 알려주는 메서드
+offsetTop, offsetLeft => JS가 불러올 수 있는 top과 left이다.
+clientTop, clientLeft => JS가 불러올 수 있는 컨텐츠와 요소의 차이의 크기이다.
+offsetWidth, offsetHeight => JS가 불러올 수 있는 넓이와 크기
+clientWidth, clientHeight => 테두리와 스크롤바를 제외한 내부 넓이와 높이이다.
+scrollHeight => 요소의 스크롤이 있다면 그 높이까지 계산하여 반환하는 값
+scrollTop => 사용자가 스크롤링을 얼마나 내렸는지 계산하여 값을 반환 => 동적이다.
+
+window.innerWidth => 문서 전체의 넓이
+window.innertHeight => 문서 전체의 높이
+이 윈도우 프로퍼티들은 스크롤이 있는 경우 그 스크롤의 넓이와 높이도 포함하여 반환한다.
+
+document.documentElement.clientWidth/document.documentElement.clientWidth
+=> 단순히 문서의 넓이와 높이만 필요할 때는 이 JS 프로퍼티가 더 정확하다.
+
+
+4. DOM & 프로토타입
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
