@@ -60,6 +60,10 @@ ex) date('07/11/19') => 2017/11/19
 
 
 13. Error 객체 & 생성자 함수
+JS 빌트인 객체인 Error()는 오류 메시지에 해당하는 문자열을 만들 수 생성할 수 있다.
+Error 객체는 message 프로퍼티, stack 프로퍼티, code 프로퍼티..etc..가 존재한다.
+const a = new Error('somting wrong'); => 인자의 문자열은 자동으로 message 프로퍼티에 저장된다.
+
 
 
 
