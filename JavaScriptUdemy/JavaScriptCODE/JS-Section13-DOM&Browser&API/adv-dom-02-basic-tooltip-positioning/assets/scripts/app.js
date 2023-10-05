@@ -9,6 +9,7 @@ class DOMHelper {
     const element = document.getElementById(elementId);
     const destinationElement = document.querySelector(newDestinationSelector);
     destinationElement.append(element);
+    element.scrollIntoView({behavior: "smooth"});
   }
 }
 
@@ -58,9 +59,10 @@ class Tooltip extends Component {
     const hostElPosLeft = this.hostElement.offsetLeft;
     const hostElPosTop = this.hostElement.offsetTop;
     const hostElHeight = this.hostElement.clientHeight;
+    const parentElementScrolling = this.hostElement.parentElement.scrollTop;
 
     const x = hostElPosLeft + 20;
-    const y = hostElPosTop + hostElHeight - 10;
+    const y = hostElPosTop + hostElHeight -parentElementScrolling - 10;
 
     tooltipElement.style.position = 'absolute';
     tooltipElement.style.left = x + 'px'; // 500px

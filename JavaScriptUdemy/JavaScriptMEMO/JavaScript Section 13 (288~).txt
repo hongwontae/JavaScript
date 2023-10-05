@@ -15,6 +15,8 @@ width과 height은 요소의 넓이와 높이를 의미한다.
 
 
 3. 요소 크리 & 위치로 작업하기
+
+DOM 트리의 대한 프로퍼티들이다.
 offsetTop, offsetLeft => JS가 불러올 수 있는 top과 left이다.
 clientTop, clientLeft => JS가 불러올 수 있는 컨텐츠와 요소의 차이의 크기이다.
 offsetWidth, offsetHeight => JS가 불러올 수 있는 넓이와 크기
@@ -29,12 +31,26 @@ window.innertHeight => 문서 전체의 높이
 document.documentElement.clientWidth/document.documentElement.clientWidth
 => 단순히 문서의 넓이와 높이만 필요할 때는 이 JS 프로퍼티가 더 정확하다.
 
+=> 이 프로퍼티들은 읽기 전용이다. set은 불가하다.
+
 
 4. DOM & 프로토타입
+JS안에서 노출된 DOM API는 여러 생성자 함수에서도 동작한다.
+EventTarget> Node > Element > HTMLElement > HTMLInputElement...etc
+=> 이렇게 프로토타입 체인이 되어 있다.
 
 
+5. 툴팁 위치시키기
+3의 프로퍼티를 사용해서 moreInfo을 반환한다. => 이 떄 scrollTop을 이용해서 동적으로 위치를 계산하여 DOM을 반환한다.
 
 
+6. 스크롤 다루기
+scrollTo() => 왼쪽, 오른쪽, 위, 아래로 얼마나 스크롤 할지 설정한다.
+scrollBy() => 스크롤 내에서 얼마나 많은 픽셀만큼 움직이고 싶인지 설정한다.
+scrollTo는 한 번 움직이면 재동작하지 않고(해당 위치로 움직이는 것이다.) scrollBy는 재동작한다.(인자의 값만큼 움직이는 것이다.)
+위 메서드들의 인자로 두 개를 줄 수 있다. 하나는 x값, 하나는 y값이다.
+
+scrollIntoView() => 해당 돔이 Browser로 위치가 변경되었을 떄 그 위치가 scroll안이라면 해당 돔이 스크롤의 중심이되게하는 메서드이다. 인자로 객체를 줄 수 있다. {behavior : 'smooth or auto or instant'};
 
 
 
