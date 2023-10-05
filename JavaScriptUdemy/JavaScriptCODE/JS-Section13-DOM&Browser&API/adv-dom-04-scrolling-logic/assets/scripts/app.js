@@ -54,8 +54,13 @@ class Tooltip extends Component {
   create() {
     const tooltipElement = document.createElement('div');
     tooltipElement.className = 'card';
-    tooltipElement.textContent = this.text;
-    
+    const tooltipTemplate = document.getElementById('tooltip')
+    console.log(tooltipTemplate) // template 안의 컨텐츠들은 #document-fragment로 감춰져 있다.
+    const tooltipBody = document.importNode(tooltipTemplate.content, true);
+    console.log(tooltipBody)
+    tooltipBody.querySelector('p').textContent = this.text;
+    tooltipElement.append(tooltipBody);
+
     const hostElPosLeft = this.hostElement.offsetLeft;
     const hostElPosTop = this.hostElement.offsetTop;
     const hostElHeight = this.hostElement.clientHeight;
