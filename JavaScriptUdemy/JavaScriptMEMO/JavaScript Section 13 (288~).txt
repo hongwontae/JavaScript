@@ -93,7 +93,24 @@ JS 코드로 설정 가능한 타이머는 두 종류가 존재한다.
 
 
 10. location 객체와 history객체
+둘 다 window 객체이다.
 
+location => url과 연관된 프로퍼티와 메서드가 존재한다.
+location.href ='address' => 다른 페이지로 이동시킨다.
+location.assign = 'addrss' => 다른 페이지로 이동시킨다.
+location.replace('address') => 다른 페이지로 이동시킨다. but 뒤로 갈 수 없다. history를 잃어버린다.
+location.host => 호스트를 알려준다. 즉, 도메인을 반환한다.
+location.origin => 프로토콜을 포함한 전체 도메인을 반환한다.
+location.pathname => 도메인의 뒷부분을 반환한다.
+
+history => 브라우저 기록과 연관된 프로퍼티와 메서드가 존재한다.
+history.back() => 이전 페이지로 돌려보낸다.
+history.forward() => 앞의 페이지로 보낸다.
+history.length => 사용자가 브라우저이동을 얼마나 했는지 알려준다.
+history.go() => 인자의 숫자만큼 이전 페이지로 돌아가게 한다.
+
+
+11. navigator 객체
 
 
 
