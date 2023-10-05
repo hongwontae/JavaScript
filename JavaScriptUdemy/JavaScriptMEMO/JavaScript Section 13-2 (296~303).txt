@@ -1,0 +1,105 @@
+8. 스크립트 동적으로 로딩하기
+JS로 스크립트 생성하고 작동하는 작업을 할 수 있다.
+
+DOM(문서 객체)의 노드는 요소, 텍스트, 빈 텍스트, id, css... 뿐만 아니라  <script>태그도 만들 수 있다.
+const a = document.createElement('script'); => scirpt 요소를 만들겠다.
+a.src = 'address' => script파일의 위치를 설정한다.
+a.defer = true => defer 속성을 설정하겠다.
+document.head.append(a) => head의 자식으로 자식으로 추가하겠다.
+=> 이런 방식으로 스크립트를 동적으로 활용할 수 있다.
+=> 예제에서는 버튼의 이벤트 효과를 통해 스크립트를 더욱 동적으로 만들었다.
+
+
+9. 타이머 & 간격 설정하기
+JS 코드로 설정 가능한 타이머는 두 종류가 존재한다.
+
+1. setTimeout() => 인자로 두 개를 받는다 첫 번쨰 인자는 함수이고 타이머가 끝났을 떄 실행된다. 두 번쨰 인자는 타이머에 설정하고 싶은 시간이다. (3000 => 3초) 이 타이머는 한 번만 작동한다.
+
+2. setInterval() => 인자로 두 개를 받는다. 첫 번째 인자는 함수이고 두 번째 인자의 시간마다 실행된다. 두 번째 인자는 타이머에 설정하고 싶은 시간이다. 이 타이머는 2번 째 인자의 시간마다 함수가 실행된다.
+
+1,2를 멈추기 위해서는 
+=> 1,2 함수를 선언문이 아니라 표현식으로 작성한다.
+=> clearTimeout()/clearInterval()를 호출한다. 이 때 이들의 인자에 1,2에서 사용했던 표현식의 변수를 넣는다.
+=> 이 함수들이 호출되면 타이머가 작동하지 않는다.
+
+
+10. location 객체와 history객체
+둘 다 window 객체이다.
+
+location => url과 연관된 프로퍼티와 메서드가 존재한다.
+location.href ='address' => 다른 페이지로 이동시킨다.
+location.assign = 'addrss' => 다른 페이지로 이동시킨다.
+location.replace('address') => 다른 페이지로 이동시킨다. but 뒤로 갈 수 없다. history를 잃어버린다.
+location.host => 호스트를 알려준다. 즉, 도메인을 반환한다.
+location.origin => 프로토콜을 포함한 전체 도메인을 반환한다.
+location.pathname => 도메인의 뒷부분을 반환한다.
+
+history => 브라우저 기록과 연관된 프로퍼티와 메서드가 존재한다.
+history.back() => 이전 페이지로 돌려보낸다.
+history.forward() => 앞의 페이지로 보낸다.
+history.length => 사용자가 브라우저이동을 얼마나 했는지 알려준다.
+history.go() => 인자의 숫자만큼 이전 페이지로 돌아가게 한다.
+
+
+11. navigator 객체
+navigator는 브라우저와 유저의 상호작용이 가능하도록 한다.
+=> 브라우저나 사용자가 사용한 정보들을 알 수 있다.
+
+navigator.userAgent
+=> 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36'
+=> 브라우저와 소통할 수 있는 코드는 브라우저마다 다르다. 그 차이점을 식별할 프로퍼티인 것 같다.
+
+navigator.geolocation.getCurrentPosition() => 사용자의 위치를 알아내는 메서드이다. 인자로 함수를 받는다. 해당 함수가 실행되면 콜백함수의 매개변수는 사용자의 위치를 식별할 수 있게되고 콜백함수의 내부는 이를 사용하여 처리한다.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
