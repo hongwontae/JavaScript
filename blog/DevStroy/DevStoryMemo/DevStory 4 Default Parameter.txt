@@ -39,7 +39,7 @@ function func7(a=func6(), b=a*10, c=b+10) {
 func7(); // 220;
 
 
-4. 객체를 디폴트 파라미터로 설정할 수 있다.
+4. 객체를 디폴트 파라미터로 설정할 수 있다. (중요!!)
 ex)
 let person = {
     name : 'hwt',
