@@ -14,7 +14,7 @@
 클래스가 함수로 이루어졌다면 객체가 만들어져야 한다. => 함수에서 return 키워드를 통해서..
 하지만 클래스는 return이 존재하지 않는다. => 객체가 반환되는 이유는 new 키워드 때문이다.
 
-new 키워드가 이면에서 하는 일은 =>  this에 생성될 객체를 저장한다. this = {}(빈 객체), return this => 객체를 생성한다.
+new 키워드가 이면에서 하는 일은 => this에 빈 객체를 할당한다. this에 생성될 객체를 저장한다. this = {}(빈 객체), return this => 객체를 반환한다.
 
 
 3. 프로토타입 소개(prototypes-01-starting-setup/ 프로토타입 완벽 공략)
@@ -111,7 +111,7 @@ prototype 프로퍼티 => console.log(Friend.prototype === friend1.__proto__);  
 => person Class = person function => 이를 토대로 객체를 생성하면 프로퍼티, 메서드, [[protoType]] 특성이 있다.
 => [[protoType]]안에 생성자 메서드 메서드와 [[protoType]]이 존재한다.
 => prototype 특성은 함수 객체에만 존재한다. 이 prototype은 기존 class(function)의 [[prototype]]에서 가져와서 이 클래스를 기반으로 생성된 객체의 [[prototype]]에 할당된다.
-=> prototype의 this는 언제나 메서드를  호출하는 객체를 의미한다.
+=> prototype의 this는 언제나 메서드를 호출하는 객체를 의미한다.
 
 => Person.prototype에 프로퍼티를 설정하면 이를 기반으로 생성된 객체의 [[ProtoType]]에 할당된다.
 
