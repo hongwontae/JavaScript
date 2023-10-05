@@ -52,7 +52,14 @@ navigator.userAgent
 navigator.geolocation.getCurrentPosition() => 사용자의 위치를 알아내는 메서드이다. 인자로 함수를 받는다. 해당 함수가 실행되면 콜백함수의 매개변수는 사용자의 위치를 식별할 수 있게되고 콜백함수의 내부는 이를 사용하여 처리한다.
 
 
+12. Data객체와 생성자 함수
+Date는 JS 빌트인 객체이다. 
+const a = new Date() => a라는 객체에는 현재 날짜와 타임스탬프 [[prototype]]에는 date 프로퍼티와 메서드가 존재한다.
+date()의 인자에 형식에 맞춘 문자열을 넣으면 new Date()가 파싱해서 객체를 생성한다.
+ex) date('07/11/19') => 2017/11/19
 
+
+13. Error 객체 & 생성자 함수
 
 
 
