@@ -31,7 +31,7 @@ String Method
 
 
 7. slice()
-=> subString과 같지만 뒤에서부터 시작한다.
+=> subString과 같지만 음수로직을 사용할 수 있다.
 
 
 8. repeat();
