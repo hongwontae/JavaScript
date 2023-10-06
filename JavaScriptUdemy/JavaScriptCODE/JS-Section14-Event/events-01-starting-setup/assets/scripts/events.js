@@ -1,30 +1,51 @@
-const buttons = document.querySelectorAll('button'); // nodeList = 유사배열객체
+// const buttons = document.querySelectorAll('button'); // nodeList = 유사배열객체
+// console.log(buttons)
 
-// button.onclick = function() {
+// // button.onclick = function() {
 
+// // };
+
+
+// const buttonClickHandler = (e) => {
+//    //e.target.disabled = true;
+//    console.log(e)
 // };
 
-const buttonClickHandler = (e) => {
-   e.target.disabled = true;
-   console.log(e)
-};
+// const anotherButtonClickHandler = () => {
+//   console.log('This was clicked!');
+// };
 
-const anotherButtonClickHandler = () => {
-  console.log('This was clicked!');
-};
+// // button.onclick = buttonClickHandler;
+// // button.onclick = anotherButtonClickHandler;
 
-// button.onclick = buttonClickHandler;
-// button.onclick = anotherButtonClickHandler;
+// const boundFn = buttonClickHandler.bind(this);
 
-const boundFn = buttonClickHandler.bind(this);
+// // button.addEventListener('click', buttonClickHandler);
 
-// button.addEventListener('click', buttonClickHandler);
+// // setTimeout(() => {
+// //   button.removeEventListener('click', buttonClickHandler);
+// // }, 2000);
 
-// setTimeout(() => {
-//   button.removeEventListener('click', buttonClickHandler);
-// }, 2000);
+// buttons.forEach((btn) => {
+//     btn.addEventListener('mouseenter',buttonClickHandler);
+// })
 
-buttons.forEach((btn) => {
-    btn.addEventListener('click',buttonClickHandler);
-})
 
+// window.addEventListener('scroll', event => {
+//     console.log(event)
+// });
+
+let curElementNumber = 0;
+ 
+function scrollHandler() {
+    const distanceToBottom = document.body.getBoundingClientRect().bottom;
+ 
+    if (distanceToBottom < document.documentElement.clientHeight + 150) {
+        const newDataElement = document.createElement('div');
+        curElementNumber++;
+        newDataElement.innerHTML = `<p>Element ${curElementNumber}</p>`;
+        document.body.append(newDataElement);
+    }
+}
+ 
+window.addEventListener('scroll', scrollHandler);
