@@ -1,4 +1,4 @@
-const buttons = document.querySelectorAll('button'); // nodeList = 유사배열객체
+const button = document.querySelector('button'); // nodeList = 유사배열객체
 // console.log(buttons)
 
 // // button.onclick = function() {
@@ -37,8 +37,20 @@ const buttonClickHandler = (e) => {
 
 const form = document.querySelector('form');
 form.addEventListener('submit', (event) => {
-    event.preventDefault();
+    event.preventDefault()
     console.log(event)
+})
+
+const div = document.querySelector('div');
+div.addEventListener('click', event => {
+    console.log('clicked div')
+    console.log(event);
+})
+
+button.addEventListener('click',(event) => {
+    event.stopPropagation();
+    console.log('clicked click me button')
+    console.log(event);
 })
 
 
