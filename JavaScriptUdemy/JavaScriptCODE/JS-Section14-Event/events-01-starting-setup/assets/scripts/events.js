@@ -1,4 +1,4 @@
-// const buttons = document.querySelectorAll('button'); // nodeList = 유사배열객체
+const buttons = document.querySelectorAll('button'); // nodeList = 유사배열객체
 // console.log(buttons)
 
 // // button.onclick = function() {
@@ -6,10 +6,10 @@
 // // };
 
 
-// const buttonClickHandler = (e) => {
-//    //e.target.disabled = true;
-//    console.log(e)
-// };
+const buttonClickHandler = (e) => {
+   //e.target.disabled = true;
+   console.log(e)
+};
 
 // const anotherButtonClickHandler = () => {
 //   console.log('This was clicked!');
@@ -35,17 +35,10 @@
 //     console.log(event)
 // });
 
-let curElementNumber = 0;
- 
-function scrollHandler() {
-    const distanceToBottom = document.body.getBoundingClientRect().bottom;
- 
-    if (distanceToBottom < document.documentElement.clientHeight + 150) {
-        const newDataElement = document.createElement('div');
-        curElementNumber++;
-        newDataElement.innerHTML = `<p>Element ${curElementNumber}</p>`;
-        document.body.append(newDataElement);
-    }
-}
- 
-window.addEventListener('scroll', scrollHandler);
+const form = document.querySelector('form');
+form.addEventListener('submit', (event) => {
+    event.preventDefault();
+    console.log(event)
+})
+
+
