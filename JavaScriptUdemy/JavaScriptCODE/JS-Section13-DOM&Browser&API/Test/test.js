@@ -77,4 +77,46 @@ const template = document.importNode(c.content, true);
 console.log(template);
 
 
+// script 태그를 동적으로 생성하기
+// createElement를 통해 script태그를 생성하여 원할 떄 동적으로 부여할 수 있다.
+// defer => 다운로드는 하는데 html이 다운되고 실행될 때까지는 스크립트를 실행하지 않는다.
+
+// 타이머 
+// setTimeout() => 인자로 두 개를 준다. 하나는 함수(콜백), 하나는 시간이다.(2000 => 2초), 시간에 따라 한번만 함수가 실행된다.
+// setInterval() => 인자로 두 개를 준다. 하나는 함수(콜백), 하나는 시간이다. 시간에 따라 연속적으로 함수가 실행된다.
+// clearTimeout() => setTimeout의 표현식의 변수를 인자로 넣고 호출하면 타이머가 중지된다.
+// clearInterval() => setInterval의 표현식의 변수를 인자로 넣고 호출하면 타이머가 중지된다.
+
+
+// location
+// 브라우저 위치와 관련된 메서드와 프로퍼티들이다.
+// location.href = '' => 해당 값의 주소로 브라우저를 이동시킨다.
+// locaion.assign('address') => 위와 같다.
+// location.replace('address') => 위와 같지만 뒤로 가기 불가
+// location.host => 도메인을 반환한다.
+// location.origin => 프로토콜을 포함한 도메인을 반환한다.
+// locaiton.pathname => 도메인의 뒷 부분을 반환한다.
+
+// history
+// 브라우저 기록과 관련된 메서드와 프로퍼티들이다.
+// history.back() => 이전 페이지
+// history.forward() => 앞의 페이지
+// history.length => 사용자가 브라우저 방문 횟수
+// history.go() => 인자의 숫자만큼 뒤로 간다.
+
+
+// navigator
+// 브라우저와 사용자의 상호작용을 위한 메서드와 프로퍼티
+// navigator.geoloacion.getCurrentPosition() => 사용자와 상호작용하여 사용자의 위치를 반환하는 메서드이다.
+
+// =>이 세 개의 객체들은 window 객체들이다. 어디에서나 호출하여 사용할 수 있다.
+
+// Date() => 빌트인 js객체이다. 객체를 생성하면 날짜와 관련된 메서드와 함수를 사용할 수 있다. 인자에 알맞는 날짜를 전달하면
+                // 파싱하여 날짜 객체를 만든다.
+// Error() => 빌트인 js객체이다. 객체를 생성하면 오류 메시지와 오류에 관련된 메서드와 함수를 사용할 수 있다.
+                // 인자에 문자열을 넣으면 자동으로 message 프로퍼티에 넣는다.
+
+
+
+
 
