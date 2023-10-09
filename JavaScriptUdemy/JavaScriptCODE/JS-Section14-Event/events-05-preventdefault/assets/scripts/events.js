@@ -38,3 +38,6 @@ form.addEventListener('submit', event => {
   event.preventDefault();
   console.log(event);  
 });
+// form의 button의 submit 트리거는 기본동작이 서버의 전송이다.
+// 이벤트의 기본동작을 막고 싶다면 preventDefault()를 호출해야 한다.
+// event 객체내의 존재한다.

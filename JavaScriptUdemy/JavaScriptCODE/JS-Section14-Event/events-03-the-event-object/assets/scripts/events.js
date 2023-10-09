@@ -1,4 +1,4 @@
-const buttons = document.querySelectorAll('button');
+const buttons = document.querySelectorAll('button'); // nodeList => 유사 배열 객체라 forEach 사용 가능
 
 // button.onclick = function() {
 
@@ -27,3 +27,6 @@ const boundFn = buttonClickHandler.bind(this);
 buttons.forEach(btn => {
   btn.addEventListener('click', buttonClickHandler);
 });
+
+// forEach를 통해 이벤트를 걸어준다.
+// => 다수의 DOM 요소에 한번에 걸어주는 방법이다.

@@ -51,3 +51,7 @@ button.addEventListener('click', event => {
   console.log('CLICKED BUTTON');
   console.log(event);
 });
+
+// DOM의 Event는 캡쳐링, 버블링이 존재한다. 버블링이 기본동작이다.
+// 이 버블링은 한 요소에서 핸들러가 작동하면 부모 요소의 핸들러가 작동하고 가장 최상단의 조상요소를 만날떄까지 작동한다.
+// 버블링을 무시하고 싶다면 이벤트 객체의 event.stopProgagtion()을 호출하면 된다.
