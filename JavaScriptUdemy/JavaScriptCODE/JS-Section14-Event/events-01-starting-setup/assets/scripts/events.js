@@ -42,9 +42,10 @@ form.addEventListener('submit', (event) => {
 })
 
 const div = document.querySelector('div');
-div.addEventListener('click', event => {
+div.addEventListener('click', function(event){
     console.log('clicked div')
     console.log(event);
+    console.log(this)
 })
 
 button.addEventListener('click',(event) => {
