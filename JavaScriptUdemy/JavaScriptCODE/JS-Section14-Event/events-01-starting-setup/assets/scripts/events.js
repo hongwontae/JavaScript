@@ -56,6 +56,20 @@ button.addEventListener('click',(event) => {
 // stopProgagaion()을 맨 하위 요소 DOM의 이벤트 핸들러에서 호출하지 않으면 버블링의 효과가 발생한다.
 // stopProgagaion()을 사용하면 click시 button click의 이벤트만 호출된다.
 
+const listItems = document.querySelectorAll('li');
+const list = document.querySelector('ul');
+
+// listItems.forEach((listItem)=>{
+//     listItem.addEventListener('click', (event) => {
+//         event.target.classList.toggle('highlight');
+//     })
+// })
+
+list.addEventListener('click',(event)=>{
+   event.target.closest('li').classList.toggle('highlight');
+})
+
+
 
 
 

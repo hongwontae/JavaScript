@@ -1,1 +1,1 @@
-JavaScript Section 14-2 ()
+1. 프로그래밍적으로 DOM 요소 트리거하기
