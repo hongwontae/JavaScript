@@ -105,12 +105,13 @@ class ProjectItem {
   }
 
   connectDrag(){
-    const item = document.getElementById(this.id)
+    const item = document.getElementById(this.id) // li
 
     item. addEventListener('dragstart', event => {
       event.dataTransfer.setData('text/plain', this.id);
       event.dataTransfer.effectAllowed = "move";
     });
+
     item.addEventListener('dragend', event => {
       console.log(event);
     })

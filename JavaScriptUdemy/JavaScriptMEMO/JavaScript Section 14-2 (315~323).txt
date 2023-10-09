@@ -59,6 +59,19 @@ data.transfer.effectAllowed => 어떤 종류의 드래그 앤 드롭 작업이 �
 
 
 
+7. drag & drop Summary
+dragstart => 드래그를 시작했을 때 발생하는 이벤트 트리거이다.
+dragover => 드래그 중일 때 수백밀리초마다 발생하는 이벤트이다. e.preventDefault()로 막아주는 것이 좋다.
+
+drag 값 => drag의 데이터에 관한 값들은 transfer에 저장되어 있다. 
+(event.transfer.SetData(key,value)); => 드래그 시 값 저장
+(event.transfer.GetData(key)) => 드랍 시 저장한 값을 불러와 사용한다.
+
+drop => 드래그를 놓았을 때 발생하는 이벤트 트리거이다. dragstart 이벤트에서 설정한 넘길 값을 drop 이벤트로 받는다.
+
+
+
+
 
 
 
