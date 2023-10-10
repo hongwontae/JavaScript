@@ -58,3 +58,31 @@ const cal3 = cal(5);
 const cal4 = cal(10);
 console.log(cal3(15)); // 20
 console.log(cal4(20)); // 30
+
+
+// 중첩 함수
+// 반환 함수는 아니다.
+function showName(name){
+    function whatname(){
+        console.log(name)
+    }
+    whatname();
+}
+
+showName('hwt');
+
+// 팩토리 함수가 중첩 함수이면서 반환 함수이다.
+function showInfo(a){
+    function insideShow(b){
+        console.log(a+b)
+    }
+    return insideShow
+}
+
+const show1 = showInfo(10);
+console.log(show1);
+show1(20);
+
+
+
+

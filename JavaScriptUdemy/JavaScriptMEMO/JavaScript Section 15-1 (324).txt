@@ -46,8 +46,41 @@ console.log(cal4(20)); // 30
 => 함수내의 매개변수를 지정해놓고 사용한다라고 이해하면 좋다.
 
 
-4. closure;
+4. closure
+JS의 모든 함수는 클로저이다. => scope와 밀접한 연관이 있다.
 
+1. 함수의 중괄호 내에서는 전역 변수에 접근할 수 있다.
+2. 함수 내에서 변수를 만들면 외부에서 접근이 불가하다.
+3. 함수 내의 함수는 외부 함수의 변수나 매개변수에 접근할 수 있다.
+4. 외부함수는 안쪽 함수의 변수에 접근할 수 없다.
+
+중첩 함수
+1. JS는 함수 안에서 함수를 정의하는 것을 중첩함수라고 한다.
+2. 내부 함수를 실행은 외부 함수에서만 가능하다. => 함수 반환이 아니다.
+3. 내부 함수는 외부 함수의 매개변수나 변수에 접근할 수 있다.
+ex) function name(name){
+  function whatname(){
+  console.log(name)
+}
+  whatname();
+}
+
+name('hwt'); => hwt
+
+함수 반환 (중첩 함수이면서 함수반환이다.)
+1. JS는 함수 안에 다른 함수를 반환 할 수 있다.
+2. 외부 함수의 return으로 내부 함수를 넣는다. (실행x, 전달역할)
+3. 실행하고 싶다면 일반적인 실행이 아니라 변수에 내부 함수의 return값을 넘기고 그 변수를 실행시켜야 제대로 작동한다.
+ex) function showInfo(a){
+   function inside(b){
+  console.log(a+b)
+}
+  return inside;
+}
+
+const func = showInfo(10); => showInfo()의 반환값은? inside 함수 그 자체
+func() = inside();
+func(20) => 30이 반환된다.
 
 
 
