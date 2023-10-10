@@ -23,3 +23,6 @@ console.log(addMoreNumbers(1,2))
 
 // 이 함수는 비 순수 함수이다. 부수 효과를 만들어내기 때문이다.
 // 함수의 밖에서 정의된 변수를 바꾸는 행위 => previousResult = sum;
+
+// function sendDataToServer(){}
+// 비순수 함수라는 것을 의미하도록 함수이름을 지어주는 것이 좋다.
