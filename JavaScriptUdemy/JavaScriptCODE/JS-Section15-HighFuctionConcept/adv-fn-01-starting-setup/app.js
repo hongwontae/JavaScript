@@ -84,5 +84,21 @@ console.log(show1);
 show1(20);
 
 
+function receiveGender(gender) {
+    function showName(name) {
+      return name + ' is ' + gender;
+    }
+    return showName;
+  }
+  
+  const showMale = receiveGender('male');
+  const showFemale = receiveGender('female');
+  
+  console.log(showMale('홍길동'));
+  console.log(showMale('마이콜'));
+  console.log(showFemale('이혜리'));
+// 클로저의 예시이다.
+// 외부함수가 닫힌 이후에도 내부 함수는 외부 함수의 변수나 매개변수에 접근하여 값을 취할 수 있다.
+
 
 
