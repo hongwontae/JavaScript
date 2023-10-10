@@ -1,0 +1,17 @@
+1. 재귀함수 Introduce
+재귀 함수는 함수가 자체적으로 호출을 진행한다.
+
+ex) function powerOf(x,n){
+
+    // if(n===1){
+    //     return x;
+    // }
+    // return x*powerOf(x, n-1);
+
+    return n===1 ? x : x*powerOf(x,n-1);
+}
+
+console.log(powerOf(2,3));
+
+=> 함수내에서 기존의 함수를 호출하는 것을 의미한다. 단순히 호출만 하는 코드라면 무한 로프를 돌기 때문에 멈추는 코드를 작성해줘야 한다. if check으로 무한 로프를 막는다.
+
