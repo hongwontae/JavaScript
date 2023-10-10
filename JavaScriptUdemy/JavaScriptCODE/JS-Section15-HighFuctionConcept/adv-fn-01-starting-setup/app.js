@@ -26,3 +26,35 @@ console.log(addMoreNumbers(1,2))
 
 // function sendDataToServer(){}
 // 비순수 함수라는 것을 의미하도록 함수이름을 지어주는 것이 좋다.
+
+
+// 팩토리 함수
+
+function createTaxCal(tax){
+    function calculateTax(amount){
+        return tax * amount
+    }
+
+    return calculateTax;
+}
+
+const cal1 = createTaxCal(0.19);
+const cal2 = createTaxCal(0.38);
+
+console.log(cal1(100)); // 19
+console.log(cal2(200)); // 76
+
+
+// 함수 내의 함수는 내부 함수의 외부에 있는 모든 것에 접근할 수 있다. => 상위 함수의 매개변수 tax에 접근할 수 있다.
+
+function cal(a){
+    function add(b){
+        return a+b
+    }
+    return add;
+}
+
+const cal3 = cal(5);
+const cal4 = cal(10);
+console.log(cal3(15)); // 20
+console.log(cal4(20)); // 30
