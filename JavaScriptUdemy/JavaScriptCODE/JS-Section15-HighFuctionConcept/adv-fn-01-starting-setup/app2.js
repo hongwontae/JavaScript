@@ -23,3 +23,63 @@ function powerOf(x,n){
 }
 
 console.log(powerOf(2,3));
+
+const myself = {
+    name: 'Max',
+    friends: [
+      {
+        name: 'Manuel',
+        friends: [
+          {
+            name: 'Chris',
+            friends: [
+              {
+                name: 'Hari'
+              },
+              {
+                name: 'Amilia'
+              }
+            ]
+          }
+        ]
+      },
+      {
+        name: 'Julia'
+      }
+    ]
+  };
+
+function getPrintFriendNames(person){
+    const collectedNames = [];
+
+    if(!person.friends){
+        return [];
+    }
+
+    for(const friend of person.friends){
+        collectedNames.push(friend.name);
+        collectedNames.push(...getPrintFriendNames(friend));
+    }
+    return collectedNames;
+}
+console.log(getPrintFriendNames(myself));
+
+// let a1 = {name : 'hwt', age : 40};
+// for(const a2 in a1){
+//     console.log(a2);
+// }
+
+// let a = {
+//     name : 'Max',
+//     firends : [
+//         {name : 'chris'}
+//     ]
+// }
+// function ff(person){
+//     for(const friend of person.firends){
+//         console.log(friend);
+//     }
+// }
+// ff(a)
+// for-of는 값을 가져오는 것에 불과하다. person만 있다면 a의 객체 값 전부를 가져온다.
+

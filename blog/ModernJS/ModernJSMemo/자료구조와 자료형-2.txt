@@ -1,0 +1,13 @@
+1. Iterable 객체
+
+Iterable(반복 가능한)객체는 배열을 일반화한 객체를 의미한다. 
+이터라블의 개념을 사용하면 어떤 객체든 for-of 반복문을 적용할 수 있다.
+
+Iterable => array, string, map, set...
+
+Iterble한 객체를 만들려면(for-of) 객체에 Symbol.iterable이라는 메서드를 추가해야 한다.
+
+1. for..of가 시작되자마자 for..of는 Symbol.iterator를 호출한다. (Symbol.iterator가 없으면 에러가 발생합니다). Symbol.iterator는 반드시 이터레이터(iterator, 메서드 next가 있는 객체)를 반환해야 합니다.
+2. 이후 for..of는 반환된 객체(이터레이터)만을 대상으로 동작한다.
+3. for..of에 다음 값이 필요하면, for..of는 이터레이터의 next()메서드를 호출한다.
+4. next()의 반환 값은 {done: Boolean, value: any}와 같은 형태이어야 한다. done=true는 반복이 종료되었음을 의미합니다. done=false일땐 value에 다음 값이 저장됩니다.
