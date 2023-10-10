@@ -49,15 +49,16 @@ const myself = {
     ]
   };
 
-function getPrintFriendNames(person){
-    const collectedNames = [];
+function getPrintFriendNames(person){ // myself
+    const collectedNames = []; // empty arr
 
-    if(!person.friends){
-        return [];
+    if(!person.friends){ // myself.friends가 falsy라면 빈 배열을 반환한다.
+        return [2];
     }
 
     for(const friend of person.friends){
-        collectedNames.push(friend.name);
+        //console.log(friend); // 밑의 두개의 로직이 없다면 friend는 배열의 값을 묶어서 가져온다.
+        collectedNames.push(friend.name); // 밑의 로직이 없다면 ['Manuel', 'Julia'];
         collectedNames.push(...getPrintFriendNames(friend));
     }
     return collectedNames;
@@ -81,5 +82,5 @@ console.log(getPrintFriendNames(myself));
 //     }
 // }
 // ff(a)
-// for-of는 값을 가져오는 것에 불과하다. person만 있다면 a의 객체 값 전부를 가져온다.
+//for-of는 값을 가져오는 것에 불과하다. person만 있다면 a의 객체 값 전부를 가져온다.
 
