@@ -45,4 +45,10 @@ console.log(b);
 let b1 = Symbol.for("cool");
 console.log(b1);
 console.log(b === b1);
-// Symbol.for(key)를 사용하면 cool이라는 
+// Symbol.for(key)를 사용하면 cool이라는 이름표를 가진 심볼을 찾고 없다면 생성한다.
+
+
+let c = Symbol.keyFor(b);
+console.log(c); // cool
+// Symbol.keyFor()의 인자에 전역 심볼 변수 값을 넣으면 이름을 찾아준다.
+// 레지스트리에 저장되어 있어야 작동한다.
