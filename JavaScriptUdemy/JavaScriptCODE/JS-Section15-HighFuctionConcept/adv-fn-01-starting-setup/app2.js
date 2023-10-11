@@ -53,10 +53,10 @@ function getPrintFriendNames(person){ // myself
     const collectedNames = []; // empty arr
 
     if(!person.friends){ // myself.friends가 falsy라면 빈 배열을 반환한다.
-        return [2];
+        return [1];
     }
 
-    for(const friend of person.friends){
+    for(const friend of person.friends){ 
         //console.log(friend); // 밑의 두개의 로직이 없다면 friend는 배열의 값을 묶어서 가져온다.
         collectedNames.push(friend.name); // 밑의 로직이 없다면 ['Manuel', 'Julia'];
         collectedNames.push(...getPrintFriendNames(friend));
