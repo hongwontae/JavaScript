@@ -1,0 +1,29 @@
+유사배열객체는 인덱스와 length가 존재하는 객체를 의미한다.
+이터러블은 Symbol.iterable을 통해 for-of가 사용가능한 객체를 의미한다.
+
+stirng의 경우는 유사배열객체이면서 iterable한 객체이다.
+
+Map은 키-값을 저장할 수 있는 컬렉션이다. 객체와 유사하지만 키의 타입을 구애받지 않는다는 특수성이 존재한다.
+맵은 순서를 기억한다.
+
+Map을 만드는 방법
+let a = new Map([
+    ['name','hwt'],
+    [{class: '1class'}, 'none']
+]);
+
+let a = new Map();
+a.set(...).set(...).set(....)
+
+Map의 메서드와 프로퍼티
+Map.set(key,value) => 맵의 값을 넣는다. 인자는 두 개 key-value
+Map.get(key) => key에 해당하는 값을 반환한다. 없다면 undefined를 반환한다. => 객체와 유사하다.
+Map.has(key) => key가 존재하면 true, 없다면 false
+Map.delete(key) => key에 해당하는 value를 삭제한다.
+Map.clear() => Map을 비운다.
+Map.size => 길이를 반환한다.
+
+Map.keys() => 키를 모은 이터러블 객체를 반환한다.
+Map.vlaues() => 값을 모은 이터러블 객체를 반환한다.
+Map.entries() => 키-값을 모은 이터러블 객체를 반환한다.
+
