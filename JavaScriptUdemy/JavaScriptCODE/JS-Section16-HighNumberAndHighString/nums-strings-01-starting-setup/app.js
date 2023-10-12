@@ -12,3 +12,7 @@ console.log(a3);
 
 let a4 = Math.pow(-2,53)+1
 console.log(a4);
+
+
+console.log('chapter 2')
+
