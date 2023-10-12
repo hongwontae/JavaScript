@@ -28,3 +28,12 @@ const prod = 'JavaScript Code';
 const price = 3000;
 
 const productOutput = productDescription`This product (${prod}) is {${price}}.`; // 이 형태가 호출된 형태이다.
+
+
+console.log('정규 표현식')
+const reg = new RegExp();
+console.dir(reg);
+const reg2 = /dd/;
+console.log(reg2);
+// 정규 표현식을 만드는 두 가지 방법;
+
