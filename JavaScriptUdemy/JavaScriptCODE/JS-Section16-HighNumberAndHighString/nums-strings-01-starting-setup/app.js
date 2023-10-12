@@ -17,3 +17,14 @@ console.log(a4);
 const random = Math.round(Math.random()*10);
 console.log(random);
 
+function productDescription(a,b,c){
+    console.log(a)
+    console.log(b)
+    console.log(c)
+    return 'This is a product'
+}
+
+const prod = 'JavaScript Code';
+const price = 3000;
+
+const productOutput = productDescription`This product (${prod}) is {${price}}.`; // 이 형태가 호출된 형태이다.

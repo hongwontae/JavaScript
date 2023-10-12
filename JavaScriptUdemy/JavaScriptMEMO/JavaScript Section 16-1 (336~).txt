@@ -74,7 +74,31 @@ slice() = -로직을 가지 substring
 etc....
 
 
-6. 백틱 (``)
+6. 템플릿 리터럴 (백틱) (``)
+${}에는 무조건 표현식을 넣어야 한다. => 변수를 넣어야 한다.
+함수도 들어가지만 템플릿 리터럴 안에서 호출을 해줘야 한다.
+
+템플릿 리터럴를 통해서 태그드 템플릿을 생성할 수 있다. 태그드 템플릿은 템플릿 리터럴과 함께 사용하는 함수를 일컫는다.
+
+ex) 
+function productDescription(a,b,c){
+    return 'This is a product'
+}
+
+const prod = 'JavaScript Code';
+const price = 3000;
+
+const productOutput = productDescription`This is (${prod}) is {${price}}`; 
+// 이 형태가 존재하면 호출된 것이다.
+console.log(productOutput);
+
+함수 표현식으로 태그 템플릿을 구성해야 한다.
+
+태그 템플릿의 첫 번쨰 매개변수는 템플릿 리터럴에서 만들어진 Real 문자열과 ${표현식}이 모여져 있는 배열이다.
+두 번쨰, 서 번쨰, 네 번쨰... 부터는 ${표현식}들이 값들이다.
+
+함수 표현식으로 함수를 넣고 그 함수에 백틱기호를 붙여넣으면 호출된 것을 취급한다.
+
 
 
 
