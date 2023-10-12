@@ -72,6 +72,9 @@ getCurrentPosition이라는 메서드는 상대방의 위치를 가져오는 메
 
 
 5. 다수의 콜백 & setTimeout()
+비동기 연산안에 비동기 연산을 포함할 수 있다.
+setTimeout(()=>{console.log('Timer Done')},0)라 하더라도 호출스택이 비워진 이후에 실행된다.
+
 
 
 
