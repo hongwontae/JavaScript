@@ -45,6 +45,23 @@ bigInt는 다른 유형의 숫자와 함께 사용되지 못한다. ( bigInt+/-*
 연산을 하려면 bigInt을 정수로 바꾼든가, 정수를 bigInt로 바꿔야 한다.
 
 
+4. 전역 Number와 Math객체
+Number.POSITIVE_INFINITY => Infinity
+Infinity => 무한대를 표시할 수 있는 값
+inInfinite() => Infinity,NaN이라면 false 일반 숫자 유형의 값이라면 true;
+isNaN() => nan이라면 true, 그렇지 않다면 false
+
+Math라는 객체가 존재한다.
+Math.floor() => 내림
+Math.ceil() => 올림
+Math.round() => 반올림
+Math.trunc() => 소수점 버리고 가져오기
+Math.max/min() => 최대 ,최소값
+Math.pow() => 거듭제곱 구하기
+
+
+
+
 
 
 
