@@ -66,6 +66,25 @@ let obj3 = Object.fromEntries(arr2);
 console.log(obj3);
 
 
+// 순서가 존재, 키-값으로 저장, 키로 다양한 자료형이 올 수 있다.
+// new Map() => 맵을 만든다.
+// Map.set(key,value) => 키와 값을 넣는다.
+// Map.get(key) => key의 값을 반환한다.
+// Map.delete(key) => 키의 값을 제거한다
+// Map.clear() => 맵 초기화
+// Map.has(key) => 키의 존재 여부 Boolean으로 확인
+// Map.size => 맵의 크기를 확인한다.
+
+// Map.keys() => 맵의 키들을 이터레이터 객체로 반환한다.
+// Map.values() => 맵의 값들을 이터레이터 객체로 반환한다.
+// Map.entries() => 맵의 키-값을 이터레이터 객체로 반환한다.
+
+// Object.entries() => 객체를 배열로 만든다.
+// => {name:'hwt', age: 30} => [['name','hwt'], ['age',30]];
+// Object.fromEntries() => 배열을 객체로 만든다.
+// [['name','hwt'], ['age',30]] => {name:'hwt', age: 30}
+
+
 
 
 

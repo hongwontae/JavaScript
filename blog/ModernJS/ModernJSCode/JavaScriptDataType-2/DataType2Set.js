@@ -11,6 +11,8 @@ set.add(mary);
 set.add(john);
 set.add(mary);
 
+console.log(set);
+
 // 셋에는 유일무이한 값만 저장됩니다.
 console.log( set.size ); // 3
 

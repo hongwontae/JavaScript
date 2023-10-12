@@ -10,7 +10,7 @@ Iterble한 객체를 만들려면(for-of) 객체에 Symbol.iterable이라는 메
 1. for..of가 시작되자마자 for..of는 Symbol.iterator를 호출한다. (Symbol.iterator가 없으면 에러가 발생합니다). Symbol.iterator는 반드시 이터레이터(iterator, 메서드 next가 있는 객체)를 반환해야 한다.
 2. 이후 for..of는 반환된 객체(이터레이터)만을 대상으로 동작한다.
 3. for..of에 다음 값이 필요하면, for..of는 이터레이터의 next()메서드를 호출한다.
-4. next()의 반환 값은 {done: Boolean, value: any}와 같은 형태이어야 한다. done=true는 반복이 종료되었음을 의미합니다. done=false일땐 value에 다음 값이 저장됩니다.
+4. next()의 반환 값은 {done: Boolean, value: any}와 같은 형태이어야 한다. done=true는 반복이 종료되었음을 의미한다. done=false일땐 value에 다음 값이 저장됩니다.
 
 
 이터러블은 Symbol.iterator가 구현된 객체이다.
@@ -18,13 +18,15 @@ Iterble한 객체를 만들려면(for-of) 객체에 Symbol.iterable이라는 메
 string => 이터러블이면서 유사배열객체이다.
 
 Array.from() => 이터러블이나 유사배열객체를 받아서 진짜 배열로 만들어준다.
+Array.isArray() => 인자에 들어온 값이 배열인지 아닌지를 Boolean 값으로 나타낸다.
 
 
 2. 맵과 셋
 
 Map
-맵은 키-값을 저장한다. 다만 키에 다양한 자료형을 사용하여 만들 수 있다. (키타입의 제약은 없다.)
-맵은 순서를 기억한다.
+1. 맵은 키-값을 저장한다.
+2. 키에 다양한 자료형을 사용하여 만들 수 있다. (키타입의 제약은 없다.)
+3. 맵은 순서를 기억한다.
 
 new Map() – 맵을 만든다.
 map.set(key, value) – key를 이용해 value를 저장한다.
@@ -74,7 +76,8 @@ map 객체에 넣을 떄는 set을 사용하는 것이 좋다.
 
 
 Set
-셋은 중복을 허용하지 않는 컬렉션이다. 셋에는 키가 없는 값이 저장된다.
+1. 셋은 중복을 허용하지 않는 컬렉션이다. 
+2. 셋에는 키가 없는 값이 저장된다.
 
 new Set(iterable) – 셋을 만든다. 이터러블 객체를 전달받으면(대개 배열을 전달받음) 그 안의 값을 복사해 셋에 넣어준다.
 set.add(value) – 값을 추가하고 셋 자신을 반환한다.

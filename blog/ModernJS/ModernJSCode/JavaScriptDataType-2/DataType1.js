@@ -87,3 +87,9 @@ let range = {
   }
 
 console.dir(range);
+
+// iterable한 객체는 for-of가 가능한 객체를 의미하고 for-of가 가능하다는 것은 객체내에 Symbol.iterator가 있어야 한다는 것이다.
+// 1. for-of가 호출되면 Symbol.iterable가 호출된다.
+// 2. Symbol.iterator는 이터레이터 객체를 반환한다.
+// 3. for-of는 반환된 이터레이터 객체만을 대상으로 작동한다.
+// 4. for-of는 반복문의 반복마다 next()가 호출된다.
