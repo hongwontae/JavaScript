@@ -55,6 +55,60 @@ setTimeout()은 JS내에 생성되어 있는 브라우저 API(브라우저)이�
 (이벤트 루프는 호출 스택이 비워져 있다면 메시지 대기열에 메시지나 콜백함수의 여부를 확인하여 호출 스택에 푸시하는 작업을 뜻한다.)
 
 
+4. 동기화 + 비동기화 코드 - 실행순서
+ex) 
+function trackUserHandler() {
+  navigator.geolocation.getCurrentPosition(posData => {
+    console.log(posData)
+  }, error => {
+    console.log(error)
+  })
+  console.log('Getting position');
+}
+
+=> 위의 코드로 JavaScript의 비동기 코드를 설명해보자
+getCurrentPosition이라는 메서드는 상대방의 위치를 가져오는 메서드이고 인자로 3개를 받는다. (콜백함수, 콜백함수, 객체/ 첫 번쨰 콜백함수는 위치를 가져오는데 성공했을 떄 사용하는 함수, 두 번쨰 콜백함수는 위치를 가져오는데 실패했을 떄 사용하는 함수, 세 번쨰는 이 메서드에 관한 객체이다.) trackUserHandler가 실행되면 내부의 콜백함수들은 메시지 대기열로 간다. trackUserHandler의 마지막 console.log()는 호출 스택으로 간다. 메시지 대기열에서 호출스택으로 푸시하기 위해서 호출스택이 비워져 있는지 확인한다. => 항상 기존의 호출스택이 먼저 실행된다.
+마지막 console.log()가 항상 먼저 실행되고 위의 콜백함수가 실행된다.
+
+
+5. 다수의 콜백 & setTimeout()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

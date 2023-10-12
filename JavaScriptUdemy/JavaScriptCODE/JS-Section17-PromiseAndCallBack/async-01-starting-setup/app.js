@@ -2,7 +2,12 @@ const button = document.querySelector('button');
 const output = document.querySelector('p');
 
 function trackUserHandler() {
-  console.log('Clicked!');
+  navigator.geolocation.getCurrentPosition(posData => {
+    console.log(posData)
+  }, error => {
+    console.log(error)
+  })
+  console.log('Getting position');
 }
 
 button.addEventListener('click', trackUserHandler);
@@ -10,10 +15,10 @@ button.addEventListener('click', trackUserHandler);
 // 이 리스너는 브라우저에서 관리되며 js는 다음 코드로 간다.
 // click이 되었을 떄 trackUserHandler을 연산하고 끝마치면 브라우저에서 여기로 돌아와 실행시킨다.
 
-let result = 0;
+// let result = 0;
 
-for(let i=0; i<1000000; i++){
-  result+=i
-}
+// for(let i=0; i<1000000; i++){
+//   result+=i
+// }
 
-console.log(result);
+// console.log(result);
