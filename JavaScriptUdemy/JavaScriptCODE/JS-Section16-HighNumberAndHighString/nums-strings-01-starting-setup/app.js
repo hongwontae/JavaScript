@@ -14,5 +14,6 @@ let a4 = Math.pow(-2,53)+1
 console.log(a4);
 
 
-console.log('chapter 2')
+const random = Math.round(Math.random()*10);
+console.log(random);
 
