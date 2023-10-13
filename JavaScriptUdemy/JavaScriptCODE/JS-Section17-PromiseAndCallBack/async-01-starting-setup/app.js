@@ -13,6 +13,7 @@ function trackUserHandler() {
   console.log('Getting position');
 }
 
+
 button.addEventListener('click', trackUserHandler);
 // 이 리스너는 클릭이 될 떄까지 코드 실행을 멈추는 것이 아니다.
 // 이 리스너는 브라우저에서 관리되며 js는 다음 코드로 간다.
