@@ -4,8 +4,9 @@ const output = document.querySelector('p');
 const setTime = (duration) => {
   const promise = new Promise((resolve, reject) => {
     setTimeout(() => {
-      resolve('Done');
+      resolve('Done'); // 비동기 함수
     }, duration);
+    console.log('DDDD')
   });
   return promise;
 };

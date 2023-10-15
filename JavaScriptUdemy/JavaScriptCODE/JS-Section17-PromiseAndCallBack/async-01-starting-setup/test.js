@@ -9,4 +9,3 @@ function func () {
     console.log('cool')
 }
 
-// 
