@@ -8,7 +8,7 @@ const setTimer = duration => {
     }, duration);
   });
   return promise;
-};
+}; // 내장 API를 프로미스화 한다고 부른다.
 
 function trackUserHandler() {
   navigator.geolocation.getCurrentPosition(
