@@ -51,7 +51,16 @@ then().then().catch().then()
 catch 블록은 무조건 반환한다. => 명시적으로 쓰지 않았다면 undefined가 반환된다.
 
 
-4.
+4. Promise Status
+Pending => 프로미스가 작동중이며 then()이나 catch()가 실행되지 않는다.
+Resolve => 프로미스가 해결되어서 then()이 실행된다.
+Reject => 프로미스가 거절되어 catch나 then()의 두 번쨰 인자가 실행된다.
+
+catch()나 then() 블록 다음에 또 다른 then() 블록이 존재하면 프로미스가 pending모드로 다시 돌아간다.
+(then과 catch는 항상 새로운 프로미스를 반환한다.)
+더 이상 then() 블록이 남아있지 않은 경우에만 최종 모드 Settled에 들어간다.
+
+Settled가 되면 특수 블록인 finally()로 최종정리 작업을 수행할 수 있다. 성공하든 실패하든 무조건 실행하는 코드이다.
 
 
 
