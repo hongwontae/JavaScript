@@ -48,3 +48,7 @@ button.addEventListener('click', trackUserHandler);
 // }
 
 // console.log(result);
+
+const promise2 = new Promise((resolve, reject) => {
+  resolve('Done')
+})

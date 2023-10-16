@@ -30,7 +30,7 @@ async function trackUserHandler() {
    const posData = await getPosition();
    const timerData = await setTimer(2000);
    console.log(timerData, posData);
-   
+
 }
 
 button.addEventListener('click', trackUserHandler);
@@ -42,3 +42,8 @@ button.addEventListener('click', trackUserHandler);
 // }
 
 // console.log(result);
+
+
+
+
+
