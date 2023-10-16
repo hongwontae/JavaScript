@@ -1,5 +1,5 @@
-const button = document.querySelector('button');
-const output = document.querySelector('p');
+const button = document.querySelector("button");
+const output = document.querySelector("p");
 
 const getPosition = (opts) => {
   const promise = new Promise((resolve, reject) => {
@@ -19,21 +19,27 @@ const getPosition = (opts) => {
 const setTimer = (duration) => {
   const promise = new Promise((resolve, reject) => {
     setTimeout(() => {
-      resolve('Done!');
+      resolve("Done!");
     }, duration);
   });
   return promise;
 };
 
 async function trackUserHandler() {
+  let posData;
+  let timerData;
 
-   const posData = await getPosition();
-   const timerData = await setTimer(2000);
-   console.log(timerData, posData);
+  try {
+    posData = await getPosition();
+    timerData = await setTimer(2000);
+    console.log(timerData, posData);
+  } catch (error) {
+    console.log(error);
+  }
 
 }
 
-button.addEventListener('click', trackUserHandler);
+button.addEventListener("click", trackUserHandler);
 
 // let result = 0;
 
@@ -42,8 +48,3 @@ button.addEventListener('click', trackUserHandler);
 // }
 
 // console.log(result);
-
-
-
-
-
