@@ -69,5 +69,33 @@
 // console.dir(document);
 // console.dir(String);
 
+// let a = function(){
+//   setTimeout(()=>{
+//     console.log('3Second');
+//     setTimeout(()=>{
+//       console.log('4Second')
+//     },4000)
+//   },3000)
+// }
+
+// a();
+
+
+let b = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve('Done')
+  }, 4000)
+})
+
+b.then(data => {
+  data
+  console.log(data)
+  console.dir(data);
+}, error => {
+  console.log(error)
+})
+
+
+
 
 
