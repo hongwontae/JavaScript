@@ -26,10 +26,9 @@ ECMAScript 사양에 정의되어 있지 않지만 자바스크립트 실행 환
 eval(), isFinite(NaN이나 infinity면 false 일반 수면 true), isNaN(NaN이면 ture 아니면 false)...등등
 
 
-
-
 정적메서드 => 프로토타입이 아닌 함수 자체에 메서드를 설정하는 것을 의미한다.
 window(전역객체)는 표준 빌트인 객체와 환경에 따른 호스트 객체 그리고 var 키워드로 선언한 전역변수와 전역 함수를 프로퍼티로 갖는다.
+생성자 함수는 prototype에 constructor와 넘겨줄 프로퍼티가 존재한다. 생성자 함수로 인해 만들어진 객체는 constructor와 프로퍼티들을 받는다.
 
 
 의문점
