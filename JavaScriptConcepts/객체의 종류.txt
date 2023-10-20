@@ -11,7 +11,7 @@ String(), Number()... => 형변환 역할만 한다.
 2. 호스트 객체
 ECMAScript 사양에 정의되어 있지 않지만 자바스크립트 실행 환경(브라우저 환경 또는 Node.js 환경)에서 추가로 제공하는 객체를 말한다. 브라우저 환경에서 DOM, BOM, Canvas, XMLHttpRequest, fetch, rquestAnimationFrame, SVG, Web Storage, Web Component, Web Worker와 같은 클라이언트 사이드 Web API를 호스트 객체로 제공하고, Node.js 환경에서는 Node.js 고유의 API를 호스트 객체로 제공한다.
 => Browser가 DOM를 만들고 JS코드에서 사용가능하다. 이를 호스트 객체라고 한다.
-=> 이미 정의되어 있어서 new를 사용하지 않고 사용한다.
+=> 이미 정의되어 있어서 new를 사용하지 않고 사용한다. => 정적 메서드에 다 존재하기 때문에
 
 
 3. 사용자 정의 객체
