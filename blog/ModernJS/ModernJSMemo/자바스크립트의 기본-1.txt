@@ -33,6 +33,19 @@ typeof
 
 
 
+Review-1
+JS의 자료형(타입)은 두 가지로 나뉜다. 원시타입, 객체타입
+원시타입 => String, Number, BigInt, Boolean, null, undefined, Symbol
+객체타입 => Object(array,func)
+
+typeof/ typeof() 
+=> 타입을 알려주는 키워드이자 전역 프로퍼티이다.
+=> String, Number, BigInt, Boolean, Symbold, function, object로 알려준다.
+=> null은 obj
+
+
+
+
 
 
 

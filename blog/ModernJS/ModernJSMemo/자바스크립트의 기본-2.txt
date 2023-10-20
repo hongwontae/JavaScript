@@ -131,7 +131,7 @@ feat. ??
 괄호없이 ??를 ||, &&같이 사용하는 것은 오류가 발생할 확률이 높다.
 
 
--- review
+Review-1
 ||
 => 하나라도 true(truthy)면 true이다.
 => 모두 true라면 첫 번째 값을 반환한다.
@@ -144,6 +144,53 @@ feat. ??
 => 모두 false값이면 첫 번째 값을 반환한다.
 => true와 false가 섞여 있으면 첫 번쨰 false값을 반환한다.
 => &&는 ||보다 연산자 우선순위가 높다.
+
+
+Review-2
+원시값은 new를 사용해서 만드는 것은 지향되지 않는다. => 원시값을 실제 객체값으로 바꾸는 것이기 떄문에 무거워져서 기존의 원시값의 의미를 잃어버린다.
+String(), Number(), Boolean()..등을 new 없이 사용하는 것은 단지 형변환일 뿐이다.
+
+타입을 문자열로 바꾸기
+1 => '1'
+true => 'true';
+null => 'null';
+undeined => 'undefined';
+=> 그냥 문자열로 바뀐다.
+
+타입을 숫자로 바꾸기
+'1' => 1;
+' 123 ' => 123;
+'1ko' => NaN;
+true => 1;
+false => 0;
+null => 0;
+undefined => NaN;
+
+타입을 Boolean으로 바꾸기
+0>n => n은 무조건 true;
+0 => false
+-1>n => n은 무조건 true;
+=> 0만 false 값
+'' => 빈 문자열 false;
+'a' => 뭐가 있는 문자열 true;
+null, undeifned => false;
+
+
++가 단항연산자로써 사용되었을 떄는 Number()가 붙는 효과인 것이다.
+null과 undefined을 비교대상으로 사용했을 떄는 형변환이 되지 않은 채 비교계산이 된다. null과 undeifned가 == 일때만 형변환한다.
++=, *=,/=  => 이렇게 사용하는 것이다.
+삼항연산자는 할당의 역할도 한다.
+truth/falsy => 무엇가를 평가할 떄 무엇을 Boolean 값으로 사용할 것이냐?
+0,'',null,undefined => falsy처리한다.
+ex) if(z){console.log(z)} => z가 truth값이면 true
+
+or/and
+and가 연산순위가 더 높다.
+or => 모두 false이면 마지막 false, 모두 true이면 첫 번쨰 true, 섞여 있으면 첫 번쨰 true;
+and => 모두 true이면 마지막 true, 모두 false이면 첫 번쨰 false, 섞여 있으면 첫 번쨰 false;
+
+
+
 
 
 

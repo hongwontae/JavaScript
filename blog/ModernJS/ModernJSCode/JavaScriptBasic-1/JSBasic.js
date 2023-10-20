@@ -20,3 +20,5 @@ console.log(typeof a3);
 
 let b = confirm();
 console.log(b); //true
+
+console.log(typeof null);

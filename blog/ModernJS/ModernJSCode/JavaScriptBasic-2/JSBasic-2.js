@@ -137,5 +137,24 @@ let zk2 = 3 && 4 && 5 && false;
 console.log(zk2);
 
 
+let z = null;
+console.log(typeof z);
+let z1 = String(z);
+console.log(z1);
+console.log(typeof z1);
+
+let z2;
+let z3 = String(z2);
+console.log(z3);
+console.log(typeof z3);
+
+console.log(Number(z));
+console.log(Number(z2));
+let z4 = '12ko';
+console.log(Number(z4));
+
+let z5 = -1;
+console.log(Boolean(z5));
+
 
 
