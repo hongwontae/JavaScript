@@ -14,7 +14,7 @@ console.log('days => ',days)
 // 배열의 매장 메서드
 // Push, Pop => 배열 끝의 항목을 추가하거나 제거할 수 있다.
 // push => 배열의 끝에 항목을 추가한다.  movieLine.push('son') or movieLine.push('asd'.'asd')
-// pop => 배열의 끝의 항목을 제거한다. movieLine.pop() => 파라미터가 필요없다. nㅁncy 삭제
+// pop => 배열의 끝의 항목을 제거한다. movieLine.pop() => 파라미터가 필요없다. nancy 삭제
 let movieLine = ['Tom', 'nancy']
 console.log('movieLine => ',movieLine)
 
