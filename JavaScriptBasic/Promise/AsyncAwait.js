@@ -32,11 +32,18 @@ async function getBanana(){
 
 // pickFrutis().then(console.log);
 
-async function pickFruits(){
-    const apple = await getApple();
-    const banana = await getBanana();
-    return `${apple} + ${banana}`
+// async function pickFruits(){
+//     const applePromise = getApple();
+//     const bananaPromise = getBanana();
+//     // 병렬적 처리하는 방법
+//     const apple = await applePromise;
+//     const banana = await bananaPromise;
+//     return `${apple} + ${banana}`
+// }
+
+function pickAllFruits(){
+    return Promise.all([getApple(), getBanana()])
+    .then(fruits => fruits.join(' + '))
 }
 
-let a = pickFruits();
-a.then(console.log);
+pickAllFruits().then(console.log)

@@ -12,3 +12,7 @@ await는 async 안에서만 사용할 수 있다.
 await는 then()을 사용하는 것처럼 awit 앞의 코드의 실행이 끝나기 전까지 기다린다.
 
 async의 함수 리턴 값은 항상 Promise이다. 그러므로 then을 통해서 받아야 한다.
+
+
+Promise.all()/ Promise.race()
+인자로 Promise값인 배열이 들어간다. 동시에 처리하며 all은 모두 처리하고, race는 먼저 온것만 처리한다.
