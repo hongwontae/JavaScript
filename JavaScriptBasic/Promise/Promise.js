@@ -1,57 +1,40 @@
-function printImmediately(print){
-    print();
-}
+// // producer
+// const promise = new Promise((resolve, reject) => {
+//     // netWork, read Files.. doing sime heavy work;
+//     console.log('doing something');
+//     setTimeout(()=>{
+//         reject(new Error('new Error'));
+//     },2000)
+// });
 
-console.log(1)
-console.log(2);
-setTimeout(()=>{console.log('SetTimeOut의 콜백함수야')},2000)
-printImmediately(() => {
-    console.log('Hello')
-}); // 이 경우 콜백함수가 비동기적으로 처리되지 않는다.
+// // consumers : then, catch, finally
+// promise.then(value => {
+//     console.log(value);
+// }).catch(error => {
+//     console.log(error)
+// }).finally(() => {
+//     console.log('finally')
+// })
 
-function printWithDelay(print, timeout){
-    setTimeout(print, timeout)
-}
-printWithDelay(() => {console.log('printWithDelay')},2000);
+// then => promise가 올바르게 실행되어서 pending => fulfilled가 되어서 resolve 콜백함수의 값이 담기는 것이다.
+// catch => 모종의 이유로 error가 발생하여 그 오류를 처리하고 싶을 떄는 catch 메서드나 then의 두 번쨰 매개변수에 처리한다.
 
-class UserStorage{
-    loginUser(id,password,onSuccess,onError){
+
+const fetchNumber = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        resolve(1)
+    }, 1000);
+})
+
+fetchNumber.then(num => num*2)
+ .then(num => num*3)
+ .then(num => {
+    return new Promise((resolve, reject) => {
         setTimeout(() => {
-            if(
-                (id === 'ellie' && password === 'dream')||
-                (id === 'coder' && password === 'academy')
-            ){
-                onSuccess(id);
-            } else{
-                onError(new Error('not found'))
-            }
-        },2000);
-    }
+            resolve(num-1)
+        }, 1000)
+    })
+ })
+  .then(num => console.log(num));
 
-    getRoles(user, onSuccess,onError){
-        setTimeout(() => {
-            if(user === 'ellie'){
-                onSuccess({name : 'ellie', role : 'admin'});
-            } else{
-                onError(new Error('no Access'))
-            }
-        },1000)
-    }
-}
 
-const userStorage = new UserStorage();
-const id = prompt('enter your id');
-const password = prompt('enter your password');
-
-userStorage.loginUser(id,password,
-    user => {
-        userStorage.getRoles(user,(userWithRole) => {
-            alert(`Hello ${userWithRole.name}, you have a ${userWithRole.role} role`)
-        }, error => {
-            console.log(error)
-        })
-    },
-    error => {
-        console.log(error)
-    }
-    )
