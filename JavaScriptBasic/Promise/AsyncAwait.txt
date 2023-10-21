@@ -1,0 +1,14 @@
+Promise를 간편하게 실행해주고 동기적인 코드 진행처럼 보이게 해준다.
+
+Promise === Async/Await가 아니다.
+=> 둘 다 알맞은 상황에 사용해야 한다.
+
+함수의 호출의 리턴이 Promise이고 resolve, reject를 호출하지 않으면 Promise는 pending 상태이다.
+그렇기에 Promise안에는 resolve나 reject를 사용해서 상태를 표현해야 한다.
+
+함수앞에 async라는 키워드를 사용하면 함수 본문의 코드들이 Promise로 변환이 된다.
+
+await는 async 안에서만 사용할 수 있다.
+await는 then()을 사용하는 것처럼 awit 앞의 코드의 실행이 끝나기 전까지 기다린다.
+
+async의 함수 리턴 값은 항상 Promise이다. 그러므로 then을 통해서 받아야 한다.
