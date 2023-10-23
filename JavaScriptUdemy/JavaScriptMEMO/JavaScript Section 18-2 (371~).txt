@@ -9,5 +9,46 @@ XMLHttpRequest로 가져온 데이터의 타입이 JSON이라면 JS 객체처럼
 
 
 9. POST 요청으로 데이터 보내기
-post 요청을 보내기 위해서는 open('post', url)를 넣고 send(보낼 데이터 => JSON 형식이어야 한다.)
+post 요청을 보내기 위해서는 open('post', url)를 넣고 send(보낼 데이터 => JSON 형식이어야 한다.)를 작성해야 한다.
+
+
+10. UL를 통해 요청 트리거하기
+input의 값을 가져올 떄는 항상 value를 사용해야한다.
+event.target => 이벤트가 발생한 곳을 반환한다.
+event.currentTarget => 이벤트가 걸려있는 부모를 반환한다.
+
+
+11. Delete 요청 보내기
+Element.tagName => 모조리 대문자로 반환된다.
+open('delete',URL)/ 네트워크 통신 요청 메서드는 Delete가 나온다.
+
+
+12. 오류 처리하기
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
  
