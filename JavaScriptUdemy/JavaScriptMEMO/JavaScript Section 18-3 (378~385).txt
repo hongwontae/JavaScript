@@ -1,4 +1,4 @@
-1. fetch() API 사용하기
+13. fetch() API 사용하기
 fech API는 XMLHttpRequest의 현대형이며 JS의 현대성을 반영하지 못하는 투박한 이벤트 핸들러를 사용하지 않기 위하여 사용된다.
 fetch()는 객체를 생성하지 않고 사용하는 전역 객체이다. Internet Explorer에서 사용불가
 
@@ -8,7 +8,7 @@ fetch는 프로미스 기반 함수이다. => 프로미스를 만드는 로직�
 fetch는 파싱된 응답이 아닌 스트리밍된 응답을 반환한다.
 
 
-2. fetch API
+14. fetch API
 fetch() => 반환값은 Promise객체이다. ([[promiseResult]] : response인 것이다.)
 
 fetch(url, options)
@@ -28,12 +28,12 @@ ex) fetch("https://jsonplaceholder.typicode.com/posts/1").then((response) =>
 response.json() => HTTP 응답 body 텍스트를 JSON 형식으로 바꾼 프로미스를 반환한다. resolve된 [[promiseResilt]]를 반환한다. 그 값은 json 객체이다.
 
 
-3. fetch() API를 이용해 데이터 POST하기
+15. fetch() API를 이용해 데이터 POST하기
 두 번쨰 인자는 객체를 키 값을 불러와서 값을 조종한다.
 {method : 'POST'}
 
 
-4. 요청 헤더 추가하기
+16. 요청 헤더 추가하기
 전송하는 요청에 대한 헤더의 정보를 수정하거나 추가할 수 있다.
 => fetch(url, {options})
 
@@ -51,7 +51,7 @@ headers라는 키에 대해 객체 값를 추가함으로써 헤더의 정보에
 XMLHttpRequest.setRequestHeader('키','값') => 이렇게 헤더의 정보를 추가해 줄 수 도 있다.
 
 
-5. fetch() & 오류 처리하기
+17. fetch() & 오류 처리하기
 XMLHttpRequest와 같이 네트워크 연결, 기술적인 문제일 떄만 catch 블럭으로 해당 오류를 잡아낼 수 있다.
 즉, get 요청의 url이 틀린것은 잡아내지 못한다는 것이다.
 
@@ -65,7 +65,14 @@ if(response.status >=200 && response.status < 300){
 response.json() => 프로미스를 도출하므로 다음 줄에서는 결과값을 볼 수 없다.
 
 
-6. XMLHttpReequest vs Fetch()
+18. XMLHttpReequest vs Fetch()
+두 방법 모두 요청을 전송할 떄에 사용하며 fetch() API는 오래된 브라우저에서 지원되지 않는다.
+Fetch()는 Promise 기반이며 오류처리가 힘들다.
+XMLHttpRequest는 코드 작성시 난해할 수 있으나 오래된 브라우저를 지원하고 오류처리가 fetch()보다는 낫다.
+
+
+19. FormData로 작업하기
+
 
 
 
