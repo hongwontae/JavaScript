@@ -5,35 +5,38 @@ const fetchButton = document.querySelector('#available-posts button');
 const postList = document.querySelector('ul');
 
 function sendHttpRequest(method, url, data) {
-  const promise = new Promise((resolve, reject) => {
-    const xhr = new XMLHttpRequest();
+//   const promise = new Promise((resolve, reject) => {
+    // const xhr = new XMLHttpRequest();
 
-    xhr.open(method, url);
+    // xhr.open(method, url);
 
-    xhr.responseType = 'json';
+    // xhr.responseType = 'json';
 
-    xhr.onload = function() {
-        if(xhr.status >=200 && xhr.status < 300){
-            resolve(xhr.response)
-        } else{
-            reject(new Error('Something went Wrong!'))
-        }
-    };
+    // xhr.onload = function() {
+    //     if(xhr.status >=200 && xhr.status < 300){
+    //         resolve(xhr.response)
+    //     } else{
+    //         reject(new Error('Something went Wrong!'))
+    //     }
+    // };
 
-    xhr.onerror = ()=>{
-        reject(new Error('Failed to send Request!'))
-    }
+    // xhr.onerror = ()=>{
+    //     reject(new Error('Failed to send Request!'))
+    // }
 
-    xhr.send(JSON.stringify(data));
-  });
+    // xhr.send(JSON.stringify(data));
 
-  return promise;
+// });
+    return fetch(url).then(response => {
+        return response.json();
+    }); 
+
 }
 
 async function fetchPosts() {
   const responseData = await sendHttpRequest(
     'GET',
-    'https://jsonplaceholder.typicode.com/poss'
+    'https://jsonplaceholder.typicode.com/posts'
   );
   const listOfPosts = responseData;
   for (const post of listOfPosts) {
