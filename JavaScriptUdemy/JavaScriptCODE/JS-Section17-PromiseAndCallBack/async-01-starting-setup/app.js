@@ -6,10 +6,11 @@ const setTime = (duration) => {
     setTimeout(() => {
       resolve('Done'); // 비동기 함수
     }, duration);
-    console.log('DDDD')
   });
   return promise;
 };
+
+console.dir(setTime(3000));
 
 function trackUserHandler() {
   navigator.geolocation.getCurrentPosition(posData => {
