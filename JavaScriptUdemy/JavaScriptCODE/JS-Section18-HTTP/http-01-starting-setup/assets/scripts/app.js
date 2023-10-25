@@ -56,11 +56,11 @@ function sendHttpRequest(method, url, data) {
 
 async function fetchPosts() {
   try {
-    const responseData = await sendHttpRequest(
-      'GET',
+    const responseData = await axios.get(
       'https://jsonplaceholder.typicode.com/posts'
     );
-    const listOfPosts = responseData;
+    console.log(responseData)
+    const listOfPosts = responseData.data;
     for (const post of listOfPosts) {
       const postEl = document.importNode(postTemplate.content, true);
       postEl.querySelector('h2').textContent = post.title.toUpperCase();
@@ -86,7 +86,8 @@ async function createPost(title, content) {
   // fd.append('body', content)
   fd.append('userId', userId)
 
-  sendHttpRequest('POST', 'https://jsonplaceholder.typicode.com/posts', fd);
+  axios.post('https://jsonplaceholder.typicode.com/posts', fd);
+  // post headers가 자동으로 Content-Type : 'multipart'으로 되어 있다.
 }
 
 fetchButton.addEventListener('click', fetchPosts);
@@ -101,8 +102,7 @@ form.addEventListener('submit', event => {
 postList.addEventListener('click', event => {
   if (event.target.tagName === 'BUTTON') {
     const postId = event.target.closest('li').id;
-    sendHttpRequest(
-      'DELETE',
+    axios.delete(
       `https://jsonplaceholder.typicode.com/posts/${postId}`
     );
   }
