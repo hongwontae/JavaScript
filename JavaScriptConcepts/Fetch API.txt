@@ -1,0 +1,40 @@
+fetch()는 브라우저 API이다. BOM에 속해 있다. (window.fetch() === fetch())
+
+Promise 기반 함수이기 떄문에 then()과 catch()를 이용하여 결과값을 받을 수 있다.
+
+fetch(1,2,)
+1 => URL
+2 => options
+
+서버와 통신이 성공하면 resolve 함수를 반환하고 실패하면 reject 함수를 반환한다.
+기본적으로 get이 기본값이다.
+
+서버와 통신이 성공하여 resolve 함수가 반환되면 리턴값은 response이다. 이 값은 then()의 인자로 들어간다.
+
+Response 프로퍼티
+- response.status : HTTP 상태 코드 
+
+- response.ok : HTTP 상태코드가 200~299일 경우 true
+
+- response.body : 내용
+
+- response.text() : 응답을 읽고 텍스트를 반환한다.
+
+- response.json() : 응답을 JSON 형태로 파싱한다.
+
+- response.formData() : 응답을 FormData 객체 형태로 반환한다.
+
+- response.blob() : 응답을 Blob(타입이 있는 바이너리 데이터) 형태로 반환한다.
+
+- response.arrayBuffer() : 응답을 ArrayBuffer(바이너리 데이터를 로우 레벨 형식으로 표현한 것) 형태로 반환한다.
+
+응답 자료 형태 반환 메서드는 한번만 사용 할 수 있다.
+만일 response.text()를 사용해 응답을 얻었다면 본문의 콘텐츠는 모두 처리 된 상태이기 때문에 뒤에 또 response.json() 써줘도 동작하지 않게 된다.
+
+
+
+
+
+
+
+
