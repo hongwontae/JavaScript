@@ -26,6 +26,27 @@ React, vue.js, Anglura 등은 모두 라이브러리이다.
 
 
 5. Axios 라이브러리 & HTTP 요청
+클라이언트와 서버의 통신을 더욱 원활한 코드 작성을 도와주는 라이브러리 => Axios
+CDN를 사용하면 Axios는 전역 객체가 된다.
+
+axios는 항상 프로미스를 반환한다.
+axios.get/ axios.post/ axios.put/ axios.delete () => URL 하나만 인자로 받고 Promise를 반환한다.
+이렇게 반환된 PromiseResult인 Response는 기존의 fetch API와 비슷하지만 axios의 response 객체는 바로 데이터가 튀어나온다.
+
+axios는 별다른 오류처리를 하지 않아도 오류가 발생한다. => axios의 효과
+또한 axios는 fetch API의 오류처리의 빈틈 (URL이 틀린경우, 400, 500 에러)도 자동으로 오류처리한다.
+(네트워크 오류, URL 오류.. 등등)
+=> 이러한 것을 다 잡아주기 떄문에 catch를 통해 예외처리 하기에 쉽다.
+
+Axios에는 따로 헤더를 추가할 필요가 없다.
+post 전송일 떄 XMLHttpRequest나 fetch()는 headers를 Content-Type : application/json이라고 작성했다.
+또한 보낼 데이터를 JSON.Stringify()를 통해서 JSON으로 만들었다.
+Axios는 이 두 작업을 자동으로 처리한다.
+
+Form-Data를 작성해도 자동으로 처리해준다.
+Axios가 데이터를 분석하여 알맞게 headers를 처리하고 올바른 데이터 변환도 한다.
+
+delete => URL만 넣으면 자동으로 처리된다.
 
 
 
