@@ -1,5 +1,7 @@
 import { ProjectList } from "./App/ProjectList.js";
 
+ window.DEFAILT_VALUE = 'MAX';
+
 class App {
   static init() {
     const activeProjectsList = new ProjectList('active');
