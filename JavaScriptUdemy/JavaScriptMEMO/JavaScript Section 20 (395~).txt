@@ -46,6 +46,20 @@ export import를 통해 가져오기 순서에 대해서 신경 쓸 필요가 �
 맨 마지막 <script>의 module를 설정하고 엔드포인트로 만들고 다른 js 파일들은 export-import를 통해 관계를 설정하자. => HTML 코드는 script 하나만을 가지고 있기에 코드가 효율적으로 변한다.
 
 
+6. 잘 알려진 내보내기 구문 변형 더 보기
+export 키워드는 함수, 클래스, 상수, 변수 등 모든 항목에 대해 사용될 수 있다.
+import 또한 export된 함수, 클래스, 상수, 변수 등 모든 항목을 가져올 수 있다.
+
+import * as 변수명 from "export 파일 주소.확장자";
+=> export된 모든 항목들을 가져온다.
+
+import {가져올 expoet 구문 as 별칭} from "export 파일 주소.확장자"
+=> 별칭을 사용할 수 있다.
+
+
+7. 기본 내보내기로 작업하기
+
+
 
 
 
