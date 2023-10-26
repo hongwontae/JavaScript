@@ -1,9 +1,11 @@
 //import { Tooltip } from "./Tooltip.js";
 import { DOMHelper } from "../Utility/DOMHelper.js";
 
+console.log('Project Item created');
+
 export class ProjectItem {
     hasActiveTooltip = false;
-  
+
     constructor(id, updateProjectListsFunction, type) {
       this.id = id;
       this.updateProjectListsHandler = updateProjectListsFunction;
@@ -31,7 +33,7 @@ export class ProjectItem {
       })
 
     }
-  
+
     connectDrag() {
       const item = document.getElementById(this.id);
       item.addEventListener('dragstart', event => {
@@ -43,7 +45,7 @@ export class ProjectItem {
         console.log(event);
       });
     }
-  
+
     connectMoreInfoButton() {
       const projectItemElement = document.getElementById(this.id);
       const moreInfoBtn = projectItemElement.querySelector(
@@ -51,7 +53,7 @@ export class ProjectItem {
       );
       moreInfoBtn.addEventListener('click', this.showMoreInfoHandler.bind(this));
     }
-  
+
     connectSwitchButton(type) {
       const projectItemElement = document.getElementById(this.id);
       let switchBtn = projectItemElement.querySelector('button:last-of-type');
@@ -67,4 +69,4 @@ export class ProjectItem {
       this.updateProjectListsHandler = updateProjectListsFn;
       this.connectSwitchButton(type);
     }
-  }
+}
