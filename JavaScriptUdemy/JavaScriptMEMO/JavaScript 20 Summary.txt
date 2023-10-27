@@ -1,0 +1,28 @@
+하나의 JS 스크립트를 쪼개서 여러 JS 파일로 만들 수 있다. 이 떄의 하나 하나를 모듈이라고 부른다.
+
+html-script 로직
+=> html이 실행되면 
+
+export => export가 붙은 파일의 클래스, 상수, 변수, 함수 등을 내보낸다.
+import => export가 내보낸 상수, 변수, 상수, 함수들을 import 구문으로 가져온다.
+
+export 문법
+=> 내보내고 싶은 class, 변수, 상수, 함수.. 등 앞에 export 키워드를 넣는다.
+
+import 문법
+=> import {가져올 class, 변수, 상수, 함수} from "경로/파일명.js" ({} 안에는 가져올 이름만 적어도 된다.)
+=> import {class, func1...} from "" => 여러개를 가져올 수 있다.
+=> import * as alies from "" => 주소의 export 문을 모두 가져와서 alies 객체안에 넣는다고 생각하면 된다.
+(alies.export 항목)
+=> import {가져올 항목명 as 별칭} from "" => 별칭을 사용할 수 있다.
+
+default 문법
+default 클래스, 변수, 상수, 함수에 적용할 수 있다. default는 4가지 여타 항목의 이름을 제외하고 사용해도 된다.
+import 할 떄는 import 변수명 from "" => default한 항목을 가져온다.
+default는 파일 마다 한 번만 사용이 가능하다.
+
+
+import() => 동적으로 import 하고 싶을 떄 사용한다. 
+
+
+ 
