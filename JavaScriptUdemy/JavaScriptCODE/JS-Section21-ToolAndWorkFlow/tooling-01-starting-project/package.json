@@ -1,11 +1,14 @@
 {
   "name": "tooling-01-starting-project",
   "version": "1.0.0",
-  "description": "JavaScript Complete Guide",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "HWT",
-  "license": "ISC"
+  "author": "hwt",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^8.52.0"
+  }
 }
