@@ -52,7 +52,27 @@ npm init @eslint/config => eslint 파일을 설치하고 설정하는 명령어
 
 4. ESLint 사용법
 ESLint는 오류를 잡아주는 tool이 아니다. 일관성을 해치는 코드 구문을 오류처럼 보이게 하여 잡아주는 도구이다.
-일관성을 해치는 코드 설명은 eslintrc.json에 존재하고 직접 구문을 조작하여 
+일관성을 해치는 코드 설명은 eslintrc.json에 존재하고 직접 구문을 조작하여 off로 만들 수 도 있다.
+=> 항상 설정이 고비다.
+
+
+5. 웹팩으로 번들링하기
+별개의 파일들을 하나로 합치는 기술 => 번들링
+번들링을 위해서 webpack이라는 도구를 사용한다.
+
+webpack는 번들링 외에 전체 워크플로우를 조정하는 것도 도와준다. webpakc.org.js => 공식 사이트
+
+설정
+1. 원하는 위치에 npm install --save-dev webapck webpack-cil 명령어를 terminal에 입력한다.
+2. package.json에 webpack과 webpack-cil의 버전이 명시되어진다.
+3. package.json이 있는 파일과 동일한 레벨에서 webpack.config.json를 만든다.
+=> 이 파일은 nodeJS 구문으로 돌아간다. module.export = {} => nodeJS가 {}를 파일 밖에 노출시키는 구문이고 설치한 webpack이 해당 객체를 가져온다. 즉, 웹팩을 구성하는 구성 객체
+4. webpack의 번들링 작업을 위해서 시작포인트를 알려줘야 한다. => webpack이 시작포인트 스크립트를 분석하여 하나로 만든다.
+
+module.exports 객체의 설정으로 번들링 파일이 생성된다. => 번들링 파일를 만들기 위해서는 코드의 시작지점(entry 객체), 번들링 파일 설정(output 객체)가 필요하다.
+
+
+
 
 
 
