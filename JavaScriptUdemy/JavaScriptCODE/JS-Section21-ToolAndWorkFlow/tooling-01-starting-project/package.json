@@ -9,6 +9,8 @@
   "author": "HWT",
   "license": "ISC",
   "devDependencies": {
-    "eslint": "^8.52.0"
+    "eslint": "^8.52.0",
+    "webpack": "^5.89.0",
+    "webpack-cil": "^0.0.1-security"
   }
 }

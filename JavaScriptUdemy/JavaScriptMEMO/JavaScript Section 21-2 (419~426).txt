@@ -1,1 +1,9 @@
 1. 웹팩으로 번들링하기
+module로 나눠서 스크립트를 작성하여 배포한다면 많은 HTTP 요청으로 인해 성능의 저하가 올 수 있다.
+=> webpack를 이용하면 분산된 module를 하나로 합친 코드로 만들어서 배포하여 효율성이 증가한다.
+
+webpack은 Node.js의 npm을 통해 설치된다.
+
+webpack 설치방법
+npm install --save-dev webpack webpack-cil
+(webpack-cil를 이용하면 API로 webpack과 상호 적용할 수 있다.)
