@@ -1,0 +1,54 @@
+Node.js는 chrome v8 JavaScript 엔진으로 빌드된 JavaScript 런타임이다.
+=> 서버에서 js가 동작할 수 있도록 하는 환경을 만들어주는 것
+
+런타임 => 언어가 구동되는 환경
+
+Node.js는 비동기식으로 처리되고, Node.js의 express를 사용하여 서버를 만들 수 있다.
+
+npm은 Node.js를 설치하면 자동으로 설치되는 Node Package Manager이다.
+npm은 Node.js에 필요한 패키지들을 관리한다.
+
+
+package.json은 패키지 매니저(npm, yarn)을 통해 설치한 모듈들의 의존성을 관리하는 JSON 형식의 파일이다.
+name, version, description, author, license 등 프로젝트 정보 및 설치한 모듈을 정의할 수 있다.
+npm으로 모듈 다운로드 시 package.json 에 입력된다.
+package.json은 모듈의 버전을 정의할 떄 version range를 사용한다. (version range => 버전의 이상, 미만으로 나타낸다.)
+
+package-lock.json은 package.json과 다르게 명확하게 버전을 명시한다. package-lock.json이 있는 이유는 package.json에 항상 명확한 버전을 입력한다면, 모든 개발자의 환경에서 버전 업데이트가 일어날 때마다 npm install을 해줘야한다.
+
+
+NVM(Node Version Manager)는 노드 버전을 관리해주는 도구이다. Node.js의 버전을 빠르게 바꿀 수 있다.
+
+Express.js는 라우팅과 미들웨어 기반인 경량형 Node.js 웹 프레임워크이다. Node.js 서버 구축을 쉽게 도와주는 프레임워크이다. 각종 라이브러리를 내장하고 있어서 편하게 서버구축이 가능하다.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
