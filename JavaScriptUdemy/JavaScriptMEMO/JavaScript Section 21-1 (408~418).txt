@@ -44,10 +44,18 @@ npm (Node Package Manager)
 3. npm 프로젝트 설정하기 and eslint 설정
 npm를 설치하기 원하는 곳을 지정한다. => 전역으로 지정하면 관리하기 오히려 어렵다.
 Terminal => npm init => 각 질문에 답 => terminal 위치에 package.json이 설치된다.
-=> package.json을 통해서 설치와 각종 설정으로 스크립트 파일을 관리할 수 있다.
+=> package.json은 npm으로 설치한 파일이나 설정의 about 버전과 간략한 설명이 들어있다.
+=> package-lock.json => 명확한 버전이 기재되어 있다.
 
-npm install --save-dev eslint => eslint을 사용하기 직전의 설정
-npm init @eslint/config => eslint 파일을 설치하고 설정하는 명령어
+npm install --save-dev eslint => eslint을 사용하는 설정
+-- save-dev => 개발용으로만 사용되는 모듈을 설치할 떄 쓰는 명령어이다. 서버단에는 영향을 주지 않는다.
+eslint => eslint의 모듈을 설치하겠다라는 명령어이다. 이렇게 되면 eslint를 위해서 node_modules(실질적으로 기능이 들어있다.)와 package-lock.json이 불러진다. (package-lock.json은 매우 명확하고 명시적인 package.json이다.)
+
+package.json을 토대로 npm은 작동한다. npm으로 설치한 모듈이 삭제되었을 떄 npm install을 하면 package.json에서 명시되어 있는 모듈들을 다시 설치한다. (npm과 package.json의 관계)
+
+npm init @eslint/config를 통해 esLint의 설정 파일을 만들 수 있다. => 실질적으로 규칙이 적용되는 곳이다.
+
+esLint.json의 error, warn, off를 통해 규칙을 끄거나 켤 수 있다. 또한 공식사이트를 통해서 규칙을 추가하거나 정확한 문법을 확인할 수 있다.
 
 
 4. ESLint 사용법
@@ -56,22 +64,16 @@ ESLint는 오류를 잡아주는 tool이 아니다. 일관성을 해치는 코�
 => 항상 설정이 고비다.
 
 
-5. 웹팩으로 번들링하기
-별개의 파일들을 하나로 합치는 기술 => 번들링
-번들링을 위해서 webpack이라는 도구를 사용한다.
 
-webpack는 번들링 외에 전체 워크플로우를 조정하는 것도 도와준다. webpakc.org.js => 공식 사이트
-
-설정
-1. 원하는 위치에 npm install --save-dev webapck webpack-cil 명령어를 terminal에 입력한다.
-2. package.json에 webpack과 webpack-cil의 버전이 명시되어진다.
-3. package.json이 있는 파일과 동일한 레벨에서 webpack.config.json를 만든다.
-=> 이 파일은 nodeJS 구문으로 돌아간다. module.export = {} => nodeJS가 {}를 파일 밖에 노출시키는 구문이고 설치한 webpack이 해당 객체를 가져온다. 즉, 웹팩을 구성하는 구성 객체
-4. webpack의 번들링 작업을 위해서 시작포인트를 알려줘야 한다. => webpack이 시작포인트 스크립트를 분석하여 하나로 만든다.
-
-module.exports 객체의 설정으로 번들링 파일이 생성된다. => 번들링 파일를 만들기 위해서는 코드의 시작지점(entry 객체), 번들링 파일 설정(output 객체)가 필요하다.
+5. esLint의 설정파일의 객체
+env => 어떤 환경에서 스크립트를 실행할 것인지 설정한다.
+extends => ESLint 설정을 확장할 때 사용한다.
+rules => 프로젝트에서 강제하고 싶은 규칙들을 설정한다. extends에 설정한 기능을 덮어씌운다.
 
 
+6. 검사실행
+npx eslint 파일명.js
+npx eslint 파일명.js --fix 
 
 
 
