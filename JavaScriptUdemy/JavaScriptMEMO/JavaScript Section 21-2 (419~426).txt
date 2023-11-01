@@ -47,9 +47,27 @@ The 'mode' option has not been set, webpack will fallback to 'production' for th
 
 
 3. webpack-dev-server 이용하기
+변경할 떄마다 자동으로 새로고침되는 서버를 구축하고 싶다.
+npm install --save-dev webpack-dev-server => 자동 새로고침되는 서버를 구축하기 위한 module를 다운로드한다.
+
+webpack.config.js의 module.exports에 프로퍼티로 devServer : {contentBase : JS를 읽어오는 HTML파일}
+=> 만약 config.js파일과 HTML파일의 위치가 같은 레벨이라면 위의 프로퍼티를 생략해도 된다.
+
+이후 package.json의 scripts에서 build : webpack-dev-server를 작성하면 이 명령어는 webpack도 실행하지만 개발서도 실행하는 명령어이다. 또한 변경사항이 있을 떄마다 개발 서버를 자동으로 새로고침한다.
+
+
+4. 소스맵 생성하기
+network를 보면 HTTP 통신을 통해서 가져오는 파일은 세 개이다. (HTML, CSS, JS)
+source를 보면 JS 파일은 webpack을 통해서 여러개의 파일이 하나로 된 파일이기 때문에 알아보기 힘들다.
+=> 즉, 디버깅이 어렵다는 것이다.
 
 
 
+5. 배포용 구축하기
+배포용 코드는 출력 파일을 가능한 작게 만들고 속도를 높여야 하는 것이 목적이다.
+이를 위해서 다른 webpack.config.prod.js를 작성한다.
+mode : production, devtool : none or cheap-source-map으로 설정한다.
+=> 다른 설정은 같게 하고 위의 사안만 바꿔준다. 위의 devtool은 코드 모드 웹팩보다 완벽한 디버깅 소스는 아니지만 최소 특정 수준의 코드까지 살펴볼 수 있게 해준다.
 
 
 
