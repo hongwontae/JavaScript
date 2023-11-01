@@ -75,6 +75,18 @@ package.json의 scripts의 프로퍼티로 명령어를 사용할 떄 prod.js를
 
 
 6. 최적화 마무리
+clean-webpack-plugin => webpack.config에서 require('clean-webpack-plugin')을 통해서 최적화나 생성된 출력에서 변화를 적용할 수 있도록 한다.
+=> 이렇게 설정을 하고 npm run build:prod를 실행하면 사용하지 않은 scripts 폴더의 webpack된 파일들을 삭제한다.
+
+캐시를 이용하게 하지 않고 새로운 빌드를 할 떄마다 새로이 파일을 다운받게 하고 싶은 경우
+config.prod.js의 webpack 설정파일의 output filname에 '[contenthash]파일 이름.js'를 설정한다.
+=> 변경사항이 있을 때마다 브라우저가 다시 다운로드하여 배포한다.
+
+
+7. Npm & 웹팩을 통해 제 3자 패키지 사용하기
+
+
+
 
 
 
