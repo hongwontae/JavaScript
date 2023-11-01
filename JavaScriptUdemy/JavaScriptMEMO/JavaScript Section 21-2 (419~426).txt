@@ -83,7 +83,6 @@ config.prod.js의 webpack 설정파일의 output filname에 '[contenthash]파일
 => 변경사항이 있을 때마다 브라우저가 다시 다운로드하여 배포한다.
 
 
-7. Npm & 웹팩을 통해 제 3자 패키지 사용하기
 
 
 
