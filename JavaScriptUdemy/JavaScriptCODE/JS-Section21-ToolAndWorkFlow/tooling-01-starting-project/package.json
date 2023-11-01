@@ -4,13 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
   },
   "author": "HWT",
   "license": "ISC",
   "devDependencies": {
     "eslint": "^8.52.0",
     "webpack": "^5.89.0",
-    "webpack-cil": "^0.0.1-security"
+    "webpack-cil": "^0.0.1-security",
+    "webpack-cli": "^5.1.4"
   }
 }
