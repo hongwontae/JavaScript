@@ -62,12 +62,20 @@ source를 보면 JS 파일은 webpack을 통해서 여러개의 파일이 하나
 => 즉, 디버깅이 어렵다는 것이다.
 
 
-
 5. 배포용 구축하기
 배포용 코드는 출력 파일을 가능한 작게 만들고 속도를 높여야 하는 것이 목적이다.
 이를 위해서 다른 webpack.config.prod.js를 작성한다.
 mode : production, devtool : none or cheap-source-map으로 설정한다.
 => 다른 설정은 같게 하고 위의 사안만 바꿔준다. 위의 devtool은 코드 모드 웹팩보다 완벽한 디버깅 소스는 아니지만 최소 특정 수준의 코드까지 살펴볼 수 있게 해준다.
+
+package.json의 scripts의 프로퍼티로 명령어를 사용할 떄 prod.js를 바라보게 할 수 있다.
+"build:dev" : webpack --config webpack.config.prod.js => webpack를 구성할 떄 배포모드를 구성한다.
+
+이를 통해서 package.json의 명령어는 개발 웹팩을 만들어서 서버를 가동시키거나 배포 웹팩을 만드는 두 가지 명령어가 존재한다.
+
+
+6. 최적화 마무리
+
 
 
 
