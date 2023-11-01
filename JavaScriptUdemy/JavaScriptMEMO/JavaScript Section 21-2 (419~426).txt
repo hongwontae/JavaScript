@@ -38,6 +38,16 @@ package.json에 scripts 키에 "build" : "webpack"를 주면 내부에서 webpac
 webpack은 import의 확장자를 추가할 수 없다. => .js를 빼야 한다.
 
 
+2. 개발 모드 & 지연된 로딩 해결하기
+ARNING in configuration
+The 'mode' option has not been set, webpack will fallback to 'production' for this value.
+=> 개발자는 개발을 위한 코드인지 배포를 위한 코드인지 Webpack에 알릴 수 있다. 디폴트 값은 production, 배포이다.
+
+개발 모드를 원한다면 webpack.config.js에 mode : 'development' 프로퍼티를 주어야 한다.
+
+
+3. webpack-dev-server 이용하기
+
 
 
 
