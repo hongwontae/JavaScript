@@ -1,5 +1,5 @@
 const button = document.querySelector('button'); // nodeList = 유사배열객체
-// console.log(buttons)
+console.log(button)
 
 // // button.onclick = function() {
 
