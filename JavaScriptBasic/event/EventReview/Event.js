@@ -1,4 +1,6 @@
-const btn = document.getElementById('btn');
+const btn = document.querySelector('button');
+console.dir(btn);
+console.dir(document.URL);
 
 btn.addEventListener('click',function(e){
     console.log(this);

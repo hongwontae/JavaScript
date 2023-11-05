@@ -1,6 +1,6 @@
 1. DOM이란 무엇인가?
 브라우저와 관련된 객체들의 집합을 브라우저 객체 모델(BOM : Browser Object Model)이라고 부른다.
-DOM은 BOM의 일부이다. BOM의 최상의 객체는 Window객체이다.
+DOM은 BOM의 일부가 아니다.
 
 DOM(DOM : Document Object Model)은 문서 객체이다라고 부른다. 넓은 의미로는 웹 브라우저가 HTML 페이지를 인식하는 방식을 의미한다. 좁은 의미로는 Document객체와 관련된 객체의 집합
 
