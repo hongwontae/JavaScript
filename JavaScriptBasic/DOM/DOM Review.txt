@@ -26,13 +26,93 @@ document.querySelectorAll() => 위의 로직과 같지만 유사배열형태 nod
 
 getElementById() => 인자에 문자열 형태로 일치하는 첫 번쨰 id에 해당하는 DOM를 가져온다. 
 getElementByClassName() => 인자에 문자열 형태로 일치하는 css의 DOM를 HTMLCollection으로 모두 가져온다. 라이브 배열이다.
-getElementByTagName() => 인자에 문자열 형태로 일치하는 tagName의 DOM를 모두 가져온다. HTMLCollectio으로 모두 가져온다. 라이브 배열이다.
+getElementByTagName() => 인자에 문자열 형태로 일치하는 tagName의 DOM를 모두 가져온다. HTMLCollection으로 모두 가져온다. 라이브 배열이다.
 => 규칙X
 
 => 이렇게 가져온 DOM은 각자의 데이터를 담고 있는 객체이다. 프로퍼티나 메서드가 존재한다.
 
 
-5. 
+5. Node?
+DOM 트리는 node로 구성되어 있다. node는 요소(HTML 태그), 속성, 문자 등으로 이루어져 있다. 
+DOM query를 이용해서 접근하면 해당 DOM의 노드들을 제어할 수 있는 프로퍼티나 메서드를 사용할 수 있다.
+DOM안에 여러 node들이 존재하는 것이다. html 요소 노드, 문자열 노드, 속성 노드 등...
+
+
+
+6. InnerHTML, InnerText, TextContent
+InnerHTML은 태그안에 속해 있는 모든 값들을 반환한다.
+InnerText는 태그안에 속해 있는 문자열만 반환한다. => 빈 칸이나 보이지 않는 속성 모두 무시한다.
+TextContent 태그안에 속해 있는 보이지 않는 문자열과 보이는 문자열를 반환한다.
+TextNode와 위에 3개는 다른 개념이다. => 위의 3개의 프로퍼티는 해당 DOM의 안에 있는 값을 가져오는 개념이다.
+
+
+7. 속성과 프로퍼티
+속성은 HTML, 프로퍼티 JS
+
+
+8. 자식 노드, 요소
+.children => 반환타입은 HTMLCollection 모든 자식을 보여준다. 요소노드만 보여준다.
+.childNodes => 반환타입은 nodeList이고 모든 자식을 보여준다. 요소노드, 텍스트노드, 속성노드 모두를 포함한다.
+.firstChild => 첫 번쨰 자식의 텍스트 노드에 접근한다.
+.firstElementChild => 첫 번쨰 자식의 요소 노드에 접근한다.
+.lastChild => 마지막 자식의 텍스트 노드에 접근한다.
+.lastElementChild => 마지막 자식의 요소 노드에 접근한다.
+
+HTMLCollection은 라이브 배열이고 nodeList는 넌 라이브 배열이다.
+
+
+9. 부모 노드, 요소
+.parentElement => 부모 요소 노드를 반환한다. 부모가 없다면 null를 반환한다.
+.parentNode => 부모의 노드를 반환한다. 없다면 null를 반환한다.
+
+closet() => 가장 가까운 조상 요소를 선택한다.
+
+
+10. 형제 노드, 요소
+previousSibling => 이전의 형제 노드를 선택
+previousElementSibling => 이전 형제 요소 노드를 선택
+nextSibling => 앞 형제 노드를 선택
+nextElementSibling => 앞 형제 요소 노드를 선택
+
+
+11. DOM CSS 제어
+className => css class 반환한다.
+classList => DOM의 객체이다. css를 제어하는 js 빌트인 객체이다.
+classList.toggle() => className이 있다면 지우고 없다면 생성하는 메서드
+add, remove, contains 등 존재한다.
+
+
+12. 요소 만들기
+document.createElement();
+
+
+13. 요소 추가하기
+append() => 인자에 요소 노드나 텍스트 노드를 받고 마지막 자식으로 넣는다. 여러개를 받을 수 있다.
+appendCilde() => 인자에 요소 노드만 가능하다. 마지막 자식으로 넣는다. 하나의 요소 노드만 가능하다.
+prepend() => 요소노드나 텍스트 노드 여러개를 받을 수 있고 인자들은 자식의 첫 번쨰로 넣는다.
+before() => 선택된 노드의 전에 위치시킨다.
+after() => 선택된 노드의 후에 위치시킨다.
+replaceWith() => 해당된 요소를 매개변수의 값으로 교체한다.
+
+targetElement.insertAdjacentElement(position,element);
+position의 값에 따라 element들의 삽입이나 이동을 도와준다.
+beforebegin: targetElement의 앞
+afterbegin: targetElement 자식 요소의 첫 번째 위치
+beforeend: targetElement 자식요소의 마지막 위치
+afterend: targetElement의 뒤
+
+
+14. 요소 복사
+cloneNode() => 노드를 복제해서 새로운 노드를 반환한다.
+인자에 false => 해당된 요소만 복제한다.
+인자에 true => 자손 노드까지 복제한다. 완전히 다 복사한다.
+
+
+15. 요소 제거하기
+remove() => 해당되는 노드를 삭제한다.
+removeChilde() => 해당되는 자식 노드를 삭제한다.
+
+
 
 
 
