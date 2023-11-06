@@ -29,14 +29,12 @@ getElementByClassName() => 인자에 문자열 형태로 일치하는 css의 DOM
 getElementByTagName() => 인자에 문자열 형태로 일치하는 tagName의 DOM를 모두 가져온다. HTMLCollection으로 모두 가져온다. 라이브 배열이다.
 => 규칙X
 
-=> 이렇게 가져온 DOM은 각자의 데이터를 담고 있는 객체이다. 프로퍼티나 메서드가 존재한다.
+=> 이렇게 가져온 DOM은 요소 노드이고 이를 조작할 수 있는 많은 프로퍼티와 메서드를 가지고 있다.
 
 
 5. Node?
 DOM 트리는 node로 구성되어 있다. node는 요소(HTML 태그), 속성, 문자 등으로 이루어져 있다. 
-DOM query를 이용해서 접근하면 해당 DOM의 노드들을 제어할 수 있는 프로퍼티나 메서드를 사용할 수 있다.
-DOM안에 여러 node들이 존재하는 것이다. html 요소 노드, 문자열 노드, 속성 노드 등...
-
+DOM query를 이용해서 접근하면 해당 DOM의 노드를 제어할 수 있는 프로퍼티나 메서드를 사용할 수 있다.
 
 
 6. InnerHTML, InnerText, TextContent
