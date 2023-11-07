@@ -34,8 +34,16 @@ template => JS를 활용하여 동적으로 복제하고 추가할 수 있는 �
 template를 DOM query로 찾아오면 여타 DOM 요소노드와 같은 프로퍼티와 메서드를 가지고 있다.
 template.content => DocumentFragment이다.
 
+documentFragment는 웹 문서의 메인 DOM 트리에 포함되지 않는, 가상 메모리에 존재하는 DOM 노드 객체이다. 
+
 importNode(1,2) => 현재 문서에 삽입할 수 있는 다른 문서의 Node 객체 또는 DocumentFragment 객체의 복사본을 생성한다.
 1에 위의 다른 문서의 node나 documentFragment가 들어가고 2는 불리언 값이 들어간다. 원본 문서에서 노드를 복사할 떄 하위 노드를 포함할지 여부를 불리언으로 지정한다.
+
+template는 눈에 보이지 않는 HTML이며 JS의 제어로 보여줄 수 있다.
+=> template은 DOM으로 만들어질 떄 프로퍼티로 content가 존재한다. => importNode()를 사용해서 복사할 수 있다. 
+content는 documentFragment이기 때문에 importNdoe로 복사하는 것이 좋다.
+=> 두 번쨰 인자로 true를 주면 깊은 복사와 모든 요소를 복사한다. => 이 후 DOM 조작을 통해 모달을 보여준다.
+
 
 
 

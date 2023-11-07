@@ -9,11 +9,12 @@ export class Modal{
     show(){
         if('content' in document.createElement('template')){
             const modalElements = document.importNode(this.modalTemplateEl.content, true);
-            console.dir(this.modalTemplateEl.content);
             const modalElement = modalElements.querySelector('.modal');
             const backdropElement = modalElements.querySelector('.backdrop');
+            
 
             const contentElement = document.importNode(this.contentTemplateEl.content, true);
+            console.log(this.contentTemplateEl.content);
 
             modalElement.appendChild(contentElement);
 
