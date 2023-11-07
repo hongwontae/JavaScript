@@ -7,3 +7,48 @@ webpack.config
 
 
 2. DOM 엑세스 얻기
+JS 코드를 짤 떄 처음에 고려에 할 사안 두 가지 
+1. 클래스 문법을 사용/ 2. 함수 프로그래밍 사용
+
+=> 클래스 문법을 사용하자 => 핵심이 될 것이라 생각한다.
+
+class의 변수명 첫 글자는 대문자이다.
+constructor는 이 클래스가 인스턴스화 됐을 떄 항상 실행되는 함수이다.
+constructor내의 this는 클래스 자체를 가리키고 있다./ eventHadler 내의 함수는 역시 걸려있는 DOM를 가르킨다.
+
+사용자의 위치를 파악하는 API => navigator.geolocation.getCurrentPosition()를 사용한다.
+BrowserAPI를 지원하지 않는 브라우저의 폴백코드를 작성한다. if falsy값을 통해서..
+
+navigator.geolocation.getCurrentPosition()은 콜백함수로 작동한다. 성공했을 떄 첫 번쨰 함수를 실행하고 오류가 발생했을 떄 두 번쨰 함수를 실행한다.
+
+성공했을 경우 첫 번쨰 함수 인자에 successResult를 받는다.
+=> GeolocationPosition {coords: GeolocationCoordinates, timestamp: 1699351539202}
+=> 원하는 위치값을 여기서 가져와서 사용한다.
+
+오류가 발생했을 경우 두 번쨰 함수 인자에 error 객체를 받는다. 
+=> app에서는 error 처리를 alert으로 처리했다.
+
+
+3. 피드백 추가하기 
+template => JS를 활용하여 동적으로 복제하고 추가할 수 있는 관련 컨텐츠를 보관하는 영역이다.
+template를 DOM query로 찾아오면 여타 DOM 요소노드와 같은 프로퍼티와 메서드를 가지고 있다.
+template.content => DocumentFragment이다.
+
+importNode(1,2) => 현재 문서에 삽입할 수 있는 다른 문서의 Node 객체 또는 DocumentFragment 객체의 복사본을 생성한다.
+1에 위의 다른 문서의 node나 documentFragment가 들어가고 2는 불리언 값이 들어간다. 원본 문서에서 노드를 복사할 떄 하위 노드를 포함할지 여부를 불리언으로 지정한다.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
