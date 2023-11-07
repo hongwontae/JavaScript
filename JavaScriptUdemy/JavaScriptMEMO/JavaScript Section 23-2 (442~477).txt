@@ -56,6 +56,10 @@ presets의 useBuiltIns의 entry는 최상단에 core.js를 import하고 웹팩�
 => npm run build : prod를 실행하면 scripts에 개발 파일이 설치되어 실행된다.
 
 
+3. JS 파일 외의 브라우저 지원
+JS의 기능을 지원하지 않는 웹 페이지를 고려해서 폴백코드를 구성하는 것이 필요하다.
+
+
 
 
  
