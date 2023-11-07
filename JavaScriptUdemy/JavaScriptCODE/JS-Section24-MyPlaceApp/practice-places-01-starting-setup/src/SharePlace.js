@@ -20,6 +20,7 @@ class PlaceFinder {
 
       const modal = new Modal('loading-modal-content', 'Loading location - please wait!');
       modal.show();
+      console.dir(new Modal());
 
       navigator.geolocation.getCurrentPosition(
         successResult => {

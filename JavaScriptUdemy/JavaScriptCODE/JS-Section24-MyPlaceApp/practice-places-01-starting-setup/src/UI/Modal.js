@@ -9,17 +9,17 @@ export class Modal{
     show(){
         if('content' in document.createElement('template')){
             const modalElements = document.importNode(this.modalTemplateEl.content, true);
-            const modalElement = modalElements.querySelector('.modal');
-            const backdropElement = modalElements.querySelector('.backdrop');
+            this.modalElement = modalElements.querySelector('.modal');
+            this.backdropElement = modalElements.querySelector('.backdrop');
             
 
             const contentElement = document.importNode(this.contentTemplateEl.content, true);
             console.log(this.contentTemplateEl.content);
 
-            modalElement.appendChild(contentElement);
+            this.modalElement.appendChild(contentElement);
 
-            document.body.insertAdjacentElement('afterbegin',modalElement);
-            document.body.insertAdjacentElement('afterbegin', backdropElement);
+            document.body.insertAdjacentElement('afterbegin',this.modalElement);
+            document.body.insertAdjacentElement('afterbegin', this.backdropElement);
 
         }else{
             alert(this.fallbackText);
@@ -27,7 +27,12 @@ export class Modal{
     }
 
     hide(){
-
+        if(this.modalElement){
+            document.body.removeChild(this.modalElement);
+            document.body.removeChild(this.backdropElement);
+            this.modalElement = null;
+            this.backdropElement = null; // 메모리에 저장하지 않아서 메모리 누수가 발생하지 않는다.
+        }
     }
 
 }

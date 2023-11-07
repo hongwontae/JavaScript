@@ -45,6 +45,19 @@ content는 documentFragment이기 때문에 importNdoe로 복사하는 것이 �
 => 두 번쨰 인자로 true를 주면 깊은 복사와 모든 요소를 복사한다. => 이 후 DOM 조작을 통해 모달을 보여준다.
 
 
+4. 모달 숨기기
+class에서 constructor로 만들어진 프로퍼티들은 인스턴스에 프로퍼티로 전달된다.
+그렇지 않고 constructor를 벗어난 this를 사용한 프로퍼티들은 prototype으로 전달된다.
+
+class 내부에서 전역적으로 사용하고 싶다면 class 필드로 만들면 된다. this를 이용하거나 constructor 안에 넣거나...
+
+구형 브라우저에서도 적용되는 JS를 만들기 위해 document.body.removeChild를 이용한다.
+메모리 누수가 발생하지 않게 사용한 객체에 null를 부여한다.
+
+
+
+
+
 
 
 
