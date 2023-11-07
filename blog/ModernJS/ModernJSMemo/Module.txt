@@ -7,7 +7,7 @@ import 사용하면 외부 모듈의 기능을 가져올 수 있다.(모듈 가�
 모듈은  <script type="module"> 속성을 설정해 해당 스크립트가 모듈이란 걸 브라우저가 알 수 있게 해줘야 한다.
 
 모듈은 로컬 파일에서 동작하지 않는다. => CORB 때문이다.
-HTTP, HTTP 프로토콜을 통해서만 동작한다. => node.js serve를 사용한다.
+HTTP, HTTP 프로토콜을 통해서만 동작한다. => node.js server를 사용한다.
 
 
 일반 스크립트 vs 모듈
@@ -26,7 +26,7 @@ HTTP, HTTP 프로토콜을 통해서만 동작한다. => node.js serve를 사용
 export 하는 방법
 1. 각 변수나 함수, 클래스 옆에 export 키워드를 붙이는 방법
 
-2. export default 키워드 옆에 변수나 함수, 클래스 명을 붙이는 방법 => 한 번만 사용가능하다.
+2. export default 키워드 옆에 변수나 함수, 클래스 명을 붙이는 방법 => export 파일에서 한 번만 사용가능하다.
 
 3. export {export할 변수명, export할 변수명...};
 => 여러개를 export하는 방법이다.
