@@ -21,9 +21,13 @@ Map.js(export class Map) => Share.js(import {Map} from './UI/Map')
 *** 만약 this를 사용해서 프로퍼티를 설정하면 생성될 인스턴스에 프로퍼티를 들어간다. 다만 시점에 따라서 발생하는 코드는 유의해야 한다.
 
 
-2. 주소 찾기 & 좌료 얻기
+2. 주소 찾기 & 좌표 얻기
+input.value 값을 가져온다. => 그 값을 google geocoding API를 사용해서 좌표를 찾아낸다.
+=> input의 값을 encodeURL()의 인자로 넣어서 google 서버에 fetch한다.
+=> 이후 fetch 로직에 따라 성공과 에러 처리를 한 이후에 좌료를 return한다.
 
 
+3. 사용자 입력을 좌표로 변환하기
 
 
 
