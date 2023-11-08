@@ -42,7 +42,6 @@ class PlaceFinder {
           this.selectPlace(coordinates)
         },
         error => {
-            modal.hide();
           alert(
             'Could not locate you unfortunately. Please enter an address manually!'
           );

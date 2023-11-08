@@ -28,6 +28,8 @@ input.value 값을 가져온다. => 그 값을 google geocoding API를 사용해
 
 
 3. 사용자 입력을 좌표로 변환하기
+return된 fetch 좌표 값을 가지고 google MAP API 함수를 사용해서 띄어준다.
+이 떄 modal의 열고 닫는 행위의 계산을 해야 한다.
 
 
 
