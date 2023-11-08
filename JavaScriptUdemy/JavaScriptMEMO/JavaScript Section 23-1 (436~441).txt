@@ -1,5 +1,5 @@
 1. 브라우저 지원이란 무엇인가?
-Browser API => 브라우저가 노출하는 API를 의미한다.
+Browser API => 브라우저가 노출하는 API를 의미한다. (BOM(navigator, locate), DOM....)
 JS Syntax => JS 언어에 빌트인 된 모든 키워드와 기능을 의미한다.
 
 브라우저 API는 각각의 브라우저 마다 다른 기능을 JS에게 준다.
