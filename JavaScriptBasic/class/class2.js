@@ -62,6 +62,14 @@ class SuperPerson{
     sum(one, two){
         return (one+two);
     }
+    height = 100000;
+    static sex = 'good sex'
+    static lng = ()=>{
+        return console.log(1)
+    }
+    multiple(){
+        console.log('not!!')
+    }
 }
 
 class SuperPerson2 extends SuperPerson{
@@ -72,7 +80,19 @@ class SuperPerson2 extends SuperPerson{
     sum(one1, two1){
         return super.sum(one1,two1)
     }
+    height = '10000'
+    // static sex = 'Bad Sex'
+    // static lng = ()=>{
+    //     console.log(1000)
+    // }
+    goAle(){
+        return super.multiple();
+    }
+    static gogo(){
+        return super.lng();
+    }
 }
 
 let sp2 = new SuperPerson2('HWT',3000);
 console.log(sp2);
+SuperPerson2.gogo();
