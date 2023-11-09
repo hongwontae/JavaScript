@@ -13,8 +13,15 @@ console.dir(person.introduce());
 class Person1{
     constructor(name,age){
         this.name = name;
-        this.age = age;
-        console.log(this);
+        this.age = age; 
+        const btn = document.getElementById('btn');
+        btn.addEventListener('click',()=>{
+            console.log(this);
+        })
+        this.dkdk = function(){
+            return console.log('hwt')
+        }
+
     }
 
     introduce(){
@@ -33,6 +40,5 @@ class Person1{
 }
 
 let person2 = new Person1('HWT',3000);
+console.log(person2);
 let person3 = new Person1('AJY',4000);
-
-person2.getting();
