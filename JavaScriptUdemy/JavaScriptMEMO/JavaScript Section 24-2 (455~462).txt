@@ -40,9 +40,18 @@ return된 값을 input의 value로 추가한다. => 브라우저에 렌더링된
 
 
 5. 링크를 클립보드에 복사하기
+input/textarea.select() => 모든 텍스트가 선택된다.
+if 체크를 통해 클립보드 API를 지원하지 않는 브라우저의 콜백 코드를 작성한다.
+=> 이 떄 select()를 통해서 전체 선택를 도와주고 ctrl+c를 도와준다.
+
+클립보드 API를 지원하는 코드의 경우
+navigator.clipboard.writeText(input.value).then(()=>{alert('Ctrl+C')}).catch(error =>{console.log(error) input.select()})를 작성한다.
+
+=> 해당 로직에 의해 클립보드가 작동한다.
 
 
-
+6. "공유 장소" 화면 렌더링하기
+URL 객체와 location 객체를 알아야 분석가능 => 차후에 분석하자.
 
 
 
