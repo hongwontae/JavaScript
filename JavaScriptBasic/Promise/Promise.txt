@@ -31,3 +31,11 @@ catch가 마지막에 있다면 첫 번쨰의 then()이 오류발생하면 다 �
 catch가 두 번쨰에 있다면 첫 번쨰 오류를 처리하고 다음 코드로 간다.
 
 
+resolve()/ reject() High
+new를 사용해서 Promise()를 호출한 순간 콜백함수는 실행된다.
+이 떄 로직은 실행되는데 결과값은 대기하는 것이다. => pending 상태이다.
+then() 메서드를 실행하지 않으면 resolve()의 값은 undefined이다.
+then() 메서드를 호출한 순간 resolve의 값은 있는 상태이다. => fulfill 상태이다.
+그러므로 Promise 기반 함수들은 결과값은 resolve() 안에 존재하는 것이다. => then()으로 받고 싶기 때문이다.
+
+

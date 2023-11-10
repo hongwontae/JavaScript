@@ -11,7 +11,7 @@
 //   console.log(typeof parsed, parsed);
 
 // get 방식
-fetch("https://jsonplaceholder.typicode.com/posts/1")
+fetch("https://jsonplaceholder.typicode.com/posts/1") 
   .then((response) => response.json())
   .then((data) => console.log(data));
 
