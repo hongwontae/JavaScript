@@ -40,12 +40,12 @@
 const femi = new Promise((resolve, reject)=>{
     setTimeout(()=>{
         resolve('HWT')
-        console.dir(resolve())
+        //console.dir(resolve())
         console.log('hhwt')
-    },2000)
+    },1000)
 });
 
-//femi.then(data => console.log(data));
+femi.then(data => console.log(data));
 
 
 
