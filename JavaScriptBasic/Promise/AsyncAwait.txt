@@ -16,3 +16,15 @@ async의 함수 리턴 값은 항상 Promise이다. 그러므로 then을 통해�
 
 Promise.all()/ Promise.race()
 인자로 Promise값인 배열이 들어간다. 동시에 처리하며 all은 모두 처리하고, race는 먼저 온것만 처리한다.
+
+
+* await
+=> 시간이 필요한 작업에 await가 붙지 않으면 기다리지 않고 다음 코드/ 다음 줄로 간다.
+그 코드는 전의 코드의 결과가 필요하지만 없기 떄문에 오류가 발생한다.
+ex) const response = fetch(getUrl);
+    const data = response.json()
+=> 이 떄 윗 줄에 await가 없기 떄문에 통신 데이터를 받기도 전에 밑줄 코드를 실행한다.
+=> 그렇으로 response 데이터는 그냥 undefined 데이터이다. => json()이라는 메서드도 존재하지 않는다.
+
+또한 await는 then()과 같기 떄문에 resolve() 값을 받기 위해서는 await를 사용해야 한다.
+그렇지 않으면 promise 객체를 생으로 받는다.

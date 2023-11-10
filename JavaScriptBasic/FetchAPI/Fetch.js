@@ -11,9 +11,17 @@
 //   console.log(typeof parsed, parsed);
 
 // get 방식
-fetch("https://jsonplaceholder.typicode.com/posts/1") 
-  .then((response) => response.json())
-  .then((data) => console.log(data));
+// fetch("https://jsonplaceholder.typicode.com/posts/1") 
+//   .then((response) => response.json())
+//   .then((data) => console.log(data));
+
+async function submitGet(){
+  const getting = await fetch("https://jsonplaceholder.typicode.com/posts/1");
+  const data1 =  getting.json();
+  console.log(data1);
+}
+
+submitGet();
 
 // post 방식
 fetch("https://jsonplaceholder.typicode.com/posts", {
