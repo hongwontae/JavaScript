@@ -58,9 +58,35 @@ company.next()
 {value: 'Manu', done: false}
 {value: 'Anna', done: false}
 
+or
+let employee = companmy.next();
+while(!employee.done){
+  console.log(employee.value);
+  employee = company.next();
+}
+
+
 => 처음으로 company.next()를 호출하면 curEmployee는 0이다. if check는 curE이 배열의 길이와 같거나 커야 걸린다. => const retrunValue에 this.employees[0]이 할당되고 done : false가 할당된다. 이후 curE+1 이후 returnValue 객체가 반환된다. 이 과정을 지속하면 .next()가 3번 호출되면 if check에 걸리고 숫자만 반환된다.
 
 * 여기에 조금의 로직을 더 한다면 for-of이다.
+
+
+4. Iterator And for Loop
+for-of를 위해서 [Symbol.iterator]가 객체 안에 존재해야 한다.
+next 로직의 메서드는 반복자이다. Symbol.iterator는 반복자가 값이어야 한다.
+제너레이터는 JS에서 Itreator 객체를 사용해서 빌트인 next 메서드를 가진 객체를 생성한다.
+=> JS 함수이며 자동으로 반복자를 생성해준다.
+=> 제너레이터 함수식 [Symbol.iterator] : function* 함수이름(익명함수도 가능) (){}
+=> 값을 반환할 식은 yield 키워드를 사용한다. return과 비슷하다.
+=> generator를 사용하면 next 객체를 생성하는 것이다.
+
+for-of를 사용하면 해당 객체의 [Symbol.iterator] 키를 찾고 값을 실행한다.
+단 SI는 next() 메서드만 실행하기 떄문에 next()를 수동으로 만들거나 function* 제너레이터를 사용해야 한다.
+제너레이터를 사용하면 return 대신 yield를 사용한다. 
+** yield은 return과 비슷하지만 return은 이 키워드를 만나자마자 끝내지만 yield는 이 키워드를 만났을 떄 끝내고 다음 함수가 호출되었을 떄 밑의 코드를 실행하고 yield를 만날 떄 끝난다.=> 이게 반복된다.
+
+function*는 항상 next()를 생성한다. next()의 값은 {value : done/false}이다.
+
 
 
 
