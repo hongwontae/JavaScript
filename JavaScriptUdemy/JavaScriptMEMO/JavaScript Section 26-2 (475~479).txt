@@ -1,0 +1,16 @@
+1. Reflect API
+Reflect는 JS 개체로 클래스의 정적 메서드들을 그룹화한다.
+객체를 써서 작업할 떄 도움이 되는 기능을 묶는 것이다.
+=> 객체로 작업할 떄 도움을 주는 API이다.
+
+Reflect.setPrototypeOf() => 객체의 프로토타입을 지정하는 메서드
+Reflect.difineProperty() => 객체에 프로퍼티를 추가해주는 메서드
+Reflect.deleteProperty() => 객체의 프로퍼티를 삭제해주는 메서드
+
+Object API도 위의 메서드가 존재하지만 Object API 메서드는 실패했을 경우 정의되지 않았다고 반환하거나 무응답인데 반해 Reflect API는 에러를 반환하거나 주어진 메서드에 true, false로 반환하여 작동 여부를 알려준다.
+
+또한 Reflect API는 객체로 작업할 떄 필요한 모든 기능을 묶어났다.
+deleteProperty는 Object API에 존재하지 않는다. => 기존에는 delete 키워드를 사용했다.
+
+
+2. Proxy API와 첫 번쨰 함정
