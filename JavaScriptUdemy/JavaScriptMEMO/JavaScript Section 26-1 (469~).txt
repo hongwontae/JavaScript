@@ -88,6 +88,18 @@ for-of를 사용하면 해당 객체의 [Symbol.iterator] 키를 찾고 값을 �
 function*는 항상 next()를 생성한다. next()의 값은 {value : done/false}이다.
 
 
+5. 생성자 요약 & 빌트인 반복 예시
+let arr = [1,2,3] => prototype에 Symbol.iterator가 존재한다.
+arr.length 프로퍼티는 Symbol.iterator의 사용을 받는다.
+=> arr는 0,1,2 index이고 이를 반복할 떄 2에서 끝나도록 Symbol.iterator가 제어한다.
+=> 배열에 length 프로퍼티가 있는 이유
+
+
+6. Reflect API
+
+
+
+
 
 
 
