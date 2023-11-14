@@ -40,3 +40,12 @@ ex) Object.defineProperty(person, "fullName",{
 })
 
 
+** 객체 프로퍼티에서 일반 프로퍼티와 메서드의 이름을 동일하게 설정할 수 있다.
+** 그러나 우선순위는 메서드에게 있기 떄문에 일반 프로퍼티 반환은 불가해진다.
+
+
+class의 getter와 setter
+=> 다를게 없다. get 이름(){}/ set 이름(){}
+=> 인스턴스 생성 후에 get과 set를 사용하면 된다.
+
+
