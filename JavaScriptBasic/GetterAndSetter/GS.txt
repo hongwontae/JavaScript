@@ -1,0 +1,42 @@
+Getter and Setter
+
+getter => 객체의 속성 값을 반환하는 메서드
+setter => 객체의 속성 값을 설정, 변경하는 메서드
+
+getter&setter 사용 이유
+1. 정보은닉으로 보안강화
+2. 코드의 안전성, 유지보수성 강화
+3. 옳지 않은 값 설정 미연의 방지
+
+객체안에 get이나 set 키워드를 작성하면 getter와 setter 로직이 이루어진다.
+getter와 setter는 함수 호출 형식이 아닌 일반 프로퍼티처럼 접근해서 사용된다.
+getter와 setter의 이름은 동일하게 설정한다.
+
+
+접근자 프로퍼티
+객체의 프로퍼티는 두 가지로 나뉠 수 있다.
+1. 데이터 프로퍼티 => 일반적으로 사용하는 프로퍼티
+2. 접근자 프로퍼티 => 메서드를 데이터 프로퍼티처럼 사용해도 작동하는 프로퍼티
+(getter, setter 함수 자체가 접근자 프로퍼티이다.)
+
+
+getter, setter 주의점
+데이터 프로퍼티와 접근자 프로퍼티의 이름들이 같다면 무한 루프가 발생한다.
+=> setter내의 반환이 다시 setter를 부르기 때문에 일어나는 일이다.
+=> 이를 방지하기 위해서 데이터 프로퍼티명과 접근자 프로퍼티명을 다르게 하거나 내부적으로 setter의 값 반환을 다른 변수에 할당하면 된다.
+
+
+Object.defineProperty()
+=> 객체의 속성을 정의하고 수정하는 메서드로, 프로토타입 체인을 이용한 상속과 같이 고급 기능을 구현할 때 유용하게 사용된다.
+=> 이를 통해서 getter와 setter를 설정할 수 있다.
+
+ex) Object.defineProperty(person, "fullName",{
+    get : function(){
+        retrun this.name = ''
+    },
+    set : function(){
+        .....
+    }
+})
+
+
