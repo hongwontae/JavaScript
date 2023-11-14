@@ -1,0 +1,13 @@
+Form tag
+html 태그이며, 사용자로부터 정보를 받아올 떄 쓰인다.
+=> 정보를 서버로 보내기 위해 사용된다.
+
+input type의 submit과 button 태그는 데이터 전송을 위한 태그이다.
+=> 이 두개는 click 이벤트 없이 자동으로 데이터 전송을 실행하고 새로고침한다.
+
+기본동작(새로고침),(서버에 데이터를 전송)을 막기 위해서 e.preventDefault()를 사용하면 된다.
+
+JS에서 DOM 쿼리를 통해 input를 가져오면 elements : HTMLFormControlsCollection에 접근할 수 있다.
+=> form 태그안의 태그들이나 속성에 접근할 수 있다.
+
+
