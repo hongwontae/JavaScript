@@ -1,18 +1,8 @@
-const fs = require('fs');
+const http = require('http');
 
-fs.readFile('uesr-data.txt',(err,data)=>{
-    if(err){
-        console.log(err)
-        return;
-    } else{
-        console.log(data.toString());
-    }
+const server = http.createServer((request, response) => {
+    response.write('Hello there')
+    response.end();
 })
 
-fs.writeFile('uesr-data.txt','username=Max',err => {
-    if(err){
-        console.log(err);
-    } else{
-        console.log('Wrote to file')
-    }
-});
+server.listen(3000);

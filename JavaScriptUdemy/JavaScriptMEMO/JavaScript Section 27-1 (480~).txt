@@ -38,6 +38,26 @@ fs.readFile('파일이름',(err,data)=>{에러나 데이터 읽는처리})
 
 
 4. 들어오는 HTTP 요청으로 작업하기
+일부 모듈은 사용하려면 require 키워드를 통해 가져와야 하지만 대부분의 모듈은 전역적으로 사용이 가능하다.
+
+HTTPRequest module => http 웹 서버와 관련된 모듈이다.
+
+http.createServer() => 서버를 설정하는 메서드이다.
+http.createServer().listen(); => 서버를 시작하는 메서드이다. 이를 통해서 들어오는 요청을 리스닝한다.
+
+const server = http.createServer((request, response) => {
+   response.write('Hello there');
+   response.end();
+});
+
+server.listen();
+
+createServer의 인자는 콜백함수이고 두 개의 인자를 받는다. request는 들어오는 요청에 대한 설정이고 response는 나가는 응답에 대한 설정이다. response.write()는 응답메시지, response.end()는 응답 설정이 끝나면 node.js에게 알리는 메서드이다. 
+이후 server.listen()를 통해 서버가 시작되고 리스닝이 시작된다. 인자로는 포트를 받는다.
+
+** node app.js를 통해 node.js를 실행시키면 스크립트는 종료되지 않는다. => 서버 실행이기 떄문이다.
+** 
+
 
 
 
