@@ -1,4 +1,18 @@
-const name = 'HWT'
+const fs = require('fs');
 
-console.log('Hello world!')
-console.log(`${name}이다.`)
+fs.readFile('uesr-data.txt',(err,data)=>{
+    if(err){
+        console.log(err)
+        return;
+    } else{
+        console.log(data.toString());
+    }
+})
+
+fs.writeFile('uesr-data.txt','username=Max',err => {
+    if(err){
+        console.log(err);
+    } else{
+        console.log('Wrote to file')
+    }
+});
