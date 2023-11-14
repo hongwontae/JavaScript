@@ -1,0 +1,11 @@
+JS에서 input의 값을 가져오려면 해당 input DOM를 가져온 후 value라는 속성에 접근해야 한다.
+
+<input id="name" type='text'>
+
+const input = document.getElementById('name').value;
+function print(){
+ console.log(input)
+};
+print() => input 값
+
+input의 값 타입 속성을 작성해야 한다. => 그렇지 않으면 JS에서 해당 값을 불러올 수 없다.
