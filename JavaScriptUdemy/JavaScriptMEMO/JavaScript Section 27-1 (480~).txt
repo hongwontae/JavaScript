@@ -72,8 +72,8 @@ response.setHeader('Content-Type','text/plain')
 
 
 6. 들어오는 데이터 구문 분석하기
-
-
+<form>과 <input>의 동작에 대해서 알아야 한다. => method, action, type, name
+response는 나가는 데이터, request는 받는 데이터이다.
 
 
 
