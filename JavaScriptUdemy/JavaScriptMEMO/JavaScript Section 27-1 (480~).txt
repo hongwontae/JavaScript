@@ -71,6 +71,10 @@ response.setHeader('Content-Type','text/plain')
 => text.html은 보내는 데이터가 html 컨텐츠라고 알린다. 
 
 
+6. 들어오는 데이터 구문 분석하기
+
+
+
 
 
 

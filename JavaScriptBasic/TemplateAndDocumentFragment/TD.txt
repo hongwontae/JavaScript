@@ -1,0 +1,26 @@
+DocumentFragment
+let DocumentFragment = document.createDocumentFragment(); => 빈 태그를 만드는 것이다.
+=> DOM 트리 내부에 존재하는 것이 아니라 메모리상에만 존재한다. 노드조각이다.
+
+DocumentFragment의 장점
+1. DOM객체는 트리구조로 되어있기 때문에, 특정 엘리먼트에 접근하는 것을 줄일수록 좋다.
+ Document Fragment는 DOM트리와 별개로 존재하므로 접근 속도가 빠르다.
+
+2. Reflow는 성능에 영향을 미치는 주요 요인중 하나로, Reflow를 줄일수록 좋다.
+ Document Fragment를 이용해서 작업을 모아놨다가 한번에 DOM에 적용한다면 Reflow를 최소화할 수 있을 것이다.
+
+
+importNode(externalNode, deep)
+=> 노드를 복사한다.
+=> externalNode/ 외부 node 또는 DF를 복사한다.
+=> deep/ false=>자식x, treu=>자식o
+
+importNode => template를 대상으로
+cloneNode => DOM를 대상으로
+
+cloneNode vs importNode
+1. cloneNode는 element.cloneNode(true/false) => element 메서드 체이닝으로 cloneNode를 불러온다.
+2. importNode는 document.importNode(element, true/false) => document 객체의 메서드를 가져온다.
+3. template은 cloneNode를 가져올 수 없다. cloneNode는 이미 DOM에 있는 것을 대상으로 복제하는데 documentFragment인 템플릿은
+    DOM에 없고 메모리상에만 존재하기 때문이다.
+4. importNode를 통해서 정확히 가져오려면 template.content를 통해서 가져와야 한다. => 그렇지 않으면 DF를 특정할 수 없다.
