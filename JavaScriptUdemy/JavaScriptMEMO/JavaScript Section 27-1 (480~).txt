@@ -76,6 +76,30 @@ response.setHeader('Content-Type','text/plain')
 response는 나가는 데이터, request는 받는 데이터이다.
 
 
+7. Express.js
+=> node.js에서 웹 애플리케이션과 웹 서버를 쉽게 구축하는 프레임워크이다.
+1. npm init => 의존성 설치 준비, package.json를 설치한다.
+2. npm install express --save => express.js를 설치한다.
+=> Java의 spring과 비슷한 역할을 한다.
+
+
+8. express.js 기초
+const express = requires('express');
+const app = express();
+app.listen(3000)
+=> 서버를 만들고 노출시키는 기본적인 구문
+
+express.js 미들웨어 프레임워크이다.
+express.js는 여러 다른 함수들을 통해 들어오는 요청을 전달하는 역할을 한다. 미들웨어는 단순히 함수로 요청을 받고 무엇가를 실행한다.
+미들웨어는 코드의 순서가 중요하다. 위의 미들웨어가 실행되고 밑의 미들웨어가 실행되는 순서이다.
+
+app.use(req,res,next)
+=> 인자로 함수를 받는다. 미들웨어를 등록한다는 뜻이다.
+=> req는 받는 데이터, res는 보내는 데이터, next는 express.js에 작업이 완료되지 않았다고 말하는 것이다.
+   next() 메서드가 실행된 것은 미들웨어의 끝이라는 것을 알려주는 것이다.
+
+Browser의 Content-type을 보면 charset=utf-8이 있다. => express.js가 자동으로 추가해준 것이다.
+
 
 
 
