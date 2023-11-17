@@ -101,6 +101,47 @@ app.use(req,res,next)
 Browser의 Content-type을 보면 charset=utf-8이 있다. => express.js가 자동으로 추가해준 것이다.
 
 
+9. 데이터 추출하기
+데이터의 분석을 도와주는 라이브러리  => body-parser 패키지
+=> npm install body-parser --save
+=> 들어오는 요청과 요청 본문을 분석하고 추출한다. 그리고 분석된 본문을 req 객체의 본문 필드에 보낸다.
+=> req.body.input 속성명으로 접근하면 값을 가져온다.
+
+
+10. 템플릿 & EJS를 사용해 서버 측 HTML 렌더링하기
+npm install --save ejs => HTML template를 node.js와 연동하는 패키지
+app.set('view engine', 'ejs'); => 뷰와 템플릿을 분석하는 엔진이 ejs라고 알려준다.
+app.set('views','views') => 폴더이름과 경로
+
+ejs => 타임리프와 비슷한것 같다.
+<%= user%> => node.js 서버가 돌아갈 때 패키지로 인해 ejs가 렌더링되고 해당 구문이 ejs 패키지로 인해 해석되어 동적인 결과가 반환되는 것이다.
+
+동적인 결과를 반환하려면
+res.render('렌더링할 파일이름',{
+  <%=%> : value
+})
+
+
+11. 프로젝트 향상시키기
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
