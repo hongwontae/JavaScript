@@ -57,6 +57,8 @@ render Tree에 있는 node를 배치한다.(layout) => render Tree에 있는 nod
 => render Tree에 있는 node를 순서대로 구성한다 => 웹 사용자에게 반환한다.
 => 이 과정은 operation이라고 한다.
 
+리플로우와 리페인팅은 css와 연관이 깊다. 단순한 DOM 추가와 삭제는 일부 HTML만 리렌더링한다.
+
 
 5. defer and async
 defer는 HTML 파싱하여 DOM를 만들기 전까지 JS을 파싱만 한다. 이후 DOM이 만들어지면 JS를 실행한다.
