@@ -38,6 +38,32 @@ Jest 설치
 npm install --save-dev jest
 
 
+3. 유닛 테스트 작성 & 실행하기
+테스트 파일 생성 방법 => 파일이름.test(spec).js
+
+valina JS는 Jest 테스트의 대상이 될 수 없다.
+=> 코드를 테스트하려면 가져와야 하는데 이 떄 import 문은 jest 파일에서 인식하지 못한다.
+=> require()를 통해 가져와야 한다.
+=> node.js 기반의 JS 지원한다.
+
+ex) const {generateText} = require('./util');
+
+
+test(1,callBack)
+=> 전역함수이며 단일 테스트를 정의한다.
+=> 첫 번쨰 인자로는 테스트 이름을 정의한다.
+=> 두 번쨰 인자로는 테스트를 실행할 함수를 정의한다.
+
+ex) test('should output name and age', ()=>{
+  const text = generate('Max',29);
+  expert(text).toBe('Max (29 years old)')
+})
+=> expert는 기대하는 값과 실제 테스트 값을 비교할 때 사용하는 함수이다.
+=> expert(테스트 값).toBe(기대하는 값);
+
+테스트를 실행하고 싶다면 package.json의 scripts 키에 값으로 "test" : "jest"를 주고 npm test를 하면 된다.
+결과가 옳다면 pass가 뜨고 옳지 않다면 틀린 이유와 fail이 뜬다.
+
 
 
 
