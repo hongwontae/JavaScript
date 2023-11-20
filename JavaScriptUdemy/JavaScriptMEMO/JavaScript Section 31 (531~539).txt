@@ -65,6 +65,73 @@ ex) test('should output name and age', ()=>{
 결과가 옳다면 pass가 뜨고 옳지 않다면 틀린 이유와 fail이 뜬다.
 
 
+4. 통합 테스트 작성 & 실행하기
+exports가 된 객체들은 같은 파일에 있을지라도 공유가 되지 않기에 
+=> exports.generateText = generateText;
+exports.validateInput = validateInput;
+const로 작성하기 exports식으로 넘겨줘야 한다.
+
+통합 테스트는 하나의 함수문이나 하나의 구문에 국한되지 않고 함수안에 함수가 있다든가 여러 module에 관여하고 있는 코드들을 테스트하는 것이다.
+
+똑같은 방식으로 test(expect.toBe)를 사용하면 된다.
+
+
+5. E2E 테스트 작성 & 실행하기
+puppeteer 라이브러리를 설치한다. => E2E 테스트를 돕는 라이브러리
+=> npm i puppeteer
+
+브라우저에서 실행되어야 하는 단계를 정의해서 웹 페이지에서 특정 작업을 자동화한다.
+=> 테스트를 위해서
+
+ex) test('should click around', ()=>{
+    const browser = puppeteer.launch({ => puppeteer를 설정한다.
+        headless : false,
+        slowMo : 80, => 속도
+        args : ['--window-size=1920,1080'] => 브라우저 화면 사이즈
+    })
+})
+
+=> 이 함수는 프로미스를 반환한다.
+=> 최신 puppeteer 라이브러리 사용법을 배워야 한다.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
