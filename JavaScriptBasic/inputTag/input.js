@@ -1,15 +1,8 @@
-const input = document.getElementById('input');
-const div = document.getElementById('div');
-const box = document.getElementById('box');
+const inputName = document.getElementById('name')
+const inputAge = document.getElementById('age');
+const form = document.querySelector('form');
 
-
-div.addEventListener('click',()=>{
-    const text = input.value;
-    console.log(text);
-    box.append(text);
-
+form.addEventListener('onSubmit',()=>{
+    console.log(inputName.value);
+    console.log(inputAge.value);
 })
-
-
-
-

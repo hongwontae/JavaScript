@@ -21,13 +21,13 @@ let [...c1]= c;
 console.log(c1 === c);
 // => RestParameter로 복사한 값은 새로운 참조값을 갖는다.
 
-let d = [1,2,3];
+let d = 1;
 
 function add1(...d){ // 함수의 매개변수의 ...은 목록을 배열로 만든다.
     console.log(d) // => 값은 d = [1,2,3]
 }
 
-add1(...d);
+add1(d);
 // 함수 호출 ...은 배열을 목록을 만들어준다.
 
 let obj1 = {
