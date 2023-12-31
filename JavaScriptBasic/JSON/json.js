@@ -6,3 +6,6 @@ xhr.onload = ()=>{
     const res = JSON.parse(xhr.response);
     console.log(res);
 }
+
+
+

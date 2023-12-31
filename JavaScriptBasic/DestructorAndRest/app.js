@@ -1,24 +1,26 @@
-let a = [1,2,3,4,5];
-let [a1=100,a2,...a3] = a;
-console.log(a1);
-console.log(a2);
-console.log(a3);
+// let a = [1,2,3,4,5];
+// let [a1=100,a2,...a3] = a;
+// console.log(a1);
+// console.log(a2);
+// console.log(a3);
 
-let b = {title:'hwt', age: 20, ClassRoom: 10};
-let {title,age:age2 = 10,ClassRoom} = b;
-console.log(title);
-console.log(age2);
-console.log(ClassRoom);
+// let b = {title:'hwt', age: 20, ClassRoom: 10};
+// let {title,age:age2 = 10,ClassRoom} = b;
+// console.log(title);
+// console.log(age2);
+// console.log(ClassRoom);
 
-function add({age,ClassRoom,}){
-    return age+ClassRoom
-}
+// function add({age,ClassRoom,}){
+//     return age+ClassRoom
+// }
 
-console.log(add(b));
+// console.log(add(b));
 
 let c = [1,2,3];
-let [...c1]= c;
-console.log(c1 === c);
+let [c1,c2] = c;
+console.log(c1);
+
+
 // => RestParameter로 복사한 값은 새로운 참조값을 갖는다.
 
 let d = 1;
