@@ -1,0 +1,11 @@
+JSON.stringify => 객체를 JSON으로
+JSON.parse => JSON을 객체로
+
+fetchAPI는 브라우저 내장 함수이고 WEB API이다.
+fetch() => 일반 get요청
+fetch.get()/ fetch.post() => 특정 HTTP 메서드 요청
+
+Promise 기반 함수이다. async/await 사용가능
+
+fetchAPI는 내부적으로 Promise 기반 함수이기 때문에 그냥 사용하면 pending 상태의 결과값을 받는다.
+=> then 호출을 통해 resolve 인자를 받아서 사용한다.

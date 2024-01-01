@@ -15,28 +15,32 @@
 //   .then((response) => response.json())
 //   .then((data) => console.log(data));
 
-async function submitGet(){
-  const getting = await fetch("https://jsonplaceholder.typicode.com/posts/1");
-  const data1 =  getting.json();
-  console.log(data1);
-}
+const a = fetch("https://jsonplaceholder.typicode.com/posts/1")
+console.log(a);
 
-submitGet();
+// async function submitGet(){
+//   const getting = await fetch("https://jsonplaceholder.typicode.com/posts/1");
+//   const data1 =  await getting.json();
+//   console.log(data1);
+// }
 
-// post 방식
-fetch("https://jsonplaceholder.typicode.com/posts", {
-	// method 옵션 POST 지정
-  method: "POST",
-	// JSON 포맷 (JSON으로 보낼거야~)
-  headers: {
-    "Content-Type": "application/json",
-  },
-	// body안에 payload 넣기
-  body: JSON.stringify({
-    title: "Test",
-    body: "I am testing!",
-    userId: 1,
-  }),
-})
-  .then((response) => response.json())
-  .then((data) => console.log(data));
+// submitGet();
+
+// // post 방식
+// fetch("https://jsonplaceholder.typicode.com/posts", {
+// 	// method 옵션 POST 지정
+//   method: "POST",
+// 	// JSON 포맷 (JSON으로 보낼거야~)
+//   headers: {
+//     "Content-Type": "application/json",
+//   },
+// 	// body안에 payload 넣기
+//   body: JSON.stringify({
+//     title: "Test",
+//     body: "I am testing!",
+//     userId: 1,
+//   }),
+// })
+//   .then((response) => response.json())
+//   .then((data) => console.log(data));
+
