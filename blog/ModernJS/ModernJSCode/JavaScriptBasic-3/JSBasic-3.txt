@@ -1,0 +1,87 @@
+13. while/ for
+while(조건){식, 빠져나갈 조건}
+ex) let i=0; while(i<=3){console.log(i) i++};
+
+do-while
+do가 먼저오고 while이 나중에 오는 구문이다.
+=> 무조건 한 번은 실행하고 싶을 떄 사용한다.
+
+for
+for(let i=0; i<=3; i++){console.log(i)};
+break => 반복문을 빠져나오는 지시자
+continew => 반복문을 건너뛰는 지시자
+
+
+14. CASE 구문
+CASE구문은 switch(val){case val} => val이 같은 자료형이여야 한다. => 자동으로 형 변환x
+ex) switch(4){
+        case : 1
+    console.log(1x)
+    break;
+
+        case : 2
+    console.log(2x)
+    break;
+
+        case : 3
+    console.log(3x)
+    break;
+
+        case : 4
+    console.log(4x)
+    break;
+
+    default :
+    console.log('Not Match')
+}
+
+dafault는 아무것도 일치하지 않을 떄 실행된다.
+break를 사용하지 않으면 break가 나오는 지점까지 실행된다.
+case : val로 작성해야 한다.
+
+
+15. 함수
+함수 선언문 => function getAge(){....}
+함수 내 선언한 변수는 지역 변수이다./ 함수 본문은 외부 변수에 접근가능/ 내부와 외부가 충돌하면 내부 우선
+선언 시에는 매개변수, 호출시에는 인자, 인수
+매개변수에 기본값을 할당할 수 있다. 
+
+return이 없거나 return 지시자만 있는 경우 undefined를 반환한다.
+return은 자동으로 뒤에 ;이 붙는다.
+ex) return
+    (a+b+c)
+=> 적용되지 않는다. return;
+
+
+16. 함수 표현식
+let a = function(){
+
+}
+
+JS에서 함수는 값이다. => 할당 가능 
+
+콜백함수는 인자에 함수를 넣는 것이다. 이 떄 일회성으로 익명함수를 쓰기도 한다.
+익명함수 => 이름이 없는 함수
+
+함수 선언문은 호이스팅된다. 함수 표현식은 실행흐름에 맡겨진다.
+
+
+17. 화살표 함수
+let a = ()=>{
+
+}
+
+매개변수가 하나라면 () 생략 가능
+한줄에 모두 적을 거라면 {} 생략가능 이 떄 retunr이 자동으로 들어간다.
+
+
+
+
+
+
+
+
+
+
+
+

@@ -22,3 +22,4 @@ let b = confirm();
 console.log(b); //true
 
 console.log(typeof null);
+
