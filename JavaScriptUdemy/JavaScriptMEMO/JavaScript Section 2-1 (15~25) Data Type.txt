@@ -1,6 +1,6 @@
 1. html-js 연결(basics-01-starting-project)
 1-1. head에 <script>JS 코드</script>
-1-2. <script src ="js파일 위치"></script> => src는 "" 사용한다. (''가능 but src에 쌍 다옴표는 개발자들의 법칙이다.) => 이 때의 문제점은 스크립트가 완료되기 전까지는 페이지가 렌더링되지 않는다.
+1-2. <script src ="js파일 위치"></script> => src는 "" 사용한다. (' ' 가능 but src에 쌍 다옴표는 개발자들의 법칙이다.) => 이 때의 문제점은 스크립트가 완료되기 전까지는 페이지가 렌더링되지 않는다.
 1-3. <body> 위에 <Script src=""><script> => 페이지가 렌더링되고 js를 읽는다.
 
 

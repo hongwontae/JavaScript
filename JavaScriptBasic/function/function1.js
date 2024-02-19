@@ -53,3 +53,7 @@ function add1(x,y) {
     return sum;
 }
 // return이 함수 실행을 종료 시키니까 else 필요없다.
+
+const add = function (){
+
+}

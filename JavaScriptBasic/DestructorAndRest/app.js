@@ -44,12 +44,9 @@
 // console.dir(sex4)
 
 const app = {name : 'hwt', age : 3000};
-const {...props} = app;
-console.log(props)
 
-let a = {...props}
-console.log(a);
-
+const {name, age} = app;
+console.log(age);
 
 
 
