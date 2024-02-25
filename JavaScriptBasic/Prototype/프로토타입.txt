@@ -39,5 +39,7 @@ Array의 prototype은 객체에 내려줄 Array의 프로퍼티와 Object로 인
 ex)cosnt data = new Person()를 통해 객체를 생성하면 data에는 Person의 prototype + constructor가 부여된다.
 Person 자체는 사용자가 만들었지만 Funtion prototype을 [[prototype]]으로 갖는다. 그래서 Person.bind, call 등등 사용가능
 
+ex) [[prototype]]은 JS에 의해 만들어진다./ 객체를 생성할 떄 객체 자체에 프로퍼티가 존재하는 것은 메모리 낭비를 초래할 수 있다.
+
 
 
