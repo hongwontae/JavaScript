@@ -5,6 +5,6 @@
 ---
 
 ## JavaScript Basice-2 (형 변환, 연산자, 논리 연산자, ??)
-[JS-Tree-2-Link]()
+[JS-Tree-2-Link](https://github.com/hongwontae/JavaScript/tree/main/JavaScript-Logic/JS-Tree-2)
 
 
