@@ -29,4 +29,5 @@ button.addEventListener('click', ()=>{
     // let age1 = prompt('나이를 입력해주세요',27);
     let isBoolean = confirm('주인인가 아닌가');
     console.log(isBoolean);
+    console.log(typeof isBoolean)
 })

@@ -1,31 +1,22 @@
-// 형변환
-let pro = prompt('Hello world',100);
-console.log(`${pro} type은 ${typeof pro}`)
-// 모든 걸 String으로 처리 => 암시적 형변환
-
-// 증감 연산자
 let a = 10;
-++a
-// a++
-console.log(a);
+// 증감 연산자 후위형이면 다음 라인부터 적용된다.
+console.log(a++);
+
+let a1 = 'HWT'
+let a2 = 'Alexander'
+console.log(a1+a2);
+
+let a3 = 10;
+console.log(a2+a3)
 
 
-// 논리 연산자
-let a1 = 1 || 2;
-console.log(a1);
+let a4  = null ||  undefined || 4 || 'HWT';
+console.log(a4);
 
-if(a || a1){
-    console.log(a+a1)
+if(4 || undefined){
+    console.log('true++');
 }
 
-let b = 10;
-let c = 20;
-
-let d = b||c ? 'true' : 'false';
-console.log(`${d} type은 ${typeof d}`);
-
-
-// nullish 병합 연산자 ??
 let height;
-height = height ?? 100;
+height = height ?? undefined;
 console.log(height)

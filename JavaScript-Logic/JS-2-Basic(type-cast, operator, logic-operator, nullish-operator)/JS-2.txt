@@ -6,7 +6,7 @@
 1-1. String으로 형변환 : null => "null", false => "false" 처럼 예측 가능하게 변환한다.
 
 1-2. Number로 형변환
-undefinded => NaN, null => 0, true => 1, false => 0, strin
+undefinded => NaN, null => 0, true => 1, false => 0
 string의 경우 공백을 제외했을 떄 숫자형태를 갖추면 그대로 가져가고 아니면 NaN
 
 1-3. Boolean으로 형변환 : 0 => false, null => false, undefinded => false, 1이상 => true, String => 1
@@ -41,7 +41,8 @@ string의 경우 공백을 제외했을 떄 숫자형태를 갖추면 그대로 
 3-2. && (and)
 두 개 중 모두가 참이어여 true을 반환한다.
 false를 고른다./ 첫 번쨰 falsy 값을 찾는다./ 모두가 truthy라면 마지막 truthy을 고른다.
-3-3. !
+3-3. ! (not)
+부정 연산자
 
 
 4. nillish 병합 연산자 ??
