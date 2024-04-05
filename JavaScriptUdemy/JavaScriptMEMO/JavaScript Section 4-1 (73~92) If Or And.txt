@@ -14,7 +14,6 @@ ex) 2===2 true/ 2==="2" false
 ex) !true => false/ !false =>true
 
 
-
 => 등호 연산자와 부정 연산자의 값은 Boolean이다.
 
 
@@ -61,32 +60,7 @@ ex) const username = 'user1'
 } => username은 Truthy값으로 평가되어 중괄호문이 실행된다. 빈 문자열은 false, 하나라도 있는 문자열은 true
 
 
-7. if문 활용하기1 (공격함수 추가하기) (control-03-monster-killer-starting-project)
 
-
-8. if문 활용하기2 (승리조건 확인하기) (control-05-attack-if-else-if)
-
-
-9. if문 활용하기3 (강한공격 기능 추가하기) (control-06-strong-attack)
-Refactoring
-
-
-10. if문 활용하기4 (치료 기능 추가하기) (control-07-heal-functionality)
-
-
-11. if문 활용하기5 (보너스 생명) (control-08-bonus-life-functionality)
-
-
-13. if문 활용하기6 (reset()) (control-09-reset-logic)
-
-
-14. if문 활용하기7 (사용자 입력 검증하기) (control-10-player-set-initial-health)
-prompt() => 웹페이지를 열면 사용자에게 메시지 상자를 건네주고 사용의 입력값을 받아오는 함수이다.
-
-Or조건은 맨 처음이 true이면 뒤의 조건문은 확인하지 않는다.
-
-
-15. if문 활용하기8 (Log) (control-11-added-logging)
 
 
 
