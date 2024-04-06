@@ -79,3 +79,8 @@ let hwt = new Hwt('HWT', 27);
 console.log(hwt);
 
 
+let kk =1;
+let kk2 = kk;
+kk2 = 3;
+console.log(kk);
+
