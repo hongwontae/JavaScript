@@ -13,3 +13,8 @@ function add(){
 }
 let boundary = add.bind(obj);
 boundary();
+
+
+// Symbol
+let a = Symbol('id');
+console.log(a);

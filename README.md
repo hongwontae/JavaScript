@@ -8,13 +8,21 @@
 
 
 ## JavaScript Basic-1 (script tag, 'use strict', 변수와 상수, 자료형, etc...)
-[JS-Tree-1-Link](https://github.com/hongwontae/JavaScript/tree/main/JavaScript-Logic/JS-Tree-1-JS-Basic-1)
+[JS-1-Link](https://github.com/hongwontae/JavaScript/tree/main/JavaScript-Logic/JS-Tree-1-JS-Basic-1)
 ---
 
 ## JavaScript Basic-2 (형 변환, 연산자, 논리 연산자, ??)
-[JS-Tree-2-Link](https://github.com/hongwontae/JavaScript/tree/main/JavaScript-Logic/JS-Tree-2-JS-Basic-2)
+[JS-2-Link](https://github.com/hongwontae/JavaScript/tree/main/JavaScript-Logic/JS-Tree-2-JS-Basic-2)
 ---
 
 ## JavaScript Basic-3 (while, do~while, for, switch-case, Function-Basic, arrowFunc)
-[JS-Tree-3-Link](https://github.com/hongwontae/JavaScript/tree/main/JavaScript-Logic/JS-Tree-3-JS-Basic-3)
+[JS-3-Link](https://github.com/hongwontae/JavaScript/tree/main/JavaScript-Logic/JS-Tree-3-JS-Basic-3)
+---
+
+## JavaScript-4 Object
+[JS-4-Link](https://github.com/hongwontae/JavaScript/tree/main/JavaScript-Logic/JS-4-object)
+---
+
+## JavsScript-5 (this, symbol, script(defer/async))
+[JS-5-Link](https://github.com/hongwontae/JavaScript/tree/main/JavaScript-Logic/JS-5-this-symbol-defer-async)
 ---

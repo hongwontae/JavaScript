@@ -57,7 +57,8 @@ ex) addBtn.addEventListener('click', add); => click이 되었을 떄만 add함�
 
 
 7. 자료형 변환하기 (basics-09-parseint) 
-ParseInt() => 문자열을 소수점 이하 숫자가 없는 수로 구문 분석하는 함수이며 ParseFloat은 소수점 아래 자리가 있는 수로 분석한다. 즉, 문자열을 숫자로 바꿔준다.
+ParseInt() => 문자열을 소수점 이하 숫자가 없는 수로 구문 분석하는 함수이며 
+ParseFloat은 소수점 아래 자리가 있는 수로 분석한다. 즉, 문자열을 숫자로 바꿔준다.
 
 문자열 앞에 있는 +는 문자열을 숫자로 전환한다.
 ex) currentResult = currentResult+ +parseInt(userInput.value)
