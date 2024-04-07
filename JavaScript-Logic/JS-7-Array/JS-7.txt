@@ -51,6 +51,8 @@ array => 배열
 2-9. Array.isArray()
 => 배열인지 아닌지 boolean으로 반환하는 메서드
 
+2-10. map, filtes는 함수들의 반환값은 무조건 배열이다. 또한 모든 요소를 순회하는 로직을 갖고 있다.
+
 
 3. Object.keys, values, entries
 3-1. Object.keys(obj) – 객체의 키만 담은 배열을 반환합니다.
