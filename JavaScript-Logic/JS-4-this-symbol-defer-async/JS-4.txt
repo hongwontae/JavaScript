@@ -11,6 +11,9 @@ ex) test.call('네네네')
 => test 함수 내의 this는 '네네네'를 바라본다.
 call, apply는 binding + 호출/ bind는 bound 함수를 리턴한다.(this 바인딩 함수)
 
+let add2 = add.bind(null, 2,3);
+add2(4) => 4+2+3이 된다. this 컨텍스트를 결정하고, 인수를 고정시키는 역할도 한다.
+
 
 3. Symbol
 symbol은 유일한 식별자를 만들고 싶을 떄 사용한다.
