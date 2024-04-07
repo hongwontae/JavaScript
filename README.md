@@ -19,10 +19,18 @@
 [JS-3-Link](https://github.com/hongwontae/JavaScript/tree/main/JavaScript-Logic/JS-Tree-3-JS-Basic-3)
 ---
 
-## JavaScript-4 Object
-[JS-4-Link](https://github.com/hongwontae/JavaScript/tree/main/JavaScript-Logic/JS-4-object)
+## JavsScript-4 (this, symbol, script(defer/async))
+[JS-5-Link](https://github.com/hongwontae/JavaScript/tree/main/JavaScript-Logic/JS-4-this-symbol-defer-async)
 ---
 
-## JavsScript-5 (this, symbol, script(defer/async))
-[JS-5-Link](https://github.com/hongwontae/JavaScript/tree/main/JavaScript-Logic/JS-5-this-symbol-defer-async)
+## JavaScript-5 Object
+[JS-4-Link](https://github.com/hongwontae/JavaScript/tree/main/JavaScript-Logic/JS-5-object)
+---
+
+## JavaScript-6 dataType
+[JS-6-Link](https://github.com/hongwontae/JavaScript/tree/main/JavaScript-Logic/JS-6-dataType)
+---
+
+## JavaScript-7 Array
+[JS-7-Link](https://github.com/hongwontae/JavaScript/tree/main/JavaScript-Logic/JS-7-Array)
 ---
