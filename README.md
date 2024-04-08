@@ -34,3 +34,7 @@
 ## JavaScript-7 Array
 [JS-7-Link](https://github.com/hongwontae/JavaScript/tree/main/JavaScript-Logic/JS-7-Array)
 ---
+
+## JavaScript-8 JSON, Object(values, keys, entries..), rest/spread structural-decomposition
+[JS-8-Link](https://github.com/hongwontae/JavaScript/tree/main/JavaScript-Logic/JS-8-JSON-Rest-Spread-Object)
+---
