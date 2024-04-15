@@ -39,3 +39,12 @@ script tag에 async가 있다면 dom 생성을 차단하지 않고 script를 로
 dom 생성을 막고 script를 실행한다.
 => 병렬적 로드, 병렬적 실행
 
+
+5. window
+정의 : JavaScript의 최상위 객체이다.
+
+특징
+5-1. var, function으로 규정된 모든 값들은 window의 객체에 속한다.
+5-2. 다만 window.을 사용하지 않고 사용해도 된다.
+
+

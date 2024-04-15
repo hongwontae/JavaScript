@@ -6,6 +6,12 @@
 ![icons8-자바-스크립트-128 (1)](https://github.com/hongwontae/JavaScript/assets/128343635/a298105e-8232-4933-be50-22a4e72dae74)
 ![icons8-자바-스크립트-128](https://github.com/hongwontae/JavaScript/assets/128343635/72aea1b1-25f0-48a1-ae60-8720360677ee)
 
+# JS theory
+
+## 1. JS Execution Context
+[Execution-Context]()
+---
+
 
 ## JavaScript Basic-1 (script tag, 'use strict', 변수와 상수, 자료형, etc...)
 [JS-1-Link](https://github.com/hongwontae/JavaScript/tree/main/JavaScript-Logic/JS-Tree-1-JS-Basic-1)

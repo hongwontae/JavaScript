@@ -18,3 +18,5 @@ boundary();
 // Symbol
 let a = Symbol('id');
 console.log(a);
+
+
