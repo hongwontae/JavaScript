@@ -9,7 +9,7 @@
 # JS theory
 
 ## 1. JS Execution Context
-[Execution-Context]()
+[Execution-Context](https://github.com/hongwontae/JavaScript/blob/main/JavaScript-Logic/JS-ExecutionContext/EXC.txt)
 ---
 
 
