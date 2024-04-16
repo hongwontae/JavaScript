@@ -11,4 +11,5 @@ function sumAll(n){
 let kkk = sumAll(3);
 console.log(kkk);
 
-console.log('ddd')
+console.log('ddd');
+
