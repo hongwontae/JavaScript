@@ -10,6 +10,13 @@
 ## 1. JS Execution Context
 [Execution-Context](https://github.com/hongwontae/JavaScript/blob/main/JavaScript-Logic/JS-ExecutionContext/EXC.txt)
 ---
+## 2. JS Closure
+[Closure](https://github.com/hongwontae/JavaScript/blob/main/JavaScript-Logic/JS-Theory/JS-Closure/Closure.txt)
+---
+
+## 3. JS Scope
+[Scope](https://github.com/hongwontae/JavaScript/blob/main/JavaScript-Logic/JS-Theory/JS-Scope/Scope.txt)
+---
 
 ## JavaScript Basic-1 (script tag, 'use strict', 변수와 상수, 자료형, etc...)
 [JS-1-Link](https://github.com/hongwontae/JavaScript/tree/main/JavaScript-Logic/JS-Tree-1-JS-Basic-1)
