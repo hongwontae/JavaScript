@@ -80,5 +80,8 @@ Microtask Queue가 가장 먼저 실행되고 Task Queue가 가장 늦게 실행
 *** 비동기 콜백, promise, async/await => 콜백 큐로 일단 가서 콜 스택의 호출의 시마이를 기다린다. 그 이후 순서에 맞게
 호출된다.
 
+** Promise.then()/ promise.catch()/ promise.finally()를 만나면 내부의 콜백함수는 콜백 큐로 넘어간다.
+
+
 
 

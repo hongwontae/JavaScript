@@ -17,13 +17,26 @@
 
 // console.dir(Promise)
 
+function one(){
+    return new Promise((resovle, reject)=>{
+        let success = true;
+        if(success){
+            resovle('SSS');
+            console.log('if success');
+        }
+    })
+}
+
 async function add(){
-    const a = await 2;
+    const a = await one();
     console.log(a);
 }
 
 add();
-console.log('lasting111')
+console.log('lasting111');
+
+
+
 
 // async function add2(){
 //     console.log('add2+')
