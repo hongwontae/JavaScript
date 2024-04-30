@@ -50,5 +50,29 @@ console.log('lasting111');
 // console.log('2222222222222')
 // console.log('2222222222222')
 // console.log('2222222222222')
-// console.log('2222222222222')
+// console.log('2222222222222');
+
+// function print(a){
+//     console.log(a);
+// }
+
+// function add(a,b,cb){
+//     let all = a+b;
+//     cb(all);
+// };
+
+// add(1,3,print);
+
+// console.log('Hello!');
+
+// function submit(){
+//     return new Promise((resolve, reject)=>{
+
+//     })
+// }
+
+let kkk = new Promise((resolve)=>{
+    resolve('5')
+});
+kkk.then(data => console.log(data));
 

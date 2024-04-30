@@ -82,6 +82,14 @@ Microtask Queue가 가장 먼저 실행되고 Task Queue가 가장 늦게 실행
 
 ** Promise.then()/ promise.catch()/ promise.finally()를 만나면 내부의 콜백함수는 콜백 큐로 넘어간다.
 
+*** aync function myFunc(){
+    console.log('Function First'); (a)
+    const res = await one(); (b)
+    console.log('Function out'); (c)
+}
+a가 먼저 실행 => b에서 await 키워드를 만나서 one()의 처리를 기다리기 위해 myFunc이 마이크로테스크큐로 간다.
+=> 해결된 뒤 b => c실행
+
 
 
 
