@@ -1,0 +1,29 @@
+1. Object.defineProperty 특징
+1-1. 프로퍼티 속성에 접근 권한을 설정할 수 있다.
+1-2. 프로퍼티에 getter 와 Setter 를 만들 수 있다.
+
+2. Object.defineProperty의 매개변수
+2-1. obj : 속성을 정의할 객체
+2-2. prop : 새로 만들거나 수정하려는 속성의 이름
+2-3. descriptor : 객체에 정의하는 속성을 기술하는 객체
+속성	                설명	                                                                      디폴트 값
+value	            속성의 값	                                                                      undefined 
+configurable	    속성을 변경하거나 삭제 할 경우 true 로 설정	                                         false
+writable	        속성의 값을 변경할 경우 true로 설정	                                                 false
+enumarable	        for-in 루프에서 해당 프로퍼티를 반환하려면 true 로 설정	                              false
+set	                속성 설정자로 사용할 함수입니다.	                                                undefined 
+get	                속성 접근자로 사용할 함수로 속성 접근시 해당 함수의 반환값이 속성의 값이 됩니다.	    undefined 
+
+
+3. writable 
+=> false로 설정하면 해당 속성의 값의 수정이 불가능해진다.
+
+4. configurable 
+=> false로 설정하면 해당 속성의 값을 변경하거나 해당 속성을 삭제할 수 없다.
+
+5.enumerable 
+=> false로 설정하면 for-in 반복문에서 해당 프로퍼티는 제외된다.
+
+6. get, set
+=> get, set을 설정할 수 있다.
+

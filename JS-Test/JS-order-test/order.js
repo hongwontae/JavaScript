@@ -18,10 +18,14 @@ function multi(a,b){
 
 oo(add, multi);
 
-
-for(let i=0; i<1000000000; i++){
-    
-}
-
-
 console.log('Love ++ ');
+
+function rest(...args){
+    console.log(args)
+};
+
+rest(1,2,3,4,5);
+
+
+
+
