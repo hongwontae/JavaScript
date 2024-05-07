@@ -21,18 +21,20 @@ npm install options
 default 옵션이기 때문에 생략가능. package.json의 dependencies 에 모듈이 정의된다.
 
 -g, --global
-프로젝트가 아닌 시스템 전역적으로 모듈이 설치된다. 전역 node_modules폴더 경로는 npm root -g 를 통해 찾을 수 있다. -g 옵션 사용 시 package.json에 의존성 목록이 기록되지 않는다.
+프로젝트가 아닌 시스템 전역적으로 모듈이 설치된다. 전역 node_modules폴더 경로는 npm root -g 를 통해 찾을 수 있다.
+-g 옵션 사용 시 package.json에 의존성 목록이 기록되지 않는다.
 
 -D, --save-dev
-개발용으로만 사용되는 모듈을 설치할 때 사용한다. package.json의 devDependencies 에 모듈이 정의된다. 배포 시 해당 모듈들은 포함되지 않는다.
+개발용으로만 사용되는 모듈을 설치할 때 사용한다. package.json의 devDependencies 에 모듈이 정의된다. 
+배포 시 해당 모듈들은 포함되지 않는다.
 
 
-package-lock.json은 package.json과 다르게 명확하게 버전을 명시한다. package-lock.json이 있는 이유는 package.json에 항상 명확한 버전을 입력한다면, 모든 개발자의 환경에서 버전 업데이트가 일어날 때마다 npm install을 해줘야한다.
+package-lock.json은 package.json과 다르게 명확하게 버전을 명시한다. 
+package-lock.json이 있는 이유는 package.json에 항상 명확한 버전을 입력한다면, 
+모든 개발자의 환경에서 버전 업데이트가 일어날 때마다 npm install을 해줘야한다.
 
 
 NVM(Node Version Manager)는 노드 버전을 관리해주는 도구이다. Node.js의 버전을 빠르게 바꿀 수 있다.
-
-Express.js는 라우팅과 미들웨어 기반인 경량형 Node.js 웹 프레임워크이다. Node.js 서버 구축을 쉽게 도와주는 프레임워크이다. 각종 라이브러리를 내장하고 있어서 편하게 서버구축이 가능하다.
 
 
 
