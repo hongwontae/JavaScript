@@ -21,9 +21,9 @@
 4-2. 접근자 프로퍼티 : getter, setter을 의미한다.
 
 
-5. Object.defineProperty
-5-1. getter와 setter을 구현하기 위해 ES6 이전에 높은 빈도로 사용된 메서드
-5-2. Object.defineProperty은 객체의 속성을 정의하고 수정하는 메서드
+5. 객체의 모든 프로퍼티에 대해서 설정할 수 있다.
+=> Object.defineProperty을 사용하면 getter와 setter을 생성하면 getter, setter Name을 불러올 필요없이
+그냥 객체의 프로퍼티만 호출하거나 설정해도 getter와 setter가 실행된다.
 
 
 
