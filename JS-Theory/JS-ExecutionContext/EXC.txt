@@ -76,6 +76,7 @@ ex)
     function test(){
         let msg = 'Hi~';
         console.log(`${msg} ${name1} ${name2}`); // (C)
+        
     }
     
     test(); // (D)

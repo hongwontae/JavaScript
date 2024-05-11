@@ -13,6 +13,10 @@ class Car{
            return new Sonata();
         }
     }
+
+    static ffc(){
+
+    }
 }
 class Sonata extends Car{
     constructor(){
@@ -27,4 +31,4 @@ class Avante extends Car{
 const avante = Car.factory("Avante");
 const sonata = Car.factory("Sonata");
 console.log(avante);
-console.log(sonata  )
+console.log(sonata)

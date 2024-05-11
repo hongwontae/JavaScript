@@ -45,25 +45,25 @@ divs[1].addEventListener('click', function(){
 
 divs[2].addEventListener('click', function(){
 	console.log('div2')
-}, {capture : true})
-
-
-// e-delegation
-const ul = document.querySelector('.ul');
-ul.addEventListener('click',(event)=>{
-	console.log('Clcik!');
-	console.log(event.target);
-	console.log(event.currentTarget);
-
 })
 
 
-// preventDefault();
-const form = document.querySelector('form');
+// // e-delegation
+// const ul = document.querySelector('.ul');
+// ul.addEventListener('click',(event)=>{
+// 	console.log('Clcik!');
+// 	console.log(event.target);
+// 	console.log(event.currentTarget);
 
-form.addEventListener('submit', (e)=>{
-	e.preventDefault();
-	console.log('Helo!')
-})
+// })
+
+
+// // preventDefault();
+// const form = document.querySelector('form');
+
+// form.addEventListener('submit', (e)=>{
+// 	e.preventDefault();
+// 	console.log('Helo!')
+// })
 
 

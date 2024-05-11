@@ -47,4 +47,9 @@ function kkkk (){
     this.name = 'sss'
 };
 
-console.dir(Date)
+kkkk.prototype.geder = "Female";
+console.dir(kkkk)
+
+const k2 = new kkkk();
+console.dir(k2);
+console.dir(k2.geder)

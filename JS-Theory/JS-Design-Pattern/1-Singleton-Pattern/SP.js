@@ -1,7 +1,7 @@
 const SingletonClass = (function() {
   let instance;
 
-  function init(){ // 싱글톤 객체를 리턴할 비공개 함수
+  function init(){ 
     return {
       publictMethod: function() {
         return 'public method';
