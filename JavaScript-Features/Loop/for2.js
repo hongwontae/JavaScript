@@ -14,7 +14,7 @@ const seatingChart = [
     ['GOGOGO','NONONONON','SALIBA'],
     ['WOOD','DUNK','SULE']
 ]
-
+    
 for(let i=0; i<seatingChart.length;i++){
     console.log(seatingChart[i])
 }

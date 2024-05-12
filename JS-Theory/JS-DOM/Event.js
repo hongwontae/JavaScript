@@ -36,7 +36,7 @@ var divs = document.querySelectorAll('div');
 
 divs[0].addEventListener('click', function(){
 	console.log('div0')
-})
+}, )
 
 divs[1].addEventListener('click', function(){
 	console.log('div1')
