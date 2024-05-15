@@ -14,12 +14,4 @@
 // axios는 Promise기반 함수이다.
 // 
 
-async function axios2(){
-    const axiosData = await axios({
-        method : 'GET',
-        url : "https://jsonplaceholder.typicode.com/posts"
-    })
-    return axiosData
-}
-
 

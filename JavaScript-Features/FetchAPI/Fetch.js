@@ -15,8 +15,11 @@
 //   .then((response) => response.json())
 //   .then((data) => console.log(data));
 
-const a = fetch("https://jsonplaceholder.typicode.com/posts/1")
-console.log(a);
+fetch("https://jsonplaceholder.typicode.com/posts/1").then((response)=>{
+    return response.json();
+}).then((data)=> {
+    console.log(data);
+})
 
 // async function submitGet(){
 //   const getting = await fetch("https://jsonplaceholder.typicode.com/posts/1");
