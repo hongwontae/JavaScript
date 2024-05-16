@@ -68,6 +68,3 @@ console.log(a12.findIndex((ele)=>{
 
 
 
-
-
-
