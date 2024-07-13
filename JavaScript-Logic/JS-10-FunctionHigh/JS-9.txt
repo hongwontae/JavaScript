@@ -1,4 +1,0 @@
-1. function === object
-1-1. function.name => 함수 이름 반환 프로퍼티
-1-2. function.length => 매개변수의 개수를 반환한다. but rest parameter는 고려하지 않는다.
-1-3. function 또한 object이기 떄문에 자체 속성값을 가질 수 있다.
