@@ -1,6 +1,0 @@
-1. JS Event blog
-
-
-
-
-2. JS Design Pattern

@@ -30,6 +30,8 @@
 
 5. Web APIs, 콜백 큐는 JS 엔진 외부에서 관리한다.
 5-1. 브라우저나 Node.JS에서 관리한다.
+=> setTimeout web API(브라우저에서 제공해주는 API)들은 WEB API's라는 곳에서 비동기 처리를 맡아주고 콜백 큐로 콜백 함수를 내려준다.
+=> 그 외 Promise나 async는 JS 엔진 자체에서 비동기 처리를 맡아주고 마이크로테스크 큐로 이동한다.
 
 5-2. Web APIs
 브라우저가 제공하는 다양한 기능들을 의미한다. ex)HTTP 요청, setTimeout..
@@ -89,6 +91,7 @@ Microtask Queue가 가장 먼저 실행되고 Task Queue가 가장 늦게 실행
 }
 a가 먼저 실행 => b에서 await 키워드를 만나서 one()의 처리를 기다리기 위해 myFunc이 마이크로테스크큐로 간다.
 => 해결된 뒤 b => c실행
+
 
 
 

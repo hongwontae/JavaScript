@@ -17,6 +17,14 @@ let a1 = {
 
 console.log(Object.keys(a1));
 
+// Object.values();
+let aaa = {
+    name : 'hh',
+    age : 20
+};
+
+console.log(Object.values(aaa));
+console.log('values')
 
 // Object.freeze();
 let a2 = {

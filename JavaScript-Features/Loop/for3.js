@@ -1,5 +1,15 @@
-let a1 = 'String';
+function zeroSum(){
+    let left = 0;
+    while(left < 10){
+        console.log('아닐겅')
+        left++;
+    }
+};
+zeroSum();
 
-for(let var2 of a1){
-    console.log(var2);
+function check(){
+    let value = 10;
+    value++;
+    console.log(value);
 }
+check();
