@@ -1,0 +1,5 @@
+1. New Response()는 기본적인 Response 객체이다.
+=> HTTP 응답에 사용된다.
+
+
+2. new Response('body', {option...})
