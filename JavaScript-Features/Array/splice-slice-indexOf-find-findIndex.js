@@ -49,6 +49,7 @@ let a11 = a10.find((ele)=>{
     return ele.id === 3;
 });
 console.log(a11);
+console.log('kkkkk')
 
 
 let a12 = [
