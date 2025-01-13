@@ -1,20 +1,20 @@
-// // producer
-// const promise = new Promise((resolve, reject) => {
-//     // netWork, read Files.. doing sime heavy work;
-//     console.log('doing something');
-//     setTimeout(()=>{
-//         reject(new Error('new Error'));
-//     },2000)
-// });
+// producer
+const promise = new Promise((resolve, reject) => {
+    // netWork, read Files.. doing sime heavy work;
+    console.log('doing something');
+    setTimeout(()=>{
+        reject(new Error('new Error'));
+    },2000)
+});
 
-// // consumers : then, catch, finally
-// promise.then(value => {
-//     console.log(value);
-// }).catch(error => {
-//     console.log(error)
-// }).finally(() => {
-//     console.log('finally')
-// })
+// consumers : then, catch, finally
+promise.then(value => {
+    console.log(value);
+}).catch(error => {
+    console.log(error)
+}).finally(() => {
+    console.log('finally')
+})
 
 // then => promise가 올바르게 실행되어서 pending => fulfilled가 되어서 resolve 콜백함수의 값이 담기는 것이다.
 // catch => 모종의 이유로 error가 발생하여 그 오류를 처리하고 싶을 떄는 catch 메서드나 then의 두 번쨰 매개변수에 처리한다.
