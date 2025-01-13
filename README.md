@@ -11,4 +11,7 @@ JavaScript의 기초, 개념, 이론 등 전반을 마스터하기 위한 종합
 
 ## Main Concepts
 1. **Array** : [ArrayCode](https://github.com/hongwontae/JavaScript/blob/main/JavaScript-In-Action/Array/includes-reverse-reduce-split-join-some-every.js), [Array-Info](https://github.com/hongwontae/JavaScript/blob/main/JavaScript-In-Action/Array/ArrayMethod.txt)
-
+2. **Object** : [Object Code-Info](https://github.com/hongwontae/JavaScript/blob/main/JavaScript-In-Action/object/app.js)
+3. **Function** : [Function Code-Info](https://github.com/hongwontae/JavaScript/blob/main/JavaScript-In-Action/function/function1.js)
+4. **EventLoop** : [EventLoop Info](https://github.com/hongwontae/JavaScript/blob/main/JS-Theory/JS-CallHeap-EventLoop/CallHeap-EventLoop.txt)
+5. **Promise-Async/Await** : [Promise-Async/Await Info](https://github.com/hongwontae/JavaScript/blob/main/JS-Theory/Callback-Promise-AsyncAwait/CPA.txt)
