@@ -10,5 +10,5 @@ JavaScript의 기초, 개념, 이론 등 전반을 마스터하기 위한 종합
 
 
 ## Main Concepts
-1. **Array** : (ArrayCode)[https://github.com/hongwontae/JavaScript/blob/main/JavaScript-In-Action/Array/includes-reverse-reduce-split-join-some-every.js], (Array-Info)[https://github.com/hongwontae/JavaScript/blob/main/JavaScript-In-Action/Array/ArrayMethod.txt]
+1. **Array** : [ArrayCode](https://github.com/hongwontae/JavaScript/blob/main/JavaScript-In-Action/Array/includes-reverse-reduce-split-join-some-every.js), [Array-Info](https://github.com/hongwontae/JavaScript/blob/main/JavaScript-In-Action/Array/ArrayMethod.txt)
 
