@@ -16,7 +16,7 @@ JavaScript의 기초, 개념, 이론 등 전반을 마스터하기 위한 종합
 4. **Loop** : [For Loop Info](https://github.com/hongwontae/JavaScript/tree/main/JavaScript-In-Action/Loop)
 5. **DOM** : [Dom Info](https://github.com/hongwontae/JavaScript/tree/main/JavaScript-In-Action/DOM)
 6. **Event** : [Event Info](https://github.com/hongwontae/JavaScript/tree/main/JavaScript-In-Action/event)
-7. **Destructure and Rest Parameter** : [D and R](https://github.com/hongwontae/JavaScript/tree/main/JavaScript-In-Action/DestructorAndRest)
+7. **Destructure and Rest Parameter** : [D and R Info](https://github.com/hongwontae/JavaScript/tree/main/JavaScript-In-Action/DestructorAndRest)
 8. **Class** : [Class Info](https://github.com/hongwontae/JavaScript/tree/main/JavaScript-In-Action/class)
 9. **Callback-Promise-Await/Async** : [CPA Info](https://github.com/hongwontae/JavaScript/tree/main/JavaScript-In-Action/Promise)
 
@@ -78,6 +78,7 @@ let person3 = new Person1('AJY',4000);
 8. **Error** : [Error Info](https://github.com/hongwontae/JavaScript/tree/main/JS-Theory/JS-Error)
 9. **DOM (Browser Rendering, Event Handler, Capturing, Bubbling..)** : [DOM.. Info](https://github.com/hongwontae/JavaScript/tree/main/JS-Theory/JS-DOM)
 10. **Strict Mode** : [Strict Info](https://github.com/hongwontae/JavaScript/tree/main/JS-Theory/JS-use-strict)
+
 
 - **Preview**
 ```javascript
