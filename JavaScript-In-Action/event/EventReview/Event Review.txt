@@ -1,4 +1,4 @@
-1. Event는 scrit에 defer가 걸려있어야 제대로 작동한다.
+1. Event는 script에 defer가 걸려있어야 제대로 작동한다.
 
 2. 렌더링 => HTML,Css,JS로 작성된 문서를 파싱하여 브라우저에 시각적으로 출력하는 것을 의미한다.
 
