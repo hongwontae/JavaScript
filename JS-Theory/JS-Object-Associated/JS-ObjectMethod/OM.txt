@@ -13,6 +13,7 @@
 
 3. Object.values()
 => 객체의 값만 담은 배열을 반환합니다.
+=> const a = {name : 'HWT', password : '123'} Object.valuse(a) => ['HWT', '123']
 
 
 4. Object.entries()
