@@ -18,7 +18,7 @@ Array Method
 
 
 5. splice();
-=> 기존 배열을 변경하는 메서드입니다. 반환값은 삭제대상이 된 요소들의 배열입니다.
+=> *기존 배열*을 변경하는 메서드입니다. 반환값은 삭제대상이 된 요소들의 배열입니다.
 => splice(start, deleteCount, item1, item2,...)
 => start 인덱스부터 deleteCount 개수만큼 지우고 item1, item2..를 추가합니다.
 
