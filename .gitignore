@@ -6,6 +6,7 @@
 *.jpg
 *.css
 *.ts
+*.jpeg
 
 ### Node ###
 # Logs
