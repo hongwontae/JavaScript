@@ -1,6 +1,0 @@
-1. 기본 Rest 경로 추가하기
-const router = express.Router() 
-=> 여러 다른 라우트를 등록하기 편하게 해준다.
-=> HTTP 통신을 지원하는 메서드
-
-router.post('URL',HTTP 요청에 대한 함수)
